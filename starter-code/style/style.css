@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primery: #ffa45c;
+    --color-secundery: #dbdbdb;
+    --color: #191919;
+}
+
+/* Conf gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+/* Conf header */
+
+#header {
+    background-color: var(--color);
+    color: #fff;
+}
+
+/* menu */
+.nav-header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 25px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-secundery);
+}
+
+.burguer { 
+    cursor: pointer;
+}
+
+.nav-list { 
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 14%;
+    left: 0;
+    background-color: #191919;
+    text-align: center;
+}
+
+.nav-list li {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-secundery);
+}
+
+.active-list {  
+    display: flex;
+}
+
+
+
+/* Logo header */
+.logo a{ 
+    color: #fff;
+    font-size: 1.5em;
+}
+
+/* Icon card */
+.icon-cart {
+    cursor: pointer;
+}
