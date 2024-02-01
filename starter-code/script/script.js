@@ -2,12 +2,11 @@ const navList = document.getElementById('nav-list');
 const burguer = document.getElementById('burguer');
 const icon = document.getElementById('icon');
 
-burguer.addEventListener('click', (e) => {
-    e.preventDefault();
+function toggleMenu() {
+    document.getElementById('nav-list');
 
-    if (navList.style.display == 'block') {
-        navList.style.display = 'none'
-    } else {
-        navList.style.display = 'block'
-    }
-});
+    navList.classList.toggle('active-list');
+    // Toggle - adicione caso não tenha, e remova caso já tenha
+}
+
+burguer.addEventListener('click', toggleMenu )
