@@ -84,3 +84,24 @@ li {
 .icon-cart {
     cursor: pointer;
 }
+
+/* Main */
+#main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: url(../assets/home/mobile/image-header.jpg) no-repeat bottom center;
+    background-size: cover;
+    height: 700px;
+    text-align: center;
+}
+
+#main  h3 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: 13px;
+    font-weight: 400;
+    color: var(--color-secundery);
+    margin-bottom: 15px;
+}
