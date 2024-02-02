@@ -116,7 +116,7 @@ li {
     margin-bottom: 90px;
 }
 
-#main h1 {
+#main .main-text h1 {
     font-size: 3.5em;
     text-transform: uppercase;
     line-height: 65px;
@@ -124,7 +124,7 @@ li {
     font-weight: 600;
 }
 
-#main  h3 {
+#main .main-text  h3 {
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -133,7 +133,7 @@ li {
     margin-bottom: 11px;
 }
 
-#main p {
+#main .main-text p {
     margin-top: 20px;
     font-size: 1.2em;
     color: var(--color-secundery);
@@ -227,4 +227,21 @@ li {
     margin-left: 15px;
     display: flex;
     align-items: center;
+}
+
+/* Descption Zx9 Speaker */
+
+.descption-zx9-speaker {
+    background: #f38023 ;
+    margin-top: 100px;
+    height: 700px;
+}
+
+.pattern-circles {
+    
+}
+
+.pattern-circles img {
+    width: 100%;
+    height: 100%;
 }
