@@ -390,3 +390,32 @@ li {
     color: #c2bfbf;
     line-height: 28px;
 }
+
+/* footer */
+#footer {
+    background-color: #0f0f0f;
+}
+
+.line-orange {
+    width: 150px;
+    height: 3px;
+    background-color: #f38023;
+    margin: auto;
+}
+
+.logo-footer h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 35px 0;
+} 
+
+.list-footer {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.list-footer li {
+    margin-bottom: 15px;
+}
