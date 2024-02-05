@@ -394,6 +394,8 @@ li {
 /* footer */
 #footer {
     background-color: #0f0f0f;
+    text-align: center;
+    padding: 0 50px;
 }
 
 .line-orange {
@@ -411,11 +413,16 @@ li {
 } 
 
 .list-footer {
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .list-footer li {
     margin-bottom: 15px;
+}
+
+.text-audiophile {
+    margin: 35px 0;
+    font-size: 1em;
+    color: #c2bfbf;
 }
