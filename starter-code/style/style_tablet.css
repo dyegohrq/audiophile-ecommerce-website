@@ -1,18 +1,203 @@
 @media screen and (min-width: 768px) {
 
-    /* Conf header */
+/* Conf gerais */
 
-    #header {
-        padding: 0px 35px;
+    .btn {
+        padding: 15px;
     }
 
+/* Conf header */
+
+    #header {
+        padding: 0px 45px;
+    }
+
+/* menu */
     .nav-header {
-        padding: 10px 0px;
+        padding: 20px 0px;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        margin: 0 0 0 35px;
+        margin: 0 0 0 65px;
+    }
+
+    .burguer {
+        align-items: center;
+    }
+
+    .nav-list {
+        padding: 0px 45px;
+    }
+
+
+/* Logo header */
+    .logo a {
+        font-size: 1em;
+    }
+
+/* Main */
+
+    .main-content {
+        background: url(../assets/home/tablet/image-header.jpg) no-repeat top center;
+        background-size: cover;
+        height: 885px;
+    }
+
+    #main .main-text h1 {
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 3.8em;
+    }
+
+    #main .main-text  h3 {
+        font-size: 1.3em;
+    }
+
+    #main .main-text p {
+        font-size: 1em;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+/* Btn */
+    .btn-black {
+        margin: -65px auto;
+    }
+
+/* product */
+    .product {
+        width: 211px;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Descption Zx9 Speaker */
+
+    .descption-zx9-speaker{
+        width: 100%;
+        height: 767px;
+    }
+
+    .circle-lg {
+        width: 550px;
+        height: 550px;
+        padding: 25px;
+    }
+
+    .descption-zx9-speaker h1 {
+        top: -6%;
+    }
+
+    .descption-zx9-speaker p {
+        position: relative;
+        top: -11%;
+    }
+
+/* Zx7 Speaker */
+    .zx7-speaker {
+        background: url(../assets/home/tablet/image-speaker-zx7.jpg) no-repeat center top / cover;
+        height: 374px;
+    }
+
+    .text-zx7-speaker {
+        left: 45px;
+        align-items: start;
+    }
+
+    .text-zx7-speaker h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+/* Yx1 Earphones */
+    .yx1-earphones {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 334px;
+        margin-bottom: 130px;
+    }
+
+    .img-yx1  {
+        position: absolute;
+        background: url(../assets/home/tablet/image-earphones-yx1.jpg) no-repeat center center / cover;
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        float: left;
+        z-index: 1;
+    }
+
+    .text-yx1-earphones {
+        position: absolute;
+        right: 0;
+        width: 52%;
+        height: 100%;
+        margin: 0;
+        padding-left: 45px;
+        border-radius: 5px 10px 10px 5px;
+    }
+
+/* description-of-prime-store */
+    .best-gear {
+        background: url(../assets/shared/tablet/image-best-gear.jpg) no-repeat center center / cover;
+        height: 295px;
+    }
+
+    .prime-store h1 {
+        width: 561px;
+        margin: 55px auto 25px auto;
+        line-height: 45px;
+    }
+
+    .prime-store p {
+        font-size: 1em;
+    }
+
+/* footer */
+    #footer { 
+        text-align: left;
+    }
+
+    .line-orange {
+        margin: 0;
+    }
+
+    .logo-footer h1 {
+        justify-content: start;
+        font-size: 1.8em;
+    }
+
+    .list-footer ul {
+        display: flex;
+    }
+
+    .list-footer li {
+        margin-right: 25px;
+    }
+
+    .text-audiophile {
+        font-size: .9em;
+    }
+
+    .social-media {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 45px 0 20px 0;
+    }
+
+    .social-media ul {
+        margin: 0;
     }
 }
