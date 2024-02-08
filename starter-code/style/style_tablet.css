@@ -45,7 +45,7 @@
     .main-content {
         background: url(../assets/home/tablet/image-header.jpg) no-repeat top center;
         background-size: cover;
-        height: 885px;
+        height: 955px;
     }
 
     #main .main-text h1 {
@@ -73,7 +73,7 @@
 
 /* Btn */
     .btn-black {
-        margin: -65px auto;
+        margin: -25px auto;
     }
 
 /* product */
@@ -91,18 +91,27 @@
     }
 
     .circle-lg {
-        width: 550px;
-        height: 550px;
-        padding: 25px;
+        min-width: 450px;
+        max-width: 500px;
+        min-height: 450px;
+        max-height: 500px;
+    }
+
+    .circle-lg .img-zx9 {
+        background: url(../assets/home/tablet/image-speaker-zx9.png) no-repeat center / contain;
+        min-width: 250px;
+        max-width: 550px;
+        min-height: 250px;
+        max-height: 550px;
     }
 
     .descption-zx9-speaker h1 {
-        top: -6%;
+        transform: translate(-50%, -47%);
     }
 
     .descption-zx9-speaker p {
         position: relative;
-        top: -11%;
+        top: -5%;
     }
 
 /* Zx7 Speaker */
@@ -183,6 +192,10 @@
 
     .list-footer ul {
         display: flex;
+    }
+
+    .list-footer li {
+        margin-right: 25px;
     }
 
     .text-audiophile {
