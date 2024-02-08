@@ -80,6 +80,7 @@ li {
     display: block;
     position: absolute;
     width: 100%;
+    top: 150px;
     height: 0px;
     right: 0;
     text-align: center;
