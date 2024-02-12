@@ -75,7 +75,7 @@
 
   /* Main */
   .main-content {
-    background: url(../starter-code/assets/home/desktop/image-hero.jpg)
+    background: url(../assets/home/desktop/image-hero.jpg)
       no-repeat center center / cover;
     width: 100%;
     height: 580px;
@@ -112,7 +112,7 @@
   }
 
   .circle-lg .img-zx9 {
-    background: url(../starter-code/assets/home/desktop/image-speaker-zx9.png)
+    background: url(../assets/home/desktop/image-speaker-zx9.png)
       no-repeat bottom center / contain;
     width: 100%;
     height: 100%;
@@ -154,15 +154,15 @@
   /* Zx7 Speaker */
 
   .zx7-speaker {
-    background: url(../starter-code/assets/home/desktop/image-speaker-zx7.jpg)
-      no-repeat top center/contain;
-    height: 292px;
+    background: url(../assets/home/desktop/image-speaker-zx7.jpg)
+      no-repeat top center/cover;
+      height: 320px;
   }
 
 /* Yx1 Earphones */
 
     .img-yx1  {
-        background: url(../starter-code/assets/home/desktop/image-earphones-yx1.jpg) no-repeat center center / contain;
+        background: url(../assets/home/desktop/image-earphones-yx1.jpg) no-repeat center center / cover;
         height: 90%;
     }
 
@@ -178,7 +178,7 @@
     }
 
     .best-gear {
-        background: url(../starter-code/assets/shared/desktop/image-best-gear.jpg) no-repeat center / cover;
+        background: url(../assets/shared/desktop/image-best-gear.jpg) no-repeat center / cover;
         width: 50%;
         height: 550px;
     }
@@ -227,4 +227,53 @@
     .text-audiophile {
         width: 560px;
     }
+
+    .social-media ul {
+      padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+   /* Header */
+  #header {
+    padding: 0px 261px;
+  }
+
+  /* menu */
+
+  .main-text{
+    padding-left: 261px;
+    width: 700px;
+  }
+
+  .main-content {
+    height: 983px;
+}
+
+  .content {
+    padding: 0 261px;
+  }
+
+  .product {
+    width: 433px;
+    height: 200px;
+  }
+  
+  .text-yx1-earphones {
+    padding-left: 120px;
+  }
+
+  .prime-text {
+    display: flex;
+    width: 50%;
+    text-align: left;
+    padding-right: 101px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer {
+    padding: 0 261px;
+}
 }
