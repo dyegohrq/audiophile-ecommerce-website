@@ -1,133 +1,230 @@
 @media screen and (min-width: 1200px) {
+  /* Header */
+  #header {
+    padding: 0px 85px;
+  }
 
-    /* Header */
-    #header{
-        padding: 0px 85px;
+  /* menu */
+
+  .nav-header {
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+
+  .bl {
+    width: 12%;
+    display: inline;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .burguer {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    visibility: visible;
+    overflow-y: visible;
+    padding-bottom: 0;
+  }
+
+  .nav-list li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding-right: 35px;
+  }
+
+  .nav-list a {
+    position: relative;
+  }
+
+  .nav-list a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #f79341;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .nav-list a:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  .active-list {
+    display: none;
+    height: 100%;
+  }
+
+  /* Main */
+  .main-content {
+    background: url(../starter-code/assets/home/desktop/image-hero.jpg)
+      no-repeat center center / cover;
+    width: 100%;
+    height: 580px;
+    text-align: start;
+  }
+
+  .main-text {
+    left: 0;
+    transform: translate(0%, -50%);
+    padding-left: 85px;
+    width: 510px;
+  }
+
+  /* content */
+
+  .content {
+    padding: 0 85px;
+  }
+
+  /* product */
+  .product {
+    width: 325px;
+  }
+
+  /* Descption Zx9 Speaker */
+
+  .descption-zx9-speaker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 355px;
+    max-height: 462px;
+  }
+
+  .circle-lg .img-zx9 {
+    background: url(../starter-code/assets/home/desktop/image-speaker-zx9.png)
+      no-repeat bottom center / contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .descption-zx9-speaker h1 {
+    position: none;
+    top: 0%;
+    left: 0%;
+    transform: none;
+  }
+
+  .descption-zx9-speaker p {
+    margin: auto;
+    position: none;
+    top: 0%;
+  }
+
+  .text-zx9 {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    align-items: start;
+  }
+
+  .text-zx9 h1 {
+    text-align: left;
+  }
+
+  .text-zx9 p {
+    text-align: left;
+  }
+
+  /* Btn */
+  .btn-black {
+    margin: 25px 0 0 0;
+  }
+
+  /* Zx7 Speaker */
+
+  .zx7-speaker {
+    background: url(../starter-code/assets/home/desktop/image-speaker-zx7.jpg)
+      no-repeat top center/contain;
+    height: 292px;
+  }
+
+/* Yx1 Earphones */
+
+    .img-yx1  {
+        background: url(../starter-code/assets/home/desktop/image-earphones-yx1.jpg) no-repeat center center / contain;
+        height: 90%;
     }
 
-    /* menu */
-
-    .nav-header {
-        justify-content: space-between;
-        padding: 25px 0;
+    .text-yx1-earphones {
+        height: 90%;
     }
 
-    .bl {
-        width: 12%;
-        display: inline;
+/* description-of-prime-store */
+    .prime-store {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
     }
 
-    .logo {
-        margin: 0;
+    .best-gear {
+        background: url(../starter-code/assets/shared/desktop/image-best-gear.jpg) no-repeat center / cover;
+        width: 50%;
+        height: 550px;
     }
 
-    .burguer {
-        display: none;
+    .prime-text {
+        width: 50%;
+        text-align: left;
+        padding-right: 101px;
     }
 
-    .nav-list {
+    .prime-text h1 {
+        width: 100%;
+    }
+
+    .prime-store p {
+        font-size: .8em;
+    }
+
+
+/* footer */
+
+    .menu-footer {
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: relative;
-        top: 0;
-        visibility: visible;
-        overflow-y: visible;
-        padding-bottom: 0;
+        justify-content: space-between;
     }
 
-    .nav-list li {
-        display: inline-flex;
+    .list-footer ul {
+        display: flex;
         align-items: center;
-        justify-content: center;
-        border: none;
-        padding-right: 35px;
     }
 
-    .nav-list a {
-        position: relative;
-    }
-
-    .nav-list a::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        bottom: 0;
-        left: 0;
-        background-color: #f79341;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all .3s ease-in-out 0s;
-        transition:  all .3s ease-in-out 0s;
-    }
-
-    .nav-list  a:hover::before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
-
-    .active-list {  
-        display: none;
-        height: 100%;
-    }
-
-/* Main */
-    .main-content {
-        background: url(../starter-code/assets/home/desktop/image-hero.jpg) no-repeat center center / cover;
-        width: 100%;
-        height: 580px;
-        text-align: start;
+    .list-footer li {
+        margin-bottom: 0;
         
     }
 
-    .main-text {
-        left: 0;
-        transform: translate(0%, -50%);
-        padding-left: 85px;
-        width: 510px;
+    .list-footer a {
+        transition: color .8s ease-in-out;
     }
 
-/* content */
-
-    .content {
-        padding: 0 85px;
+    .list-footer a:hover {
+        color: #f79341;
     }
 
-/* product */
-    .product {
-        width: 325px;
-    }
-
-/* Descption Zx9 Speaker */
-
-    .descption-zx9-speaker {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        min-height: 355px;
-        max-height: 462px;
-    }
-
-    .circle-lg .img-zx9 {
-        background: url(../starter-code/assets/home/desktop/image-speaker-zx9.png) no-repeat bottom center / contain;
-        width: 100%;
-        height: 100%;
-    }
-
-    .descption-zx9-speaker h1 {
-        position: none;
-        top: 0%;
-        left: 0%;
-        transform: none;
-    }
-    
-    .descption-zx9-speaker p {
-        margin: auto;
-        position: none;
-        top: 0%;
+    .text-audiophile {
+        width: 560px;
     }
 }
