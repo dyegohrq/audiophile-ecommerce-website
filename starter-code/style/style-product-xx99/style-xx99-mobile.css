@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
 
 /* text Go Back */
 .goback a {
@@ -85,4 +90,73 @@
     width: 165px;
     font-size: .8em;
     font-weight: 600;
+}
+
+/* Features */
+
+.features { 
+    text-align: center;
+}
+
+.title-features {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.text-features {
+    margin-top: 25px;
+    color: #acacac;
+    font-size: .9em;
+    font-weight: 500;
+    margin: 35px auto;
+    width: 360px;
+}
+
+/* In the box */
+.box {
+    margin: auto;
+}
+
+.title-in-the-box{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2px;
+    margin: 65px 0px;
+    font-weight: 600;
+}
+
+.accessories {
+    color: #acacac;
+    margin-bottom: 10px;
+}
+
+.accessories span {
+    color: #f38023;
+    font-family: "Ubuntu", sans-serif;
+    margin-right: 15px;
+}
+
+/* imgs-product-xx99 */
+
+.gallery {
+    width: 100%;
+    margin-top: 35px;
+    border-radius: 10px;
+}
+
+.img-gallery-1 {
+    background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg) no-repeat center center / cover;
+    height: 240px;
+    
+}
+
+.img-gallery-2 {
+    background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg) no-repeat center center / cover;
+    height: 240px;
+}
+
+.img-gallery-3 {
+    background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg) no-repeat center center / cover;
+    height: 510px;
 }
