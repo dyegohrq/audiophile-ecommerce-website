@@ -124,7 +124,7 @@ li {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: url(../assets/home/mobile/image-header.jpg) no-repeat bottom center;
+    background: url(../../assets/home/mobile/image-header.jpg) no-repeat bottom center;
     background-size: cover;
     height: 825px;
     text-align: center;
@@ -286,7 +286,7 @@ li {
     padding: 25px;
 }
 .circle-lg .img-zx9 {
-    background: url(../assets/home/mobile/image-speaker-zx9.png) no-repeat center center / contain;
+    background: url(../../assets/home/mobile/image-speaker-zx9.png) no-repeat center center / contain;
     min-width: 180px;
     min-height: 180px;
     max-width: 250px;
@@ -326,7 +326,7 @@ li {
 /* Zx7 Speaker */
 
 .zx7-speaker {
-    background: url(../assets/home/mobile/image-speaker-zx7.jpg) no-repeat right center / cover;
+    background: url(../../assets/home/mobile/image-speaker-zx7.jpg) no-repeat right center / cover;
     width: 100%;
     height: 390px;
     margin: 45px 0 55px 0;
@@ -358,7 +358,7 @@ li {
 }
 
 .img-yx1  {
-    background: url(../assets/home/mobile/image-earphones-yx1.jpg) no-repeat  center center / cover;
+    background: url(../../assets/home/mobile/image-earphones-yx1.jpg) no-repeat  center center / cover;
     width: 100%;
     height: 250px;
     border-radius: 10px;
