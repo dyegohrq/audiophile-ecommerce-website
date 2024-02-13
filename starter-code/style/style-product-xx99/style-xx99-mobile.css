@@ -160,3 +160,34 @@ html {
     background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg) no-repeat center center / cover;
     height: 510px;
 }
+
+/* Product 0 */
+
+.product-0 {
+    margin: auto;
+    text-align: center;
+}
+
+.product-0-img {
+    background: url(../../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 290px;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+
+.img-2 {
+    background: url(../../assets/product-xx59-headphones/mobile/image-product.jpg) no-repeat center / cover;
+}
+
+.img-3 {
+    background: url(../../assets/product-zx9-speaker/mobile/image-product.jpg) no-repeat center / cover;
+}
+
+.product-0 span {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
