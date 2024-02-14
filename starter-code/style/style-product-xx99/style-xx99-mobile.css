@@ -7,6 +7,10 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
+.nav-list{
+    top: 134px;
+}
+
 /* text Go Back */
 .goback a {
   display: block;
@@ -105,7 +109,6 @@ html {
 }
 
 .text-features {
-    margin-top: 25px;
     color: #acacac;
     font-size: .9em;
     font-weight: 500;
@@ -140,6 +143,7 @@ html {
 /* imgs-product-xx99 */
 
 .gallery {
+    display: contents;
     width: 100%;
     margin-top: 35px;
     border-radius: 10px;
@@ -148,9 +152,7 @@ html {
 .img-gallery-1 {
     background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg) no-repeat center center / cover;
     height: 240px;
-    
 }
-
 .img-gallery-2 {
     background: url(../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg) no-repeat center center / cover;
     height: 240px;
