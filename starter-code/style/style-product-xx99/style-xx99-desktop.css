@@ -1,0 +1,73 @@
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
+    /* product xx99 */
+
+    .product-xx99 {
+        display: flex;
+    }
+
+    .img-xx99 {
+        background: url(../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg) no-repeat center/ cover;
+        width: 530px;
+        height: 450px;
+    }
+
+    .xx99 {
+        width: 50%;
+        text-align: left;
+    }
+
+    /* Features */
+
+    .features {
+        width: 50%;
+    }
+
+    .description-xx99 {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .text-features {
+        text-align: left;
+        margin: 35px 0;
+    }
+
+    /* Box */
+
+    .box {
+        width: 50%;
+        padding-left: 85px;
+    }
+
+    .text-you {
+        display: block;
+        width: 100%;
+    }
+
+    /* Product Link */
+
+        .product-link{
+            width: 100%;
+        }
+
+        .product-0-img {
+            width: 315px;
+        }
+
+        .img {
+            background: url(../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg)no-repeat center / cover;
+        }
+        .img-2 {
+            background: url(../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg)no-repeat center / cover;
+        }
+        .img-3 {
+            background: url(../../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg)no-repeat center / cover;
+        }
+
+        .prime-store {
+            padding: 0 261px;
+        }
+}

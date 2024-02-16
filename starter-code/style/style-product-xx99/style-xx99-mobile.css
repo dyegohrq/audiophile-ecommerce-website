@@ -99,6 +99,7 @@ html {
 /* Features */
 
 .features { 
+    width: 100%;
     text-align: center;
 }
 
@@ -113,12 +114,11 @@ html {
     font-size: .9em;
     font-weight: 500;
     margin: 35px auto;
-    width: 360px;
 }
 
 /* In the box */
 .box {
-    margin: auto;
+    margin: 0 auto 25px auto;
 }
 
 .title-in-the-box{
@@ -138,6 +138,14 @@ html {
     color: #f38023;
     font-family: "Ubuntu", sans-serif;
     margin-right: 15px;
+}
+
+/*  */
+
+.text-you {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .9em;
 }
 
 /* imgs-product-xx99 */
@@ -192,4 +200,10 @@ html {
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+/*  */
+
+.best-gear {
+    margin-top: 85px;
 }
