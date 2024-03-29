@@ -72,6 +72,46 @@ h6 {
   letter-spacing: 1.3px;
 }
 
+.btn {
+  width: 160px;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
+.btn_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-on-light {
+  background-color: #d87d4a;
+}
+
+.btn-on-light {
+  color: #ffffff;
+}
+
+.btn-on-light:hover {
+  background-color: #fbaf85;
+}
+
+.btn-on-dark {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-on-dark:hover {
+  background-color: #000000;
+  color: white;
+}
+
 .orverline {
   font-weight: 400;
   font-size: 0.875em;
@@ -117,7 +157,7 @@ body {
   padding: 80px 25px 15px 25px;
   visibility: hidden;
   overflow-y: hidden;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .active {
@@ -136,7 +176,7 @@ body {
   height: 0;
   border-radius: 10px;
   visibility: hidden;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .nav .nav-menu .home {
@@ -153,7 +193,7 @@ body {
   position: absolute;
   top: 0px;
   left: 50%;
-  transform: translate(-50% , -40%);
+  transform: translate(-50%, -40%);
 }
 
 .nav .nav-menu .card-product .txt-card {
@@ -173,13 +213,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;  
+  gap: 15px;
 }
 
-.nav .nav-menu .card-product .txt-card .shop small{
+.nav .nav-menu .card-product .txt-card .shop small {
   text-transform: uppercase;
   color: #101010;
   font-weight: bolder;
+  transition: all  0.5s ease-in-out;
+}
+
+.nav .nav-menu .card-product .txt-card .shop small:hover {
+  color: #d87d4a;
 }
 
 .nav .burger,
@@ -224,9 +269,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(../assets/home/mobile/image-header.jpg) no-repeat center / cover;
+  background: url(../assets/home/mobile/image-header.jpg) no-repeat center /
+    cover;
   width: 100%;
-  height: 700px;
+  height: 750px;
 }
 
 .header .description-product {
@@ -235,13 +281,14 @@ body {
   text-align: center;
   width: 264px;
   gap: 15px;
+  margin-bottom: 25px;
 }
 
 .header .description-product h6,
-.header .description-product p{
+.header .description-product p {
   color: #fafafa;
 }
 
-.header .description-product h2{
+.header .description-product h2 {
   color: #f1f1f1;
 }
