@@ -5,21 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style/style.css">
   
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
 <body>
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <!-- NAV MENU -->
+  <nav class="nav">
+    <div class="burger">
+      <button class="hamburguer">
+        <div id="bar1" class="bar "></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </button>
+    </div>
 
-  New product
-  XX99 Mark II Headphones
-  Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
-  
-  See product
-
+    <div class="nav-menu">
+        <a href="index.html" class="home">Home</a>
+        <!-- CARD -->
+        <a href="headphones.html" class="headphones card-product">
+          <div class="img_headphone img-product">
+            <img src="assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Mark One Headphones">
+          </div>
+          <div class="txt-card">
+            <h6>Headphones</h6>
+            <div class="shop">
+              <small>Shop</small>
+              <i><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""></i>
+            </div>
+          </div>
+        </a>
+        <!-- FIM CARD -->
+        <!-- CARD -->
+        <a href="speakers.html" class="speakers card-product">
+          <div class="img_speakers img-product">
+            <img src="assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Zx9 Speaker">
+          </div>
+          <div class="txt-card">
+            <h6>Speakers</h6>
+            <div class="shop">
+              <small>Shop</small>
+              <i><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""></i>
+            </div>
+          </div>
+        </a>
+        <!-- FIM CARD -->
+        <!-- CARD -->
+        <a href="earphones.html" class="earphones card-product">
+          <div class="img_earphones img-product">
+            <img src="assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Mark One Headphones">
+          </div>
+          <div class="txt-card">
+            <h6>earphones</h6>
+            <div class="shop">
+              <small>Shop</small>
+              <i><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""></i>
+            </div>
+          </div>
+        </a>
+        <!-- FIM CARD -->
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/shared/desktop/logo.svg" alt="Logo"/>
+      </a>
+    </div>
+    <div class="card">
+      <a href="checkout.html">
+        <i>
+          <img src="assets/shared/desktop/icon-cart.svg" alt="Cart Icon"/>
+        </i>
+      </a>
+    </div>
+  </nav>
+  <!-- FIM NAV MENU -->
+  <header class="header">
+    <div class="description-product">
+      New product
+      XX99 Mark II Headphones
+      Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+    </div>
+    <div class="button">
+      <a href="">See product</a>
+    </div>
+  </header>
+<!-- 
   Headphones
   Shop
 
@@ -55,6 +126,7 @@
   and sound specialists who are devoted to helping you get the most out of personal audio. Come and 
   visit our demo facility - we’re open 7 days a week.
 
-  Copyright 2021. All Rights Reserved
+  Copyright 2021. All Rights Reserved -->
+  <script src="script/script.js"></script>
 </body>
 </html>
