@@ -230,6 +230,18 @@ body {
 }
 
 .header .description-product {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 264px;
+  gap: 15px;
+}
+
+.header .description-product h6,
+.header .description-product p{
+  color: #fafafa;
+}
+
+.header .description-product h2{
+  color: #f1f1f1;
 }
