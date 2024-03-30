@@ -150,6 +150,11 @@ h6 {
   line-height: 1.5625em;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-weight: 500;
   font-size: 0.9375em;
