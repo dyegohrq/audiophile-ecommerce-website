@@ -493,3 +493,30 @@ body {
 .best-gear .txt-best-gear p {
   color: #101010;
 }
+
+/* 
+   Estilo padrão 
+@media (min-width: 576px) and (max-width: 767.98) {
+  
+}
+
+ Celulares e alguns tablets 
+@media (min-width: 768px) and (max-width: 991.98) {
+  
+}
+
+ Tablets 
+@media (min-width: 992px) and (max-width: 1199.98) {
+  
+}
+
+ Notebook 
+@media (min-width: 1200px) and (max-width: 1399.98) {
+  
+}
+
+ Descktop 
+@media (min-width: 1400px){
+  
+}
+*/
