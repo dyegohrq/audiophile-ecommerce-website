@@ -381,9 +381,9 @@ body {
     center / cover;
   width: 420px;
   height: 100%;
-  top: 0;
-  left: 0;
-  transform: translate( -9%, -18%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
 }
 
 .zx9-speaker .img-zx9-speaker img {
