@@ -168,10 +168,9 @@ body {
   to {
     background: #101010;
   }
-
 }
 
-.nav .nav-menu{
+.nav .nav-menu {
   background-color: #ffffff;
   height: 0;
   position: fixed;
@@ -189,7 +188,7 @@ body {
   width: 100%;
   height: 0;
   visibility: hidden;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .on {
@@ -213,7 +212,7 @@ body {
   visibility: visible !important;
 }
 
-.nav .nav-menu .card-product{
+.nav .nav-menu .card-product {
   height: 0;
   visibility: hidden;
   transition: all 0.8s ease-in-out;
@@ -245,7 +244,7 @@ body {
   top: 0px;
   left: 50%;
   transform: translate(-50%, -40%);
-} 
+}
 
 .product .card-product .txt-card {
   display: flex;
@@ -271,7 +270,7 @@ body {
   text-transform: uppercase;
   color: #101010;
   font-weight: bolder;
-  transition: all  0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .product .card-product .txt-card .shop small:hover {
@@ -352,4 +351,33 @@ body {
 
 .nav-main .card-product {
   height: 160px;
+}
+
+.zx9-speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 80px 25px;
+  padding: 30px 25px;
+  background-color: #d87d4a;
+  position: relative;
+  border-radius: 10px;
+}
+
+.zx9-speaker .pattern-circles{
+  position: absolute;
+  background:  url(../assets/home/desktop/pattern-circles.svg) no-repeat center
+    center / cover;
+  width: 420px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate( -9%, -18%);
+}
+
+.zx9-speaker .img-zx9-speaker img {
+  width: 100px;
+  margin-top: 25px;
 }
