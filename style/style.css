@@ -361,9 +361,9 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   width: 264px;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 25px;
 }
 
 .header .description-product h6,
@@ -582,7 +582,7 @@ body {
 }
 
 /* Celulares e alguns tablets  */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav {
     justify-content: start;
     gap: 40px;
@@ -714,18 +714,108 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px){
+  .nav {
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    padding: 0 100px;
+    position: static;
+    background: transparent;
+  }
+  
+  .nav .burger {
+    display: none;
+  }
+
+  .nav .nav-menu {
+    background-color: transparent;
+    height: auto;
+    position: static;
+    visibility: visible;
+    overflow-y: auto;
+    padding: 0;
+    justify-content: start;
+    width: auto;
+    border-radius: 0;
+    gap: 70px;
+  }
+
+  .nav .nav-menu .home {
+    display: inline-block;
+  }
+
+  .nav .nav-menu .card-product {
+    height: auto;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+    background-color: transparent;
+    border-radius: 0;
+    width: 15%;
+  }
+
+  .nav .nav-menu .card-product .img-product img {
+    display: none;
+  }
+
+  .nav .nav-menu .card-product .txt-card {
+    margin-bottom: 0;
+  }
+
+  .nav .nav-menu .card-product .txt-card h6 {
+    color: #f1f1f1;
+    transition: all .5s ease-in-out;
+  }
+
+  .nav .nav-menu .card-product .txt-card h6:hover {
+    color: #d87d4a;
+  }
+
+  .nav .nav-menu .card-product .txt-card .shop {
+    display: none;
+  }
+
+  .nav .logo {
+    order: -1;
+  }
+
+  .nav .card {
+    position: static;
+  }
+
+  .header {
+    background: url(../assets/home/desktop/image-hero.jpg) no-repeat center left / cover;
+    align-items: start;
+    width: 100%;
+    height: 640px;
+    text-align: left;
+    padding: 0 100px;
+  }
+
+  .header .description-product {
+    width: 500px;
+    margin: 40px 0;
+    text-align: left;
+    align-items: start;
+}
+
+  .header .description-product p {
+    width: 352px;
+    margin: 0;
+  }
+
+  .nav-main {
+    padding: 80px 100px;
+  }
+
+  .zx9-speaker {
+    flex-direction: row;
+}
+}
+
+
+
 /* 
-
- Tablets 
-@media (min-width: 992px){
-  
-}
-
- Notebook 
-@media (min-width: 1200px){
-  
-}
-
  Descktop 
 @media (min-width: 1400px){
   
