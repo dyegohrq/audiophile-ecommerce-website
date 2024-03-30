@@ -367,7 +367,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 80px 25px;
+  margin: 80px 25px 25px 25px;
   padding: 30px 25px;
   background-color: #d87d4a;
   position: relative;
@@ -379,22 +379,22 @@ body {
   position: absolute;
   background:  url(../assets/home/desktop/pattern-circles.svg) no-repeat center
     center / cover;
-  width: 420px;
-  height: 100%;
+  width: 580px;
+  height: 580px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -75%);
 }
 
 .zx9-speaker .img-zx9-speaker img {
-  width: 200px;
-  margin-top: 75px;
+  width: 180px;
+  padding-top: 15px;
 }
 
 .zx9-speaker .txt-speaker {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 45px;
 }
 
 .zx9-speaker .txt-speaker h2 {
@@ -405,4 +405,8 @@ body {
 
 .zx9-speaker .txt-speaker p {
   color: #f1f1f1;
+}
+
+.zx7_speaker {
+  margin: 0 25px;
 }
