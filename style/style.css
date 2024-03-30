@@ -496,24 +496,89 @@ body {
   color: #101010;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 0 25px 35px 25px;
+  gap: 45px;
+}
+
+.footer .line-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 30%;
+  height: 2px;
+  background-color: #d87d4a;
+  margin-bottom: 35px;
+}
+
+.footer .nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer .nav-footer a {
+  color: #f1f1f1;
+  transition: all .5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer .nav-footer a:hover {
+  color: #d87d4a;
+}
+
+.footer .txt-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.footer .social-media {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer .social-media  a {
+  font-size: 1.5em;
+  color: #ffffff;
+  transition: all .5s ease-in-out;
+}
+
+.footer .social-media  a:hover {
+  color: #d87d4a;
+}
 /* 
    Estilo padrão 
-@media (min-width: 576px) and (max-width: 767.98) {
+@media (min-width: 576px){
   
 }
 
  Celulares e alguns tablets 
-@media (min-width: 768px) and (max-width: 991.98) {
+@media (min-width: 768px){
   
 }
 
  Tablets 
-@media (min-width: 992px) and (max-width: 1199.98) {
+@media (min-width: 992px){
   
 }
 
  Notebook 
-@media (min-width: 1200px) and (max-width: 1399.98) {
+@media (min-width: 1200px){
   
 }
 
