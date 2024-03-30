@@ -72,6 +72,7 @@ h6 {
   letter-spacing: 1.3px;
 }
 
+/* BUTTON  */
 .btn {
   width: 160px;
   height: 45px;
@@ -133,6 +134,8 @@ h6 {
   background-color: #000000;
   color: #ffffff;
 }
+
+/* FIM BUTTON */
 
 .orverline {
   font-weight: 400;
