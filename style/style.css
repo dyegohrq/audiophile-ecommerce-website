@@ -112,6 +112,17 @@ h6 {
   color: white;
 }
 
+.btn-on-white {
+  background-color: #000000;
+  color: white;
+}
+
+.btn-on-white:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
 .orverline {
   font-weight: 400;
   font-size: 0.875em;
