@@ -123,6 +123,17 @@ h6 {
   border: 1px solid #000000;
 }
 
+.btn-on-transparent {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-on-transparent:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .orverline {
   font-weight: 400;
   font-size: 0.875em;
@@ -408,5 +419,17 @@ body {
 }
 
 .zx7_speaker {
+  display: flex;
+  align-items: center;
   margin: 0 25px;
+  height: 350px;
+  background: url(../assets/home/mobile/image-speaker-zx7.jpg) no-repeat right center / cover;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.zx7_speaker .txt-zx7-speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
