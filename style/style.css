@@ -364,6 +364,7 @@ body {
   background-color: #d87d4a;
   position: relative;
   border-radius: 10px;
+  gap: 45px;
 }
 
 .zx9-speaker .pattern-circles{
@@ -378,6 +379,22 @@ body {
 }
 
 .zx9-speaker .img-zx9-speaker img {
-  width: 100px;
-  margin-top: 25px;
+  width: 200px;
+  margin-top: 75px;
+}
+
+.zx9-speaker .txt-speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.zx9-speaker .txt-speaker h2 {
+  width: 165px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.zx9-speaker .txt-speaker p {
+  color: #f1f1f1;
 }
