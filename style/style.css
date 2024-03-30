@@ -475,6 +475,7 @@ body {
 
 .best-gear {
   margin: 100px 25px;
+  height: 780px;
 }
 
 .best-gear,
@@ -484,8 +485,10 @@ body {
   gap: 25px;
 }
 
-.best-gear .img-best-gear img {
+.best-gear .img-best-gear {
+  background: url(../assets/shared/mobile/image-best-gear.jpg) no-repeat center / cover;
   width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -559,16 +562,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 25px;
 }
 
-.footer .social-media a {
+.footer .social-media .links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer .social-media .links a {
   font-size: 1.5em;
   color: #ffffff;
   transition: all 0.5s ease-in-out;
 }
 
-.footer .social-media a:hover {
+.footer .social-media .links a:hover {
   color: #d87d4a;
 }
 
@@ -653,11 +662,55 @@ body {
   }
 
   .yx1-earphones {
-    margin: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: 340px;
+  }
+
+  .yx1-earphones .img-yx1-earphone {
+    background: url(../assets/home/tablet/image-earphones-yx1.jpg) no-repeat center / cover;
+    width: 50%;
+    height: 100%;
+  }
+
+  .yx1-earphones .txt-yx1-earphone {
+    margin-top: 0;
+    width: 50%;
+    height: 100%;
+  }
+
+  .best-gear {
+    height: 525px;
+  }
+
+  .best-gear .img-best-gear {
+    background: url(../assets/shared/tablet/image-best-gear.jpg) no-repeat center / cover;
+  }
+
+  .footer {
+    align-items: start;
+  }
+
+  .footer .line-top {
+    justify-content: start;
+    margin: 0;
+    width: 15%;
+  }
+
+  .footer .nav-footer {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer .txt-footer {
+    text-align: left;
+  }
+
+  .footer .social-media {
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
