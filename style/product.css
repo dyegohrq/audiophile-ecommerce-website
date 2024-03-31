@@ -164,3 +164,49 @@
     width: 100%;
     height: 100%;
 }
+
+.other-products {
+    padding: 95px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    text-align: center;
+}
+
+.other-products .product-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 260px;
+}
+
+.other-products .product-you .img-xx99 {
+    background: #f1f1f1 url(../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg) no-repeat center / contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.other-products .product-you .img-xx59 {
+    background: #f1f1f1 url(../assets/product-xx59-headphones/mobile/image-product.jpg) no-repeat center / contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.other-products .product-you .img-zx9 {
+    background: #f1f1f1 url(../assets/product-zx9-speaker/mobile/image-product.jpg) no-repeat center / contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.other-products .product-you .txt-other {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
