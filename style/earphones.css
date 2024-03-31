@@ -1,0 +1,38 @@
+.category-product {
+  height: 707px;
+}
+.category-product .img.yx1-wireless {
+  background: #f1f1f1
+    url(../assets/product-yx1-earphones/mobile/image-product.jpg) no-repeat
+    center / cover;
+}
+
+.category-product .description h4 {
+  width: 100%;
+}
+
+/* Celulares e alguns tablets  */
+@media screen and (min-width: 768px) {
+  .category-product {
+    height: 660px;
+  }
+  .category-product .img.yx1-wireless {
+    background: #f1f1f1
+      url(../assets/product-yx1-earphones/tablet/image-product.jpg) no-repeat
+      center / contain;
+  }
+
+  .category-product .description h4 {
+    width: 220px;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+  .category-product {
+    height: 506px;
+  }
+  .category-product .img.yx1-wireless {
+    background: #f1f1f1 url(../assets/product-yx1-earphones/desktop/image-product.jpg) no-repeat
+      center / contain;
+  }
+}

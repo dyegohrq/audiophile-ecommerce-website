@@ -1,0 +1,41 @@
+.category-product {
+    height: 760px;
+}
+.category-product .img.zx9-speaker{
+    background: #f1f1f1 url(../assets/product-zx9-speaker/mobile/image-product.jpg) no-repeat center / cover;
+}
+.category-product .img.zx7-speaker{
+    background: #f1f1f1 url(../assets/product-zx7-speaker/mobile/image-product.jpg) no-repeat center / contain;
+}
+
+.category-product .description h4 {
+    width: 184px;
+}
+
+/* Celulares e alguns tablets  */
+@media screen and (min-width: 768px) {
+    .category-product {
+        height: 660px;
+    }
+    .category-product .img.zx9-speaker{
+        background:#f1f1f1 url(../assets/product-zx9-speaker/tablet/image-product.jpg) no-repeat center / contain;
+    }
+
+    .category-product .img.zx7-speaker{
+        background:#f1f1f1 url(../assets/product-zx7-speaker/tablet/image-product.jpg) no-repeat center / contain;
+    }
+}
+
+@media screen and (min-width: 1200px){  
+    .category-product {
+        height: 506px;
+    }
+    .category-product .img.zx9-speaker{
+        background:#f1f1f1 url(../assets/product-zx9-speaker/desktop/image-product.jpg) no-repeat center / contain;
+    }
+
+    .category-product .img.zx7-speaker{
+        background:#f1f1f1 url(../assets/product-zx7-speaker/tablet/image-product.jpg) no-repeat center / contain;
+        order: 1;
+    }
+}
