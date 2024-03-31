@@ -13,4 +13,5 @@ function openMenu() {
     button.classList.toggle('open')
     navMenu.classList.toggle('active')
     filter.classList.toggle('on')
+    nav.style.position = 'fixed'
 }
