@@ -34,17 +34,128 @@
     margin-top: 40px;
     padding: 0 25px;
     width: 100%;
-    height: 685px;
+    height: 659px;
     gap: 15px;
+    margin-bottom: 105px;
 }
 
 .category-product .img {
-    background: url(../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg) no-repeat center / contain;
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 
+.category-product .img.img-mark2{
+    background: #f1f1f1 url(../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg) no-repeat center / contain;
+}
+.category-product .img.img-mark1{
+    background: #f1f1f1 url(../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg) no-repeat center / contain;
+}
+.category-product .img.img-xx59{
+    background: #f1f1f1 url(../assets/product-xx59-headphones/mobile/image-product.jpg) no-repeat center / contain;
+}
+
 .category-product .description {
     gap: 25px;
+    margin-top: 15px;
+    width: 331px;
 }
+
+.category-product .description .orverline {
+    color: #d87d4a;
+}
+
+.category-product .description h4 {
+    width: 206px;
+    margin: auto;
+}
+
+.category-product .description p {
+    color: #101010;
+}
+
+/* Celulares e alguns tablets  */
+@media screen and (min-width: 768px) {
+    .title-category {
+        padding: 60px;
+    }
+
+    .category-product .img.img-mark2{
+        background:#f1f1f1 url(../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg) no-repeat center / contain;
+    }
+
+    .new-product, 
+    .category-product {
+        height: 660px;
+    }
+
+    .category-product .img.img-mark1{
+        background:#f1f1f1 url(../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg) no-repeat center / contain;
+    }
+    .category-product .img.img-xx59{
+        background:#f1f1f1 url(../assets/product-xx59-headphones/mobile/image-product.jpg) no-repeat center / contain;
+    }
+
+    .category-product .description {
+        width: 561px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .category-product, .description {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .category-product {
+        flex-direction: row;
+        padding: 0 100px;
+        justify-content: space-between;
+    }
+
+    .description {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+        padding-left: 100px;
+    }
+
+    .category-product .description h4 {
+        margin: 0;
+    }
+
+    .category-product .img {
+        width: 50%;
+    }
+    
+    .category-product .img.img-mark2{
+        background:#f1f1f1 url(../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg) no-repeat center / contain;
+    }
+
+    .new-product, 
+    .category-product {
+        height: 450px;
+    }
+
+    .category-product .img.img-mark1{
+        background:#f1f1f1 url(../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg) no-repeat center / contain;
+        order: 1;
+    }
+    .category-product .img.img-xx59{
+        background:#f1f1f1 url(../assets/product-xx59-headphones/desktop/image-product.jpg) no-repeat center / contain;
+    }
+}
+
+ /* Descktop  */
+ @media screen and (min-width: 1400px){
+
+    .category-product {
+        padding: 0px 150px;
+    }
+
+    .description {
+        padding-left: 0;
+    }
+ }
