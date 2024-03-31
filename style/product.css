@@ -1,0 +1,19 @@
+:root {
+    /* PRIMARY */
+    --: #d87d4a;
+    --: #101010;
+    --: #f1f1f1;
+    --: #fafafa;
+    --: #fbaf85;
+    --: #ffffff;
+    --: #000000;
+    --font: "Manrope", sans-serif;
+  }
+.go-bank {
+    display: flex;
+    padding: 15px 25px;
+}
+
+.go-bank a {
+    color: #101010;
+}
