@@ -180,6 +180,7 @@
     justify-content: center;
     gap: 45px;
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .other-products .product-you {
@@ -315,7 +316,96 @@
 }
 
 @media screen and (min-width: 1200px){
+    .go-bank {
+        padding: 65px 100px 25px 100px;
+    }
+
+    .product-detail {
+        padding: 25px 100px;
+    }
+
+    .product-detail .img-product-detail {
+        background: #f1f1f1 url(../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg) no-repeat center / contain;
+        width: 50%;
+        height: 100%;
+    }
+
+    .specification {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+        gap: 100px;
+        margin-bottom: 80px;
+    }
+
+    .features {
+        padding: 0;
+    }
+
+    .in-the-box {
+        flex-direction: column;
+    }
+
+    .img-product {
+        height: 554px;
+        padding: 0 100px;
+    }
+
+    .img-product .img-gallery1 {
+        background: url(../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg) no-repeat center / cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-product .img-gallery2 {
+        background: url(../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg) no-repeat center / cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .img-product .img-gallery3 {
+        background: url(../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg) no-repeat center / cover;
+        width: 60%;
+        height: 100%;
+    }
+
+    .other-products {
+        padding: 0 100px;
+    }
+
+    .other-products .product-you .img-xx99 {
+        background: #f1f1f1 url(../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg) no-repeat center / contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .other-products .product-you .img-xx59 {
+        background: #f1f1f1 url(../assets/product-xx59-headphones/desktop/image-product.jpg) no-repeat center / contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    .other-products .product-you .img-zx9 {
+        background: #f1f1f1 url(../assets/product-zx9-speaker/desktop/image-product.jpg) no-repeat center / contain;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media screen and (min-width: 1400px){
+    .go-bank {
+        padding: 65px 150px 25px 150px;
+    }
+
+    .product-detail {
+        padding: 25px 150px;
+    }
+
+    .specification,
+    .img-product,
+    .other-products {
+        padding: 0 150px;
+    }
+    
 }

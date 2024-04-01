@@ -146,6 +146,10 @@
     .category-product .img.img-xx59{
         background:#f1f1f1 url(../assets/product-xx59-headphones/desktop/image-product.jpg) no-repeat center / contain;
     }
+
+    .best-gear {
+        margin: 100px;
+    }
 }
 
  /* Descktop  */
@@ -157,5 +161,9 @@
 
     .description {
         padding-left: 0;
+    }
+
+    .best-gear {
+        margin: 100px 150px;
     }
  }

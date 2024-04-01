@@ -781,7 +781,7 @@ background: url(../assets/home/desktop/pattern-circles.svg) no-repeat center
     width: 15%;
   }
 
-  .nav .nav-menu .card-product .img-product img {
+  .nav .nav-menu .card-product .img-product{
     display: none;
   }
 
@@ -830,6 +830,10 @@ background: url(../assets/home/desktop/pattern-circles.svg) no-repeat center
   .header .description-product p {
     width: 352px;
     margin: 0;
+  }
+
+  .main {
+    padding: 0 100px;
   }
 
   .nav-main {
@@ -891,17 +895,18 @@ background: url(../assets/home/desktop/pattern-circles.svg) no-repeat center
     height: 525px;
     flex-direction: row;
     display: flex;
+    justify-content: space-between;
   }
 
   .best-gear .img-best-gear {
     background: url(../assets/shared/desktop/image-best-gear.jpg) no-repeat center / cover;
-    width: 61%;
+    width: 50%;
     height: 100%;
     order: 1;
   }
 
   .best-gear .txt-best-gear {
-    width: 37%;
+    width: 40%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -918,7 +923,8 @@ background: url(../assets/home/desktop/pattern-circles.svg) no-repeat center
     align-items: start;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
+    padding: 0 100px;
+}
 
   .footer .line-top {
     justify-content: start;
