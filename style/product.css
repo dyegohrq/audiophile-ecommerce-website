@@ -307,6 +307,10 @@ input[type=number] {
     font-weight: 700;
 }
 
+.cart-container .cart .cart-main .card-main-product .card-product-name .name-product {
+    color: #000000;
+    font-weight: 700;
+}
 .cart-container .cart .cart-main .card-main-product .card-product-name .price {
     color: #d0d0d0;
     font-weight: 600;

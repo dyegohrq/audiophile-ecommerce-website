@@ -32,22 +32,6 @@ function openMenu() {
 card.addEventListener("click", () => {
   cartContainer.classList.toggle("active-card");
   cardProduct.classList.toggle('add-card');
-
-
-
-  more.addEventListener('click', () => {
-
-    if (number.value < 10) {
-      number.value = parseInt(number.value) + 1;
-    }
-  })
-  
-  anyLess.addEventListener('click', () => {
-    
-    if(number.value > 1){
-      number.value = parseInt(number.value) - 1;
-    }
-  })
 });
 
 cartContainer.addEventListener("mousedown", (event) => {
@@ -59,9 +43,18 @@ cartContainer.addEventListener("mousedown", (event) => {
     }
 });
 
+more.addEventListener('click', () => {
 
-cardProduct.addEventListener('click', (e) => {
-  console.log(e.target)
+  if (number.value < 10) {
+    number.value = parseInt(number.value) + 1;
+  }
+})
+
+anyLess.addEventListener('click', () => {
+  
+  if(number.value > 1){
+    number.value = parseInt(number.value) - 1;
+  }
 })
 
 productDetail.addEventListener('click', (event) => {
@@ -80,26 +73,12 @@ productDetail.addEventListener('click', (event) => {
 
 })
 
-more.addEventListener('click', () => {
-
-  if (number.value < 10) {
-    number.value = parseInt(number.value) + 1;
-  }
-})
-
-anyLess.addEventListener('click', () => {
-  
-  if(number.value > 1){
-    number.value = parseInt(number.value) - 1;
-  }
-})
-
 
 function addToCard(name, price, number) {
   let exigistingItem = cartArray.find(item => item.name === name);
   
   if (exigistingItem) {
-    exigistingItem.qtd += 1;
+    exigistingItem.number += 1;
   } else {
     cartArray = [{
       name,
@@ -125,13 +104,13 @@ function updateCard() {
           ${item.name}
         </div>
         <div class="price">
-          ${item.price}
+          $ ${item.price}
         </div>
       </div>
       <div class="add-to-card">
         <div class="amount amout-card">
           <span class="btn-add any-less">-</span>
-          <input type="number" value='${item.number}' size="2" max="10" min="0" class="number"></input>
+          <input type="number" value='${item.number}' class="number"></input>
           <span class="btn-add more">+</span>
         </div>
       </div>
@@ -141,13 +120,3 @@ function updateCard() {
     cartMain.appendChild(cardProduct)
   })
 }
-
-/*
-  <div class="cart-main">
-      
-
-        
-  </div>
-    </div>
-    
-*/
