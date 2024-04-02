@@ -83,8 +83,23 @@
 }
 
 .product-detail .descript-product-detail .add-to-product .add-to-card .amount .number {
+    width: 20%;
+    border: none;
+    text-align: center;
+    background-color: #f1f1f1;
     color: #000000;
     font-weight: 700;
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }
 
 .product-detail .descript-product-detail .add-to-product .add-to-card .amount .btn-add {
@@ -219,6 +234,133 @@
     gap: 25px;
 }
 
+.cart-container {
+    visibility: hidden;
+    background: #10101044;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-container.active-card {
+    visibility: visible;
+}
+
+.cart-container .cart {
+    background-color: #ffffff;
+    width: 90%;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.cart-container .cart .cart_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-container .cart .cart_header .remove_all{
+    color: #d0d0d0;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.cart-container .cart .cart-main {
+    margin: 25px 0;
+}
+
+.cart-container .cart .cart-main .card-main-product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    height: 70px;
+    visibility: hidden;
+}
+
+.cart-container .cart .cart-main .card-main-product .img-card {
+    background: #f1f1f1 url(../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg) no-repeat center / contain;
+    width: 33%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.cart-container .cart .cart-main .card-main-product .card-product-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+}
+
+.cart-container .cart .cart-main .card-main-product .card-product-name span{
+    color: #000000;
+    font-weight: 700;
+}
+
+.cart-container .cart .cart-main .card-main-product .card-product-name .price {
+    color: #d0d0d0;
+    font-weight: 600;
+}
+
+.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+    height: 35px;
+    background-color: #f1f1f1;
+}
+
+.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .number {
+    color: #000000;
+    font-weight: 700;
+}
+
+.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .btn-add {
+    color: #101010;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .btn-add:hover {
+    color: #d87d4a;
+}
+
+.cart-container .cart .cart-main .add-card {
+    visibility: visible;
+}
+
+.cart-container .cart .cart-footer .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.cart-container .cart .cart-footer .total .total-name{
+    color: #d0d0d0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+.cart-container .cart .cart-footer .total .total-number{
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.cart-container .cart .cart-footer .checkout-btn {
+    width: 100%;
+}
 
 
 @media screen and (min-width: 768px) {
