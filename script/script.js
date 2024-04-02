@@ -7,6 +7,12 @@ let card = document.getElementById("card");
 let cartContainer = document.querySelector(".cart-container");
 let cart = document.querySelector(".cart");
 let productDetail = document.querySelector('.product-detail')
+let cartMain = document.querySelector('.cart-main')
+const cardProduct = document.createElement('div')
+
+let anyLess = document.querySelector('.any-less')
+let number = document.querySelector('.number')
+let more = document.querySelector('.more')
 
 let cartArray = []
 
@@ -25,6 +31,23 @@ function openMenu() {
 
 card.addEventListener("click", () => {
   cartContainer.classList.toggle("active-card");
+  cardProduct.classList.toggle('add-card');
+
+
+
+  more.addEventListener('click', () => {
+
+    if (number.value < 10) {
+      number.value = parseInt(number.value) + 1;
+    }
+  })
+  
+  anyLess.addEventListener('click', () => {
+    
+    if(number.value > 1){
+      number.value = parseInt(number.value) - 1;
+    }
+  })
 });
 
 cartContainer.addEventListener("mousedown", (event) => {
@@ -32,8 +55,14 @@ cartContainer.addEventListener("mousedown", (event) => {
 
     } else {
         cartContainer.classList.toggle("active-card");
+        cardProduct.classList.toggle('add-card');
     }
 });
+
+
+cardProduct.addEventListener('click', (e) => {
+  console.log(e.target)
+})
 
 productDetail.addEventListener('click', (event) => {
     event.preventDefault();
@@ -46,13 +75,27 @@ productDetail.addEventListener('click', (event) => {
       let name = parentButton.getAttribute('data-name');
       let price = parseFloat(parentButton.getAttribute('data-price'));
 
-      addToCard(name,  price);
+      addToCard(name,  price, parseInt(number.value));
     }
 
 })
 
+more.addEventListener('click', () => {
 
-function addToCard(name, price) {
+  if (number.value < 10) {
+    number.value = parseInt(number.value) + 1;
+  }
+})
+
+anyLess.addEventListener('click', () => {
+  
+  if(number.value > 1){
+    number.value = parseInt(number.value) - 1;
+  }
+})
+
+
+function addToCard(name, price, number) {
   let exigistingItem = cartArray.find(item => item.name === name);
   
   if (exigistingItem) {
@@ -61,7 +104,7 @@ function addToCard(name, price) {
     cartArray = [{
       name,
       price,
-      qtd: 1,
+      number,
     }]
   } 
 
@@ -69,5 +112,42 @@ function addToCard(name, price) {
 }
 
 function updateCard() {
+  cartMain.innerHTML = '';
   
+  cartArray.forEach(item => {
+    
+    cardProduct.classList.add('card-main-product')
+  
+    cardProduct.innerHTML = `
+      <div class="img-card"></div>
+      <div class="card-product-name">
+        <div class="name-product">
+          ${item.name}
+        </div>
+        <div class="price">
+          ${item.price}
+        </div>
+      </div>
+      <div class="add-to-card">
+        <div class="amount amout-card">
+          <span class="btn-add any-less">-</span>
+          <input type="number" value='${item.number}' size="2" max="10" min="0" class="number"></input>
+          <span class="btn-add more">+</span>
+        </div>
+      </div>
+    `
+
+    
+    cartMain.appendChild(cardProduct)
+  })
 }
+
+/*
+  <div class="cart-main">
+      
+
+        
+  </div>
+    </div>
+    
+*/

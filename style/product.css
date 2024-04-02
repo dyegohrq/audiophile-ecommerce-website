@@ -67,22 +67,25 @@
     font-weight: 700;
 }
 
-.product-detail .descript-product-detail .add-to-product .add-to-card {
+.add-to-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .product-detail .descript-product-detail .add-to-product .add-to-card .amount {
+    width: 140px;
+}
+
+.add-to-card .amount {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 140px;
     height: 45px;
     background-color: #f1f1f1;
 }
 
-.product-detail .descript-product-detail .add-to-product .add-to-card .amount .number {
+.add-to-card .amount .number {
     width: 20%;
     border: none;
     text-align: center;
@@ -102,13 +105,13 @@ input[type=number] {
 
 }
 
-.product-detail .descript-product-detail .add-to-product .add-to-card .amount .btn-add {
+.add-to-card .amount .btn-add {
     color: #101010;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 
-.product-detail .descript-product-detail .add-to-product .add-to-card .amount .btn-add:hover {
+.add-to-card .amount .btn-add:hover {
     color: #d87d4a;
 }
 
@@ -253,7 +256,7 @@ input[type=number] {
 
 .cart-container .cart {
     background-color: #ffffff;
-    width: 90%;
+    width: 351px;
     padding: 25px;
     border-radius: 10px;
 }
@@ -309,28 +312,8 @@ input[type=number] {
     font-weight: 600;
 }
 
-.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100px;
-    height: 35px;
-    background-color: #f1f1f1;
-}
-
-.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .number {
-    color: #000000;
-    font-weight: 700;
-}
-
-.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .btn-add {
-    color: #101010;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-}
-
-.cart-container .cart .cart-main .card-main-product .quantity-product .cart-amount  .btn-add:hover {
-    color: #d87d4a;
+.amout-card {
+    width: 110px;
 }
 
 .cart-container .cart .cart-main .add-card {
@@ -363,7 +346,7 @@ input[type=number] {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     .product-detail {
         display: flex;
         flex-direction: row;
@@ -455,6 +438,19 @@ input[type=number] {
         height: 100%;
         border-radius: 10px;
     }
+
+    .cart-container {
+        align-items: flex-end;
+        justify-content: flex-start;
+    
+    }
+
+    .cart-container .cart {
+        position: relative;
+        width: 440px;
+        top: 10%;
+        right: 4%;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -532,6 +528,10 @@ input[type=number] {
         background: #f1f1f1 url(../assets/product-zx9-speaker/desktop/image-product.jpg) no-repeat center / contain;
         width: 100%;
         height: 100%;
+    }
+
+    .cart-container .cart {
+        right: 10%;
     }
 }
 
