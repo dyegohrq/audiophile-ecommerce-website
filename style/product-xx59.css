@@ -1,0 +1,129 @@
+.product-detail .img-product-detail {
+  background: #f1f1f1
+    url(../assets/product-xx59-headphones/mobile/image-product.jpg) no-repeat
+    center / contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.img-product .img-gallery1 {
+  background: url(../assets/product-xx59-headphones/mobile/image-gallery-1.jpg)
+    no-repeat center / cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-product .img-gallery2 {
+  background: url(../assets/product-xx59-headphones/mobile/image-gallery-2.jpg)
+    no-repeat center / cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-product .img-gallery3 {
+  background: url(../assets/product-xx59-headphones/mobile/image-gallery-3.jpg)
+    no-repeat center / cover;
+  width: 100%;
+  height: 100%;
+}
+
+.other-products .product-you .img-xx99 {
+  background: #f1f1f1
+    url(../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg)
+    no-repeat center / contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.cart-container .cart .cart-main .card-main-product .img-card {
+  background: #f1f1f1
+    url(../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg)
+    no-repeat center / contain;
+  width: 33%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 767px) {
+  .product-detail .img-product-detail {
+    background: #f1f1f1
+      url(../assets/product-xx59-headphones/tablet/image-product.jpg) no-repeat
+      center / contain;
+    width: 50%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery1 {
+    background: url(../assets/product-xx59-headphones/tablet/image-gallery-1.jpg)
+      no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery2 {
+    background: url(../assets/product-xx59-headphones/tablet/image-gallery-2.jpg)
+      no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery3 {
+    background: url(../assets/product-xx59-headphones/tablet/image-gallery-3.jpg)
+      no-repeat center / cover;
+    width: 60%;
+    height: 100%;
+  }
+
+  .other-products .product-you .img-xx99 {
+    background: #f1f1f1
+      url(../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg)
+      no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-detail .img-product-detail {
+    background: #f1f1f1
+      url(../assets/product-xx59-headphones/desktop/image-product.jpg) no-repeat
+      center / contain;
+    width: 50%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery1 {
+    background: url(../assets/product-xx59-headphones/desktop/image-gallery-1.jpg)
+      no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery2 {
+    background: url(../assets/product-xx59-headphones/desktop/image-gallery-2.jpg)
+      no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-product .img-gallery3 {
+    background: url(../assets/product-xx59-headphones/desktop/image-gallery-3.jpg)
+      no-repeat center / cover;
+    width: 60%;
+    height: 100%;
+  }
+
+  .other-products .product-you .img-xx99 {
+    background: #f1f1f1
+      url(../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg)
+      no-repeat center / contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+}

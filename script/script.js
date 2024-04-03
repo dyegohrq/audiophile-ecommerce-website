@@ -98,10 +98,15 @@ function addToCard(name, price, number) {
 function updateCard() {
   cartMain.innerHTML = '';
   let total = 0;
+
+  
   
   cartArray.forEach(item => {
     
     cardProduct.classList.add('card-main-product')
+    if (item.price > 999) {
+      item.price.toFixed(3)
+    }
   
     cardProduct.innerHTML = `
       <div class="img-card"></div>
@@ -110,7 +115,7 @@ function updateCard() {
           ${item.name}
         </div>
         <div class="price">
-          $ ${item.price.toFixed(3)}
+          $ ${item.price}
         </div>
       </div>
       <div class="add-to-card">
@@ -124,10 +129,13 @@ function updateCard() {
 
     total += item.price * item.number
     
+    if (total > 999) {
+      total.toFixed(3)
+    }
     cartMain.appendChild(cardProduct)
   })
 
-  cardTotal.textContent ='$ ' + total.toFixed(3);
+  cardTotal.textContent ='$ ' + total;
   cardCountry.innerText = cartArray.length;
 }
 
