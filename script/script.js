@@ -9,6 +9,9 @@ let cart = document.querySelector(".cart");
 let productDetail = document.querySelector('.product-detail')
 let cartMain = document.querySelector('.cart-main')
 const cardProduct = document.createElement('div')
+let cardTotal = document.querySelector('.total-number')
+let cardCountry = document.querySelector('#cartQuantity')
+let removeAll = document.querySelector('.remove_all')
 
 let anyLess = document.querySelector('.any-less')
 let number = document.querySelector('.number')
@@ -69,9 +72,11 @@ productDetail.addEventListener('click', (event) => {
       let price = parseFloat(parentButton.getAttribute('data-price'));
 
       addToCard(name,  price, parseInt(number.value));
+      localStorage.setItem('oi', 1)
     }
 
 })
+
 
 
 function addToCard(name, price, number) {
@@ -92,6 +97,7 @@ function addToCard(name, price, number) {
 
 function updateCard() {
   cartMain.innerHTML = '';
+  let total = 0;
   
   cartArray.forEach(item => {
     
@@ -104,7 +110,7 @@ function updateCard() {
           ${item.name}
         </div>
         <div class="price">
-          $ ${item.price}
+          $ ${item.price.toFixed(3)}
         </div>
       </div>
       <div class="add-to-card">
@@ -116,7 +122,17 @@ function updateCard() {
       </div>
     `
 
+    total += item.price * item.number
     
     cartMain.appendChild(cardProduct)
   })
+
+  cardTotal.textContent ='$ ' + total.toFixed(3);
+  cardCountry.innerText = cartArray.length;
 }
+
+removeAll.addEventListener('click', (e) => {
+  if (cardProduct.remove()) {
+    window.location.reload(true);
+  }
+})
