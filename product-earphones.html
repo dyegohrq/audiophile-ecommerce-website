@@ -19,7 +19,7 @@
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
 
-<body>
+<body onload="carregarProduto()">
   <nav class="nav">
     <div class="burger">
       <button class="hamburguer">
@@ -113,7 +113,7 @@
       <div class="descript-product-detail">
         <h6 class="orverline">New product</h6>
         <div class="txt-descript-product">
-          <h4></h4>
+          <h4>yx1 wireless earphones</h4>
           <p>
             YX1 Wireless Earphones
             Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
@@ -313,7 +313,9 @@
           </h6>
           <span id="remove_all" class="remove_all">Remove all</span>
         </div>
-        <div class="cart-main"></div>
+        <table>
+          <tbody class="cart-main yx1"></tbody>
+        </table>
         <div class="cart-footer">
           <div class="total">
             <span class="total-name">total</span>

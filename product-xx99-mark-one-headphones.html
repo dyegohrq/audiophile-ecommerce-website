@@ -15,7 +15,7 @@
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
 
-<body>
+<body onload="carregarProduto()">
   <nav class="nav">
     <div class="burger">
       <button class="hamburguer">
@@ -116,7 +116,7 @@
           </p>
         </div>
         <div class="add-to-product">
-            <span class="price">$ 1.750</span>
+            <span class="price">$ 1.749</span>
             <div class="add-to-card">
               <div class="amount">
                 <span class="btn-add any-less">-</span>
@@ -127,7 +127,7 @@
                 <a
                   href=""
                   class="btn-on-light btn_link add-cart"
-                  data-price="1.750" data-name="XX99 MK I">Add to cart</a
+                  data-price="1.749" data-name="XX99 MK I">Add to cart</a
                 >
               </div>
             </div>
@@ -304,7 +304,9 @@
           </h6>
           <span id="remove_all" class="remove_all">Remove all</span>
         </div>
-        <div class="cart-main"></div>
+        <table>
+          <tbody class="cart-main xx99_one"></tbody>
+        </table>
         <div class="cart-footer">
           <div class="total">
             <span class="total-name">total</span>

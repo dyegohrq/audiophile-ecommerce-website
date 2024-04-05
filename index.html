@@ -12,10 +12,14 @@
     />
 
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/category.css">
+    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/product-mark-I.css">
+    <link rel="stylesheet" href="style/product-xx59.css">
 
     <title>Frontend Mentor | Audiophile e-commerce website</title>
   </head>
-  <body>
+  <body onload="carregarProduto()">
     <!-- NAV MENU -->
     <nav class="nav">
       <div class="burger">
@@ -95,8 +99,8 @@
           <img src="assets/shared/desktop/logo.svg" alt="Logo" />
         </a>
       </div>
-      <div class="card">
-        <a href="checkout.html">
+      <div class="card" id="card">
+        <a href="#">
           <i>
             <img src="assets/shared/desktop/icon-cart.svg" alt="Cart Icon" />
           </i>
@@ -246,6 +250,50 @@
         </div>
       </div>
       <!-- FIM BEST GEAR -->
+      <!-- Cart -->
+    <div class="cart-container">  <!---->
+      <div class="cart">
+        <div class="cart_header">
+          <h6>
+            Cart (<span  id="cartQuantity">0</span>)
+          </h6>
+          <span id="remove_all" class="remove_all">Remove all</span>
+        </div>
+        <table class="list-product">
+          <tbody class="cart-main"></tbody>
+        </table>
+        <div class="cart-footer">
+          <div class="total">
+            <span class="total-name">total</span>
+            <span class="total-number">$ 0</span>
+          </div>
+          <div class="btn checkout-btn">
+            <a 
+              href="checkout.html"
+              class="btn-on-light btn_link"
+              >checkout</a
+            >
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- FIM Cart -->
+    <div class="add-to-product" style="display: none;">
+      <span class="price">$ 1.750</span>
+      <div class="add-to-card">
+        <div class="amount">
+          <span class="btn-add any-less">-</span>
+          <input type="number" value="1" class="number"></input>
+          <span class="btn-add more">+</span>
+        </div>
+        <div class="btn">
+          <a
+            href=""
+            class="btn-on-light btn_link add-cart"
+            data-price="1.750" data-name="XX99 MK I">Add to cart</a
+          >
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->

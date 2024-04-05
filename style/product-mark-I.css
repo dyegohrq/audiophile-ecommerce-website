@@ -37,11 +37,11 @@
   border-radius: 10px;
 }
 
-.cart-container .cart .cart-main .card-main-product .img-card {
+.cart-container .cart table .xx99_one .img-card {
   background: #f1f1f1
     url(../assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg)
     no-repeat center / contain;
-  width: 33%;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
 }

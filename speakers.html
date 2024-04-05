@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="style/style.css" />
   <link rel="stylesheet" href="style/category.css">
   <link rel="stylesheet" href="style/speakers.css">
+  <link rel="stylesheet" href="style/product.css">
+  <link rel="stylesheet" href="style/product-mark-I.css">
+  <link rel="stylesheet" href="style/product-xx59.css">
 
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
@@ -92,8 +95,8 @@
         <img src="assets/shared/desktop/logo.svg" alt="Logo" />
       </a>
     </div>
-    <div class="card">
-      <a href="checkout.html">
+    <div class="card" id="card">
+      <a href="#">
         <i>
           <img src="assets/shared/desktop/icon-cart.svg" alt="Cart Icon" />
         </i>
@@ -221,6 +224,34 @@
       </div>
     </div>
     <!-- FIM BEST GEAR -->
+    <!-- Cart -->
+    <div class="cart-container">  <!---->
+      <div class="cart">
+        <div class="cart_header">
+          <h6>
+            Cart (<span  id="cartQuantity">0</span>)
+          </h6>
+          <span id="remove_all" class="remove_all">Remove all</span>
+        </div>
+        <table>
+          <tbody class="cart-main"></tbody>
+        </table>
+        <div class="cart-footer">
+          <div class="total">
+            <span class="total-name">total</span>
+            <span class="total-number">$ 0</span>
+          </div>
+          <div class="btn checkout-btn">
+            <a 
+              href="checkout.html"
+              class="btn-on-light btn_link"
+              >checkout</a
+            >
+          </div>
+      </div>
+      </div>
+    </div>
+    <!-- FIM Cart -->
   </main>
 
   <!-- FOOTER -->
