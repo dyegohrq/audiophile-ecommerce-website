@@ -132,6 +132,8 @@ function carregarProduto() {
 
 function updateCard(productArray) {
   cartMain.innerHTML = "";
+
+
   let total = 0;
 
   productArray.forEach((item) => {
