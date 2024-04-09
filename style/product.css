@@ -237,117 +237,6 @@ input[type=number] {
     gap: 25px;
 }
 
-.cart-container {
-    visibility: hidden;
-    background: #10101044;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-container.active-card {
-    visibility: visible;
-}
-
-.cart-container .cart {
-    background-color: #ffffff;
-    width: 351px;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-.cart-container .cart .cart_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cart-container .cart .cart_header .remove_all{
-    color: #d0d0d0;
-    border-bottom: 1px solid #f1f1f1;
-    cursor: pointer;
-}
-
-.cart-container .cart .cart-main {
-    margin: 25px 0;
-}
-
-.cart-container .card-main-product{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    height: 70px;
-    visibility: hidden;
-}
-
-.cart-container .cart table .xx99-ii tr .img-card {
-    background: #f1f1f1 url(../assets/product-xx99-mark-two-headphones/mobile/image-product.jpg) no-repeat center / contain;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.cart-container .card-product-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 33%;
-    height: 100%;
-}
-
-.cart-container .card-product-name span{
-    color: #000000;
-    font-weight: 700;
-}
-
-.cart-container .name-product {
-    color: #000000;
-    font-weight: 700;
-}
-.cart-container .price {
-    color: #d0d0d0;
-    font-weight: 600;
-}
-
-.amout-card {
-    width: 110px;
-}
-
-.cart-container .add-card {
-    visibility: visible;
-}
-
-.cart-container .cart .cart-footer .total {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 25px 0px;
-}
-
-.cart-container .cart .cart-footer .total .total-name{
-    color: #d0d0d0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1.2em;
-}
-
-.cart-container .cart .cart-footer .total .total-number{
-    color: #000000;
-    font-weight: 700;
-    font-size: 1.2em;
-}
-
-.cart-container .cart .cart-footer .checkout-btn {
-    width: 100%;
-}
 
 
 @media screen and (min-width: 767px) {
@@ -442,19 +331,6 @@ input[type=number] {
         height: 100%;
         border-radius: 10px;
     }
-
-    .cart-container {
-        align-items: flex-end;
-        justify-content: flex-start;
-    
-    }
-
-    .cart-container .cart {
-        position: relative;
-        width: 440px;
-        top: 10%;
-        right: 4%;
-    }
 }
 
 @media screen and (min-width: 1200px){
@@ -532,10 +408,6 @@ input[type=number] {
         background: #f1f1f1 url(../assets/product-zx9-speaker/desktop/image-product.jpg) no-repeat center / contain;
         width: 100%;
         height: 100%;
-    }
-
-    .cart-container .cart {
-        right: 10%;
     }
 }
 

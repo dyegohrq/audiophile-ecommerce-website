@@ -591,52 +591,6 @@ background: url(../assets/home/desktop/pattern-circles.svg) no-repeat center
   color: #d87d4a;
 }
 
-.cart-container .cart table {
-  width: 100%;
-}
-
-.cart-container .cart table .cart-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.cart-container .cart table .cart-main tr {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 80px;
-  gap: 30px;
-}
-
-.cart-container .cart table .cart-main tr td {
-  display: grid;
-  width: 33%;
-  height: 100%;
-}
-
-.cart-container .cart table .cart-main tr td .card-product-name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  font-weight: 800;
-}
-
-/* .cart-container .cart table .cart-main tr .img-card{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-} */
-
 /* Celulares e alguns tablets  */
 @media screen and (min-width: 768px) {
   .nav {
