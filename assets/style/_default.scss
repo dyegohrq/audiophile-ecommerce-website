@@ -1,0 +1,285 @@
+@import 'design_sistem';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: $light;
+    width: 100%;
+    height: 100%;
+}
+
+$break_point: 1280px;
+$paddin_mobile: 25px;
+$paddin_tablet: 40px;
+$paddin_desktop: 80px;
+
+/* Inicio Header */
+#header {
+    background-color: $dark_header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .header_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: $paddin_mobile;
+        max-width: $break_point;
+        border-bottom: 1px solid $white;
+    
+        .menu {
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+    
+            .hamburguer {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+    
+                .bar {
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 10px;
+                    background-color: $white;
+                }
+            }
+        }
+    
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    
+        .cart {
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+// Menu mobile
+.menu_mobile {
+    visibility: hidden;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    background: $white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 25px 25px 25px;
+    gap: 55px;
+    border-radius: 0px 0px 8px 8px;
+
+    .link_cart_menu {
+        background: $gray;
+        width: 100%;
+        height: 115px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        border-radius: 8px;
+
+        .img_product {
+            position: absolute;
+            top: -35px;
+            width: 100px;
+        }
+
+        span, .shop {
+            position: relative;
+        }
+    }
+}
+
+.title_span {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.07px;
+    color: $dark_full;
+    font-size: 15px;
+}
+
+.shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    small {
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $dark;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.menu_mobile.active {
+    visibility: visible;
+}
+// Fim menu
+
+.menu_descktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #header {
+
+        .header_container {
+            padding: 25px $paddin_tablet;
+            .cart {
+                width: 60%;
+                justify-content: end;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #header {
+
+        .header_container {
+            padding: 25px $paddin_desktop;
+            align-items: center;
+
+            .menu {
+                display: none;
+            }
+
+            .cart {
+                width: auto;
+                order: 2;
+            }
+
+            .menu_descktop {
+                display: flex;
+                order: 1;
+
+                ul {
+                    display: flex;
+                    gap: 35px;
+
+                    li a {
+                        color: $white;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        font-weight: bold;
+                        line-height: 25px;
+                        letter-spacing: 2px;
+                        transition: $transition;
+                    }
+
+                    li a:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Fim header */
+
+
+
+// Featured products
+#main {
+    .main_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 90px $paddin_mobile;
+        max-width: $break_point;
+        margin: auto;
+        gap: 40px;
+
+        .featured_products {
+            display: grid;
+            gap: 65px;
+            max-width: $break_point;
+            width: 100%;
+
+            .product {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+                background-color: $gray;
+                border-radius: 8px;
+                width: 100%;
+                height: 160px;
+                position: relative;
+                padding: 10px;
+                gap: 8px;
+
+                .img_product {
+                    width: 150px;
+                    position: absolute;
+                    top: -30px;
+                }
+            }
+
+            .speaker, .earphone {
+                .img_product {
+                    top: -50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        .main_container {
+            padding: 90px $paddin_tablet;
+            .featured_products {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                justify-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #main {
+        .main_container {
+            padding: 90px $paddin_desktop;
+        }
+    }
+}
+// Fim Featured products

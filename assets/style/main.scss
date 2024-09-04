@@ -1,0 +1,311 @@
+@import 'design_sistem';
+@import 'default';
+
+#main {
+    .zx9_speaker {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-top: 50px;
+
+       .zx9_container {
+        background-color: $primary;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        z-index: 99;
+
+            .circle_speaker {
+                background: url(../home/desktop/pattern-circles.svg) no-repeat center / cover;
+                width: 690px;
+                height: 690px;
+                position: absolute;
+                top: 29%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            .speaker_img img {
+                width: 200px;
+                height: 230px;
+                position: relative;
+                top: 80px;
+            }
+
+            .speaker_text {
+                width: 270px;
+                padding: 140px 0 70px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 25px;
+                color: $white;
+            }
+
+            h4 {
+                font-size: 36px;
+                line-height: 40px;
+                letter-spacing: 1.29px;
+            }
+
+        }
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        .zx9_speaker {
+            .zx9_container {
+                .circle_speaker {
+                    width: 890px;
+                    height: 890px;
+                    top: 20%;
+                }
+
+                .speaker_img img {
+                    top: 45px;
+                    width: 190px;
+                    height: 190px;
+                }
+
+                .speaker_text {
+                    padding: 100px 0 70px 0;
+                    width: 350px;
+
+                    h4 {
+                        font-size: 56px;
+                        letter-spacing: 2px;
+                        line-height: 58px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #main {
+        .zx9_speaker {
+            .zx9_container {
+                flex-direction: row;
+                justify-content: space-around;
+            
+                .circle_speaker {
+                    width: 650px;
+                    height: 650px;
+                    top: 70%;
+                    left: 22%;
+                }
+
+                .speaker_img img {
+                    top: 55px;
+                    left: 10px;
+                    width: 300px;
+                    height: 320px;
+                }
+
+                .speaker_text {
+                    padding: 60px;
+                    text-align: left;
+                    align-items: start;
+                    width: 453px;
+                }
+            }
+        }
+    }
+}
+
+#main {
+    .zx7_speaker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+
+        .zx7_container {
+            background: url(../home/mobile/image-speaker-zx7.jpg) no-repeat center / cover;
+            width: 100%;
+            height: 390px;
+
+            .zx7_text {
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                padding: 45px;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        .zx7_speaker {
+            .zx7_container {
+                background: url(../home/tablet/image-speaker-zx7.jpg) no-repeat center / cover;
+                height: 310px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #main {
+        .zx7_speaker {
+            .zx7_container {
+                background: url(../home/desktop/image-speaker-zx7.jpg) no-repeat center /cover;
+            }
+        }
+    }
+}
+
+#main {
+    .yx1_earphones {
+        width: 100%;
+        height: 100%;
+
+        .yx1_container {
+            display: grid;
+            gap: 20px;
+
+            .img_yx1 {
+                background: url(../home/mobile/image-earphones-yx1.jpg) no-repeat center / cover;
+                width: 100%;
+                height: 250px;
+                border-radius: 8px;
+            }
+
+            .text_yx1 {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 250px;
+                background-color: $gray;
+                border-radius: 8px;
+                gap: 25px;
+                padding-left: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        .yx1_earphones{
+            .yx1_container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0;
+
+                .img_yx1 {
+                    background: url(../home/tablet/image-earphones-yx1.jpg) no-repeat center / cover;
+                }
+
+                .text_yx1 {
+                    border-radius: 0px 8px 8px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #main .yx1_earphones .yx1_container {
+        .img_yx1 {
+            background: url(../home/desktop/image-earphones-yx1.jpg) no-repeat center / cover;
+            height: 280px;
+        }
+
+        .text_yx1 {
+            height: 280px;
+        }
+    }
+}
+
+#main {
+    .bringing {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+
+        .bringing_container {
+            display: grid;
+            gap: 25px;
+
+
+            .bringing_img {
+                background: url(../shared/mobile/image-best-gear.jpg) no-repeat center /cover;
+                width: 100%;
+                height: 350px;
+                border-radius: 8px;
+            }
+
+            .bringing_text {
+                display: grid;
+                gap: 15px;
+                margin: auto;
+                text-align: center;
+                width: 327px;
+
+                h4 span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main {
+        .bringing .bringing_container {
+            .bringing_img {
+                background: url(../shared/tablet/image-best-gear.jpg) no-repeat center / cover;
+                height: 300px;
+            }
+
+            .bringing_text {
+                width: 567px;
+
+                h4 {
+                    width: 380px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #main {
+        .bringing .bringing_container {
+            grid-template-columns: repeat(2 , 1fr);
+            align-items: center;
+
+            .bringing_img {
+                background: url(../shared/desktop/image-best-gear.jpg) no-repeat center / cover;
+                height: 380px;
+                order: 1;
+            }
+
+            .bringing_text {
+                text-align: left;
+                width: 444px;
+                margin: 0;
+
+                h4 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

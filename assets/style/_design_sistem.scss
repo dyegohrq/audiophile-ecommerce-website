@@ -1,0 +1,148 @@
+// Colors
+$primary: #d87d4a;
+$primary-light: #fbaf85;
+$dark: #101010;
+$dark_full: #000;
+$dark_header: #191919;
+$white: #fff;
+$gray: #f1f1f1;
+$light: #fafafa;
+
+// Typography
+$font: "Manrope", sans-serif;
+$bold: bold;
+
+h1 {
+    font-family: $font;
+    font-size: 56px;
+    font-weight: $bold;
+    line-height: 58px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: $font;
+    font-size: 40px;
+    font-weight: $bold;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-family: $font;
+    font-size: 32px;
+    font-weight: $bold;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+}
+
+h4 {
+    font-family: $font;
+    font-size: 28px;
+    font-weight: $bold;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: $bold;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+}
+
+h6 {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: $bold;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+}
+
+.overline{
+    font-family: $font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+.sub_title {
+    font-family: $font;
+    font-weight: $bold;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+
+
+body {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+// Button
+$transition: all ease-in-out .5s;
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 48px;
+    font-size: 13px;
+    font-family: $font;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.btn_light{
+    background-color: $primary;
+    color: $white;
+    transition: $transition;
+}
+
+.btn_light:hover {
+    background-color: $primary-light;
+}
+
+.btn_dark {
+    background-color: $white;
+    border: 1px solid $dark_full;
+    color: $dark_full;
+    transition: $transition;
+}
+
+.btn_dark:hover {
+    background-color: $dark_full;
+    border: none;
+    color: $white;
+}
+
+.btn_gray {
+    background-color: $dark_full;
+    color: $white;
+    transition: $transition;
+}
+
+.btn_gray:hover{
+    background-color: #4c4c4c;
+}
+
+.btn_transparent {
+    border: 1px solid $dark_full;
+    color: $dark_full;
+    transition: $transition;
+}
+
+.btn_transparent:hover {
+    background: $dark_full;
+    color: white;
+}
