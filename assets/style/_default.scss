@@ -35,17 +35,21 @@ $paddin_desktop: 80px;
     .header_container {
         display: flex;
         align-items: center;
+        background-color: $dark_header;
         justify-content: space-between;
         width: 100%;
         padding: $paddin_mobile;
         max-width: $break_point;
         border-bottom: 1px solid $white;
+        top: 0;
+        z-index: 100;
     
         .menu {
             width: 20px;
             height: 20px;
             background-color: transparent;
             border: none;
+            cursor: pointer;
     
             .hamburguer {
                 width: 100%;
@@ -81,39 +85,49 @@ $paddin_desktop: 80px;
 
 // Menu mobile
 .menu_mobile {
-    visibility: hidden;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.767);
+    width: 100%;
+    height: 0;
+    position: fixed;
     top: 82px;
     left: 0;
-    background: $white;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 45px 25px 25px 25px;
-    gap: 55px;
-    border-radius: 0px 0px 8px 8px;
+    z-index: 100;
+    overflow-y: hidden;
+    visibility: hidden;
+    transition: $transition;
 
-    .link_cart_menu {
-        background: $gray;
-        width: 100%;
-        height: 115px;
-        padding: 10px;
+    .menu_mobile_conteiner {
+        background: $white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
-        position: relative;
-        border-radius: 8px;
+        padding: 45px 25px 45px 25px;
+        gap: 55px;
+        border-radius: 0px 0px 8px 8px;
 
-        .img_product {
-            position: absolute;
-            top: -35px;
-            width: 100px;
-        }
-
-        span, .shop {
+        .link_cart_menu {
+            background: $gray;
+            width: 100%;
+            max-width: 400px;
+            height: 135px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
             position: relative;
+            border-radius: 8px;
+
+            .img_product {
+                position: absolute;
+                top: -35px;
+                width: 100px;
+            }
+
+            span, .shop {
+                position: relative;
+            }
         }
     }
 }
@@ -138,6 +152,11 @@ $paddin_desktop: 80px;
         letter-spacing: 1px;
         text-transform: uppercase;
         color: $dark;
+        transition: $transition;
+    }
+
+    small:hover {
+        color: $primary;
     }
 
     i {
@@ -149,6 +168,8 @@ $paddin_desktop: 80px;
 
 .menu_mobile.active {
     visibility: visible;
+    height: 100vh;
+    overflow-y: auto;
 }
 // Fim menu
 
