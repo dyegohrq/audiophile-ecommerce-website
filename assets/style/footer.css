@@ -129,391 +129,6 @@ body {
   color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-body {
-  background: #fafafa;
-  width: 100%;
-  height: 100%;
-}
-
-/* Inicio Header */
-#header {
-  background-color: #191919;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#header .header_container {
-  display: flex;
-  align-items: center;
-  background-color: #191919;
-  justify-content: space-between;
-  width: 100%;
-  padding: 25px;
-  max-width: 1280px;
-  border-bottom: 1px solid #fff;
-  top: 0;
-  z-index: 100;
-}
-#header .header_container .menu {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-#header .header_container .menu .hamburguer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-#header .header_container .menu .hamburguer .bar {
-  width: 100%;
-  height: 3px;
-  border-radius: 10px;
-  background-color: #fff;
-}
-#header .header_container .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-#header .header_container .cart {
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-}
-
-.menu_mobile {
-  background-color: rgba(0, 0, 0, 0.767);
-  width: 100%;
-  height: 0;
-  position: fixed;
-  top: 82px;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  overflow-y: hidden;
-  visibility: hidden;
-  transition: all ease-in-out 0.5s;
-}
-.menu_mobile .menu_mobile_conteiner {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 45px 25px 45px 25px;
-  gap: 55px;
-  border-radius: 0px 0px 8px 8px;
-}
-.menu_mobile .menu_mobile_conteiner .link_cart_menu {
-  background: #f1f1f1;
-  width: 100%;
-  max-width: 400px;
-  height: 135px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  position: relative;
-  border-radius: 8px;
-}
-.menu_mobile .menu_mobile_conteiner .link_cart_menu .img_product {
-  position: absolute;
-  top: -35px;
-  width: 100px;
-}
-.menu_mobile .menu_mobile_conteiner .link_cart_menu span, .menu_mobile .menu_mobile_conteiner .link_cart_menu .shop {
-  position: relative;
-}
-
-.title_span {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.07px;
-  color: #000;
-  font-size: 15px;
-}
-
-.shop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 13px;
-}
-.shop small {
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #101010;
-  transition: all ease-in-out 0.5s;
-}
-.shop small:hover {
-  color: #d87d4a;
-}
-.shop i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu_mobile.active {
-  visibility: visible;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.menu_descktop {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  #header .header_container {
-    padding: 25px 40px;
-  }
-  #header .header_container .cart {
-    width: 60%;
-    justify-content: end;
-  }
-}
-@media screen and (min-width: 1280px) {
-  #header .header_container {
-    padding: 25px 80px;
-    align-items: center;
-  }
-  #header .header_container .menu {
-    display: none;
-  }
-  #header .header_container .cart {
-    width: auto;
-    order: 2;
-  }
-  #header .header_container .menu_descktop {
-    display: flex;
-    order: 1;
-  }
-  #header .header_container .menu_descktop ul {
-    display: flex;
-    gap: 35px;
-  }
-  #header .header_container .menu_descktop ul li a {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 25px;
-    letter-spacing: 2px;
-    transition: all ease-in-out 0.5s;
-  }
-  #header .header_container .menu_descktop ul li a:hover {
-    color: #d87d4a;
-  }
-}
-/* Fim header */
-#main .main_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 90px 25px;
-  max-width: 1280px;
-  margin: auto;
-  gap: 40px;
-}
-#main .main_container .featured_products {
-  display: grid;
-  gap: 65px;
-  max-width: 1280px;
-  width: 100%;
-}
-#main .main_container .featured_products .product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  background-color: #f1f1f1;
-  border-radius: 8px;
-  width: 100%;
-  height: 160px;
-  position: relative;
-  padding: 10px;
-  gap: 8px;
-}
-#main .main_container .featured_products .product .img_product {
-  width: 150px;
-  position: absolute;
-  top: -30px;
-}
-#main .main_container .featured_products .speaker .img_product, #main .main_container .featured_products .earphone .img_product {
-  top: -50px;
-}
-
-@media screen and (min-width: 768px) {
-  #main .main_container {
-    padding: 90px 40px;
-  }
-  #main .main_container .featured_products {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    justify-items: center;
-  }
-}
-@media screen and (min-width: 1280px) {
-  #main .main_container {
-    padding: 90px 80px;
-  }
-}
-h1 {
-  font-family: "Manrope", sans-serif;
-  font-size: 56px;
-  font-weight: bold;
-  line-height: 58px;
-  letter-spacing: 2px;
-}
-
-h2 {
-  font-family: "Manrope", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 44px;
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  font-family: "Manrope", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 36px;
-  letter-spacing: 1.15px;
-}
-
-h4 {
-  font-family: "Manrope", sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 38px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-h5 {
-  font-family: "Manrope", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 33px;
-  letter-spacing: 1.7px;
-}
-
-h6 {
-  font-family: "Manrope", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 1.3px;
-}
-
-.overline {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-}
-
-.sub_title {
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  height: 48px;
-  font-size: 13px;
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: none;
-}
-
-.btn_light {
-  background-color: #d87d4a;
-  color: #fff;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_light:hover {
-  background-color: #fbaf85;
-}
-
-.btn_dark {
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_dark:hover {
-  background-color: #000;
-  border: none;
-  color: #fff;
-}
-
-.btn_gray {
-  background-color: #000;
-  color: #fff;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_gray:hover {
-  background-color: #4c4c4c;
-}
-
-.btn_transparent {
-  border: 1px solid #000;
-  color: #000;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_transparent:hover {
-  background: #000;
-  color: white;
-}
-
 h1 {
   font-family: "Manrope", sans-serif;
   font-size: 56px;
@@ -878,9 +493,6 @@ body {
 #main .main_container .featured_products .product .img_product {
   width: 150px;
   position: absolute;
-  top: -30px;
-}
-#main .main_container .featured_products .speaker .img_product, #main .main_container .featured_products .earphone .img_product {
   top: -50px;
 }
 
@@ -899,137 +511,6 @@ body {
     padding: 90px 80px;
   }
 }
-h1 {
-  font-family: "Manrope", sans-serif;
-  font-size: 56px;
-  font-weight: bold;
-  line-height: 58px;
-  letter-spacing: 2px;
-}
-
-h2 {
-  font-family: "Manrope", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 44px;
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  font-family: "Manrope", sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 36px;
-  letter-spacing: 1.15px;
-}
-
-h4 {
-  font-family: "Manrope", sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 38px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-h5 {
-  font-family: "Manrope", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 33px;
-  letter-spacing: 1.7px;
-}
-
-h6 {
-  font-family: "Manrope", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 1.3px;
-}
-
-.overline {
-  font-family: "Manrope", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-}
-
-.sub_title {
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-
-body {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  height: 48px;
-  font-size: 13px;
-  font-family: "Manrope", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: none;
-}
-
-.btn_light {
-  background-color: #d87d4a;
-  color: #fff;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_light:hover {
-  background-color: #fbaf85;
-}
-
-.btn_dark {
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_dark:hover {
-  background-color: #000;
-  border: none;
-  color: #fff;
-}
-
-.btn_gray {
-  background-color: #000;
-  color: #fff;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_gray:hover {
-  background-color: #4c4c4c;
-}
-
-.btn_transparent {
-  border: 1px solid #000;
-  color: #000;
-  transition: all ease-in-out 0.5s;
-}
-
-.btn_transparent:hover {
-  background: #000;
-  color: white;
-}
-
 .title_header {
   padding: 15px;
 }
@@ -1060,17 +541,26 @@ body {
 }
 #main .main_container_pages .product .img_product_page {
   width: 100%;
-  height: 350px;
+  height: 340px;
   border-radius: 8px;
 }
 #main .main_container_pages .product .xx99_II {
-  background: url(../shared/mobile/image-xx99-mark-two-headphones.jpg) no-repeat center/cover;
+  background: #f1f1f1 url(../product-xx99-mark-two-headphones/mobile/image-product.jpg) no-repeat center/contain;
 }
 #main .main_container_pages .product .xx99_I {
-  background: url(../shared/mobile/image-xx99-mark-one-headphones.jpg) no-repeat center/cover;
+  background: #f1f1f1 url(../product-xx99-mark-one-headphones/mobile/image-product.jpg) no-repeat center/contain;
 }
 #main .main_container_pages .product .xx59 {
-  background: url(../shared/mobile/image-xx59-headphones.jpg) no-repeat center/cover;
+  background: #f1f1f1 url(../product-xx59-headphones/mobile/image-product.jpg) no-repeat center/contain;
+}
+#main .main_container_pages .product .ZX9 {
+  background: #f1f1f1 url(../product-zx9-speaker/mobile/image-product.jpg) no-repeat center/contain;
+}
+#main .main_container_pages .product .ZX7 {
+  background: #f1f1f1 url(../product-zx7-speaker/mobile/image-product.jpg) no-repeat center/contain;
+}
+#main .main_container_pages .product .YX1 {
+  background: #f1f1f1 url(../product-yx1-earphones/mobile/image-product.jpg) no-repeat center/contain;
 }
 #main .main_container_pages .product .product_text {
   display: flex;
@@ -1090,6 +580,24 @@ body {
   #main .main_container_pages .product .img_product_page {
     width: 100%;
     height: 250px;
+  }
+  #main .main_container_pages .product .xx99_II {
+    background: #f1f1f1 url(../product-xx99-mark-two-headphones/tablet/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .xx99_I {
+    background: #f1f1f1 url(../product-xx99-mark-one-headphones/tablet/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .xx59 {
+    background: #f1f1f1 url(../product-xx59-headphones/tablet/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .ZX9 {
+    background: #f1f1f1 url(../product-zx9-speaker/tablet/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .ZX7 {
+    background: #f1f1f1 url(../product-zx7-speaker/tablet/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .YX1 {
+    background: #f1f1f1 url(../product-yx1-earphones/tablet/image-product.jpg) no-repeat center/contain;
   }
   #main .main_container_pages .product .product_text {
     max-width: 566px;
@@ -1115,13 +623,22 @@ body {
     height: 460px;
   }
   #main .main_container_pages .product .xx99_II {
-    background: url(../shared/desktop/image-xx99-mark-two-headphones.jpg) no-repeat center/cover;
+    background: #f1f1f1 url(../product-xx99-mark-two-headphones/desktop/image-product.jpg) no-repeat center/contain;
   }
   #main .main_container_pages .product .xx99_I {
-    background: url(../shared/desktop/image-xx99-mark-one-headphones.jpg) no-repeat center/cover;
+    background: #f1f1f1 url(../product-xx99-mark-one-headphones/desktop/image-product.jpg) no-repeat center/contain;
   }
   #main .main_container_pages .product .xx59 {
-    background: url(../shared/desktop/image-xx59-headphones.jpg) no-repeat center/cover;
+    background: #f1f1f1 url(../product-xx59-headphones/desktop/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .ZX9 {
+    background: #f1f1f1 url(../product-zx9-speaker/desktop/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .ZX7 {
+    background: #f1f1f1 url(../product-zx7-speaker/desktop/image-product.jpg) no-repeat center/contain;
+  }
+  #main .main_container_pages .product .YX1 {
+    background: #f1f1f1 url(../product-yx1-earphones/desktop/image-product.jpg) no-repeat center/contain;
   }
   #main .main_container_pages .product .product_text {
     max-width: 50%;
@@ -1132,6 +649,530 @@ body {
     order: 1;
   }
 }
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+h6 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.overline {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.sub_title {
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.btn_light {
+  background-color: #d87d4a;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_light:hover {
+  background-color: #fbaf85;
+}
+
+.btn_dark {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_dark:hover {
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+.btn_gray {
+  background-color: #000;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_gray:hover {
+  background-color: #4c4c4c;
+}
+
+.btn_transparent {
+  border: 1px solid #000;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_transparent:hover {
+  background: #000;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #fafafa;
+  width: 100%;
+  height: 100%;
+}
+
+/* Inicio Header */
+#header {
+  background-color: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#header .header_container {
+  display: flex;
+  align-items: center;
+  background-color: #191919;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px;
+  max-width: 1280px;
+  border-bottom: 1px solid #fff;
+  top: 0;
+  z-index: 100;
+}
+#header .header_container .menu {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#header .header_container .menu .hamburguer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#header .header_container .menu .hamburguer .bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+#header .header_container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#header .header_container .cart {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu_mobile {
+  background-color: rgba(0, 0, 0, 0.767);
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  overflow-y: hidden;
+  visibility: hidden;
+  transition: all ease-in-out 0.5s;
+}
+.menu_mobile .menu_mobile_conteiner {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 25px 45px 25px;
+  gap: 55px;
+  border-radius: 0px 0px 8px 8px;
+}
+.menu_mobile .menu_mobile_conteiner .link_cart_menu {
+  background: #f1f1f1;
+  width: 100%;
+  max-width: 400px;
+  height: 135px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  border-radius: 8px;
+}
+.menu_mobile .menu_mobile_conteiner .link_cart_menu .img_product {
+  position: absolute;
+  top: -35px;
+  width: 100px;
+}
+.menu_mobile .menu_mobile_conteiner .link_cart_menu span, .menu_mobile .menu_mobile_conteiner .link_cart_menu .shop {
+  position: relative;
+}
+
+.title_span {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.07px;
+  color: #000;
+  font-size: 15px;
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+}
+.shop small {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #101010;
+  transition: all ease-in-out 0.5s;
+}
+.shop small:hover {
+  color: #d87d4a;
+}
+.shop i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_mobile.active {
+  visibility: visible;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.menu_descktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  #header .header_container {
+    padding: 25px 40px;
+  }
+  #header .header_container .cart {
+    width: 60%;
+    justify-content: end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #header .header_container {
+    padding: 25px 80px;
+    align-items: center;
+  }
+  #header .header_container .menu {
+    display: none;
+  }
+  #header .header_container .cart {
+    width: auto;
+    order: 2;
+  }
+  #header .header_container .menu_descktop {
+    display: flex;
+    order: 1;
+  }
+  #header .header_container .menu_descktop ul {
+    display: flex;
+    gap: 35px;
+  }
+  #header .header_container .menu_descktop ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: 2px;
+    transition: all ease-in-out 0.5s;
+  }
+  #header .header_container .menu_descktop ul li a:hover {
+    color: #d87d4a;
+  }
+}
+/* Fim header */
+#main .main_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 90px 25px;
+  max-width: 1280px;
+  margin: auto;
+  gap: 40px;
+}
+#main .main_container .featured_products {
+  display: grid;
+  gap: 65px;
+  max-width: 1280px;
+  width: 100%;
+}
+#main .main_container .featured_products .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  height: 160px;
+  position: relative;
+  padding: 10px;
+  gap: 8px;
+}
+#main .main_container .featured_products .product .img_product {
+  width: 150px;
+  position: absolute;
+  top: -50px;
+}
+
+@media screen and (min-width: 768px) {
+  #main .main_container {
+    padding: 90px 40px;
+  }
+  #main .main_container .featured_products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #main .main_container {
+    padding: 90px 80px;
+  }
+}
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+h6 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+.overline {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.sub_title {
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 48px;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.btn_light {
+  background-color: #d87d4a;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_light:hover {
+  background-color: #fbaf85;
+}
+
+.btn_dark {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_dark:hover {
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+.btn_gray {
+  background-color: #000;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_gray:hover {
+  background-color: #4c4c4c;
+}
+
+.btn_transparent {
+  border: 1px solid #000;
+  color: #000;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn_transparent:hover {
+  background: #000;
+  color: white;
+}
+
+.main_container_product_detail {
+  padding: 0 25px;
+  max-width: 1280px;
+}
+.main_container_product_detail .go_back {
+  margin: 25px 0;
+}
+.main_container_product_detail .go_back a {
+  color: #000;
+}
+
 #footer {
   background: #101010;
   padding: 0 25px 35px 25px;

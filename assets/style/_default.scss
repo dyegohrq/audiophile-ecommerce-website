@@ -1,4 +1,5 @@
 @import 'design_sistem';
+
 * {
     margin: 0;
     padding: 0;
@@ -270,15 +271,11 @@ $paddin_desktop: 80px;
                 .img_product {
                     width: 150px;
                     position: absolute;
-                    top: -30px;
-                }
-            }
-
-            .speaker, .earphone {
-                .img_product {
                     top: -50px;
                 }
             }
+
+            
         }
     }
 }

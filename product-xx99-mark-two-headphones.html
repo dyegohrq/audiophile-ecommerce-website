@@ -24,23 +24,245 @@
 </head>
 
 <body>
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <header id="header" class="header">
+    <div class="header_container">
+      <button class="menu">
+        <div class="hamburguer">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+      </button>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="" />
+        </a>
+      </div>
 
-  Go back
+      <button class="cart">
+        <i>
+          <img src="assets/shared/desktop/icon-cart.svg" alt="" />
+        </i>
+      </button>
 
-  New product
+      <div class="menu_mobile" id="menu_mobile">
+        <div class="menu_mobile_conteiner">
+          <a href="headphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Headphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="speakers.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Speakers</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="earphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Earphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+        </div>
+      </div>
 
-  XX99 Mark II Headphones
-  The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your 
-  premium headphone experience by reproducing the balanced depth and precision of 
-  studio-quality sound.
+      <div class="menu_descktop">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li>
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li>
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  $2,999
-  1
-  Add to cart
+  <main class="main" id="main">
+    <div class="main_container_product_detail">
+
+      <div class="go_back"><a href="checkout.html">Go back</a></div>
+
+      <div class="product_detail">
+        <div class="img_product_detail"></div>
+        <div class="descript_product_detail">
+          <h4 class="overline">New product</h4>
+          <h4>XX99 Mark II Headphones</h4>
+          <p>
+            The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your
+            premium headphone experience by reproducing the balanced depth and precision of
+            studio-quality sound.
+          </p>
+          <span class="price">$2,999</span>
+          <span class="quantity">1</span>
+          <a href="" class="btn btn_light" data-price="2.999" data-name="XX99 Mark II Headphones">Add to cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_container">
+      <!-- Inicio Featured -->
+      <div class="featured_products">
+        <div class="product">
+          <div class="img_product">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+              style="top: -5px;"
+            />
+          </div>
+          <span class="title_span">Headphones</span>
+          <a href="headphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product speaker">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Speakers</span>
+          <a href="speakers.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product earphone">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Earphones</span>
+          <a href="earphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+      </div>
+      <!-- Fim Featured -->
+
+      <!-- Inicio Bringing -->
+      <div class="bringing">
+        <div class="bringing_container">
+          <div class="bringing_img"></div>
+          <div class="bringing_text">
+            <h4>Bringing you the <span>best</span> audio gear</h4>
+            <p>
+              Located at the heart of New York City, Audiophile is the premier
+              store for high end headphones, earphones, speakers, and audio
+              accessories. We have a large showroom and luxury demonstration
+              rooms available for you to browse and experience a wide range of
+              our products. Stop by our store to meet some of the fantastic
+              people who make Audiophile the best place to buy your portable
+              audio equipment
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Bringing -->
+    </div>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer_container">
+      <div class="line_top"></div>
+
+      <div class="top_content">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/shared/desktop/logo.svg" alt=""
+          /></a>
+        </div>
+        <ul class="list_menu">
+          <li class="link_menu">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="link_menu">
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li class="link_menu">
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li class="link_menu">
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        small team of music lovers and sound specialists who are devoted to
+        helping you get the most out of personal audio. Come and visit our
+        demo facility - we’re open 7 days a week.
+      </p>
+
+      <div class="bottom_content">
+        <p>Copyright 2021. All Rights Reserved</p>
+
+        <div class="social_media">
+          <ul class="list_social_media">
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- 
+
+  
 
   Features
   Featuring a genuine leather head strap and premium earcups, these headphones deliver superior 
@@ -97,7 +319,14 @@
   and sound specialists who are devoted to helping you get the most out of personal audio. Come and
   visit our demo facility - we’re open 7 days a week.
 
-  Copyright 2021. All Rights Reserved
+  Copyright 2021. All Rights Reserved -->
+  <!-- Font awesome -->
+  <script
+  src="https://kit.fontawesome.com/24690ddc1f.js"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/Script/menu_mobile.js"></script>
 </body>
 
 </html>

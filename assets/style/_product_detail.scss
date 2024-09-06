@@ -1,0 +1,12 @@
+.main_container_product_detail {
+  padding: 0 $paddin_mobile;
+  max-width: $break_point;
+
+    .go_back {
+        margin: 25px 0;
+
+        a {
+            color: $dark_full;
+        }
+    }
+}

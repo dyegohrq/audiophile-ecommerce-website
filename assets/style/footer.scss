@@ -1,9 +1,9 @@
+@import 'default-pages';
 @import 'default';
 @import 'design_sistem';
-@import 'default-pages';
+@import 'product_detail';
 
-$gap: 25px;
-
+// Inicio footer
 #footer {
     background: $dark;
     padding: 0 $paddin_mobile 35px $paddin_mobile;
@@ -150,3 +150,4 @@ $gap: 25px;
         }
     }
 }
+// Fim footer
