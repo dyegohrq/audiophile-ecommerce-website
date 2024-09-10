@@ -1165,12 +1165,167 @@ body {
 .main_container_product_detail {
   padding: 0 25px;
   max-width: 1280px;
+  margin: auto;
 }
 .main_container_product_detail .go_back {
   margin: 25px 0;
 }
 .main_container_product_detail .go_back a {
   color: #000;
+}
+.main_container_product_detail .product_detail .img_product_detail {
+  background: #f1f1f1 url(../product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg) no-repeat center/contain;
+  width: 100%;
+  height: 327px;
+  border-radius: 8px;
+}
+.main_container_product_detail .product_detail .descript_product_detail {
+  margin: 25px 0;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.main_container_product_detail .product_detail .descript_product_detail .overline {
+  color: #d87d4a;
+}
+.main_container_product_detail .product_detail .descript_product_detail .title_product {
+  width: 202px;
+}
+.main_container_product_detail .product_detail .descript_product_detail p {
+  color: #000;
+}
+.main_container_product_detail .product_detail .descript_product_detail .price {
+  font-weight: bold;
+  letter-spacing: 1.29px;
+}
+.main_container_product_detail .product_detail .descript_product_detail .add_to_cart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.main_container_product_detail .product_detail .descript_product_detail .add_to_cart .quantity {
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+.main_container_product_detail .product_detail .descript_product_detail .add_to_cart .quantity .btn_quantity {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.main_container_product_detail .product_detail .descript_product_detail .add_to_cart .quantity .btn_quantity:hover {
+  color: #d87d4a;
+}
+.main_container_product_detail .product_detail .descript_product_detail .add_to_cart .btn_light {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .main_container_product_detail {
+    padding: 0 40px;
+  }
+  .main_container_product_detail .product_detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+  }
+  .main_container_product_detail .product_detail .img_product_detail {
+    background: #f1f1f1 url(../product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg) no-repeat center/contain;
+    width: 100%;
+    height: 480px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main_container_product_detail {
+    padding: 0 80px;
+  }
+  .main_container_product_detail .product_detail {
+    gap: 55px;
+  }
+  .main_container_product_detail .product_detail .img_product_detail {
+    background: #f1f1f1 url(../product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg) no-repeat center/contain;
+    width: 100%;
+    height: 560px;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  margin: 95px 0;
+  gap: 95px;
+}
+.features .features_text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.features .in_the_box .description_box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+}
+.features .in_the_box .description_box .description_content {
+  display: flex;
+  gap: 35px;
+}
+.features .in_the_box .description_box .description_content span {
+  color: #d87d4a;
+}
+
+@media screen and (min-width: 768px) {
+  .features .in_the_box {
+    display: flex;
+    width: 100%;
+    gap: 150px;
+  }
+  .features .in_the_box .description_box {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .features {
+    flex-direction: row;
+  }
+  .features .in_the_box {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.main_container_product_detail .img_product_detail {
+  width: 100%;
+  height: 754px;
+  display: grid;
+  grid-template-rows: repeat(2, 184px) 1fr;
+  gap: 20px;
+  margin-bottom: 90px;
+}
+.main_container_product_detail .img_product_detail .gallery {
+  border-radius: 8px;
+}
+.main_container_product_detail .img_product_detail .gallery1 {
+  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+.main_container_product_detail .img_product_detail .gallery2 {
+  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+.main_container_product_detail .img_product_detail .gallery3 {
+  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.main_container_product_detail .img_product_detail {
+  height: 368px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 #header .header_main {
