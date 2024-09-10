@@ -1174,10 +1174,36 @@ body {
   color: #000;
 }
 .main_container_product_detail .product_detail .img_product_detail {
-  background: #f1f1f1 url(../product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg) no-repeat center/contain;
   width: 100%;
   height: 327px;
   border-radius: 8px;
+  background-color: #f1f1f1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.main_container_product_detail .product_detail .img_product_detail_xx99_mark_2 {
+  background-image: url(../product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg);
+}
+.main_container_product_detail .product_detail .img_product_detail_xx99_mark_1 {
+  background-image: url(../product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg);
+  margin: 0;
+}
+.main_container_product_detail .product_detail .img_product_detail_xx59 {
+  background-image: url(../product-xx59-headphones/mobile/image-category-page-preview.jpg);
+  margin: 0;
+}
+.main_container_product_detail .product_detail .img_product_detail_zx9 {
+  background-image: url(../product-zx9-speaker/mobile/image-category-page-preview.jpg);
+  margin: 0;
+}
+.main_container_product_detail .product_detail .img_product_detail_zx7 {
+  background-image: url(../product-zx7-speaker/mobile/image-category-page-preview.jpg);
+  margin: 0;
+}
+.main_container_product_detail .product_detail .img_product_detail_yx1 {
+  background-image: url(../product-yx1-earphones/mobile/image-category-page-preview.jpg);
+  margin: 0;
 }
 .main_container_product_detail .product_detail .descript_product_detail {
   margin: 25px 0;
@@ -1233,9 +1259,26 @@ body {
     gap: 55px;
   }
   .main_container_product_detail .product_detail .img_product_detail {
-    background: #f1f1f1 url(../product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg) no-repeat center/contain;
     width: 100%;
     height: 480px;
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx99_mark_2 {
+    background-image: url(../product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx99_mark_1 {
+    background-image: url(../product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx59 {
+    background-image: url(../product-xx59-headphones/tablet/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_zx9 {
+    background-image: url(../product-zx9-speaker/tablet/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_zx7 {
+    background-image: url(../product-zx7-speaker/tablet/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_yx1 {
+    background-image: url(../product-yx1-earphones/tablet/image-category-page-preview.jpg);
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1246,9 +1289,26 @@ body {
     gap: 55px;
   }
   .main_container_product_detail .product_detail .img_product_detail {
-    background: #f1f1f1 url(../product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg) no-repeat center/contain;
     width: 100%;
     height: 560px;
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx99_mark_2 {
+    background-image: url(../product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx99_mark_1 {
+    background-image: url(../product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_xx59 {
+    background-image: url(../product-xx59-headphones/desktop/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_zx9 {
+    background-image: url(../product-zx9-speaker/desktop/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_zx7 {
+    background-image: url(../product-zx7-speaker/desktop/image-category-page-preview.jpg);
+  }
+  .main_container_product_detail .product_detail .img_product_detail_yx1 {
+    background-image: url(../product-yx1-earphones/desktop/image-category-page-preview.jpg);
   }
 }
 .features {
@@ -1305,34 +1365,290 @@ body {
 }
 .main_container_product_detail .img_product_detail .gallery {
   border-radius: 8px;
-}
-.main_container_product_detail .img_product_detail .gallery1 {
-  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg) no-repeat center/cover;
   width: 100%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.main_container_product_detail .img_product_detail .gallery2 {
-  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg) no-repeat center/cover;
-  width: 100%;
-  height: 100%;
+.main_container_product_detail .xx99_mark-II .gallery1 {
+  background-image: url(../product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg);
 }
-.main_container_product_detail .img_product_detail .gallery3 {
-  background: url(../product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg) no-repeat center/cover;
-  width: 100%;
-  height: 100%;
+.main_container_product_detail .xx99_mark-II .gallery2 {
+  background-image: url(../product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .xx99_mark-II .gallery3 {
+  background-image: url(../product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg);
+}
+.main_container_product_detail .xx99_mark-I .gallery1 {
+  background-image: url(../product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg);
+}
+.main_container_product_detail .xx99_mark-I .gallery2 {
+  background-image: url(../product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .xx99_mark-I .gallery3 {
+  background-image: url(../product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg);
+}
+.main_container_product_detail .xx59 .gallery1 {
+  background-image: url(../product-xx59-headphones/mobile/image-gallery-1.jpg);
+}
+.main_container_product_detail .xx59 .gallery2 {
+  background-image: url(../product-xx59-headphones/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .xx59 .gallery3 {
+  background-image: url(../product-xx59-headphones/mobile/image-gallery-3.jpg);
+}
+.main_container_product_detail .zx9 .gallery1 {
+  background-image: url(../product-zx9-speaker/mobile/image-gallery-1.jpg);
+}
+.main_container_product_detail .zx9 .gallery2 {
+  background-image: url(../product-zx9-speaker/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .zx9 .gallery3 {
+  background-image: url(../product-zx9-speaker/mobile/image-gallery-3.jpg);
+}
+.main_container_product_detail .zx7 .gallery1 {
+  background-image: url(../product-zx7-speaker/mobile/image-gallery-1.jpg);
+}
+.main_container_product_detail .zx7 .gallery2 {
+  background-image: url(../product-zx7-speaker/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .zx7 .gallery3 {
+  background-image: url(../product-zx7-speaker/mobile/image-gallery-3.jpg);
+}
+.main_container_product_detail .yx1 .gallery1 {
+  background-image: url(../product-yx1-earphones/mobile/image-gallery-1.jpg);
+}
+.main_container_product_detail .yx1 .gallery2 {
+  background-image: url(../product-yx1-earphones/mobile/image-gallery-2.jpg);
+}
+.main_container_product_detail .yx1 .gallery3 {
+  background-image: url(../product-yx1-earphones/mobile/image-gallery-3.jpg);
 }
 
-.main_container_product_detail .img_product_detail {
-  height: 368px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+@media screen and (min-width: 768px) {
+  .main_container_product_detail .img_product_detail {
+    height: 368px;
+    grid-template-columns: 277px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .main_container_product_detail .img_product_detail .gallery3 {
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 2;
+    grid-column-end: -1;
+  }
+  .main_container_product_detail .xx99_mark-II .gallery1 {
+    background-image: url(../product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx99_mark-II .gallery2 {
+    background-image: url(../product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx99_mark-II .gallery3 {
+    background-image: url(../product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery1 {
+    background-image: url(../product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery2 {
+    background-image: url(../product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery3 {
+    background-image: url(../product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery1 {
+    background-image: url(../product-xx59-headphones/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery2 {
+    background-image: url(../product-xx59-headphones/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery3 {
+    background-image: url(../product-xx59-headphones/tablet/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery1 {
+    background-image: url(../product-zx9-speaker/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery2 {
+    background-image: url(../product-zx9-speaker/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery3 {
+    background-image: url(../product-zx9-speaker/tablet/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery1 {
+    background-image: url(../product-zx7-speaker/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery2 {
+    background-image: url(../product-zx7-speaker/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery3 {
+    background-image: url(../product-zx7-speaker/tablet/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery1 {
+    background-image: url(../product-yx1-earphones/tablet/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery2 {
+    background-image: url(../product-yx1-earphones/tablet/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery3 {
+    background-image: url(../product-yx1-earphones/tablet/image-gallery-3.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main_container_product_detail .img_product_detail {
+    height: 592px;
+    grid-template-columns: 445px 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .main_container_product_detail .xx99_mark-II .gallery1 {
+    background-image: url(../product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx99_mark-II .gallery2 {
+    background-image: url(../product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx99_mark-II .gallery3 {
+    background-image: url(../product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery1 {
+    background-image: url(../product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery2 {
+    background-image: url(../product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx99_mark-I .gallery3 {
+    background-image: url(../product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery1 {
+    background-image: url(../product-xx59-headphones/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery2 {
+    background-image: url(../product-xx59-headphones/mobile/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .xx59 .gallery3 {
+    background-image: url(../product-xx59-headphones/mobile/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery1 {
+    background-image: url(../product-zx9-speaker/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery2 {
+    background-image: url(../product-zx9-speaker/desktop/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .zx9 .gallery3 {
+    background-image: url(../product-zx9-speaker/desktop/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery1 {
+    background-image: url(../product-zx7-speaker/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery2 {
+    background-image: url(../product-zx7-speaker/desktop/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .zx7 .gallery3 {
+    background-image: url(../product-zx7-speaker/desktop/image-gallery-3.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery1 {
+    background-image: url(../product-yx1-earphones/desktop/image-gallery-1.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery2 {
+    background-image: url(../product-yx1-earphones/desktop/image-gallery-2.jpg);
+  }
+  .main_container_product_detail .yx1 .gallery3 {
+    background-image: url(../product-yx1-earphones/desktop/image-gallery-3.jpg);
+  }
+}
+.also_like {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px 0;
+  gap: 45px;
+}
+.also_like .suggested_product_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.also_like .suggested_product_container .suggested_product_contant {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.also_like .suggested_product_container .suggested_product_contant .suggested_product_img {
+  width: 100%;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+.also_like .suggested_product_container .suggested_product_contant .img_xx99_I {
+  background-image: url(../product-xx99-mark-one-headphones/mobile/image-product.jpg);
+}
+.also_like .suggested_product_container .suggested_product_contant .img_xx99_II {
+  background-image: url(../product-xx99-mark-two-headphones/mobile/image-product.jpg);
+}
+.also_like .suggested_product_container .suggested_product_contant .img_XX59 {
+  background-image: url(../product-xx59-headphones/mobile/image-product.jpg);
+}
+.also_like .suggested_product_container .suggested_product_contant .img_zx9_speaker {
+  background-image: url(../product-zx9-speaker/mobile/image-product.jpg);
+}
+.also_like .suggested_product_container .suggested_product_contant .img_zx7 {
+  background-image: url(../product-zx7-speaker/mobile/image-product.jpg);
+}
+.also_like .suggested_product_container .suggested_product_contant h5 {
+  text-transform: uppercase;
 }
 
+@media screen and (min-width: 768px) {
+  .also_like .suggested_product_container {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img {
+    height: 318px;
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_xx99_I {
+    background-image: url(../product-xx99-mark-one-headphones/tablet/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_xx99_II {
+    background-image: url(../product-xx99-mark-two-headphones/tablet/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_XX59 {
+    background-image: url(../product-xx59-headphones/tablet/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_zx9_speaker {
+    background-image: url(../product-zx9-speaker/tablet/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_zx7 {
+    background-image: url(../product-zx7-speaker/tablet/image-product.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_xx99_I {
+    background-image: url(../product-xx99-mark-one-headphones/desktop/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_xx99_II {
+    background-image: url(../product-xx99-mark-two-headphones/desktop/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_XX59 {
+    background-image: url(../product-xx59-headphones/desktop/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_zx9_speaker {
+    background-image: url(../product-zx9-speaker/desktop/image-product.jpg);
+  }
+  .also_like .suggested_product_container .suggested_product_contant .suggested_product_img .img_zx7 {
+    background-image: url(../product-zx7-speaker/desktop/image-product.jpg);
+  }
+}
 #header .header_main {
   background-color: #191919;
   width: 100%;
   max-width: 1280px;
-  height: 600px;
+  height: 760px;
 }
 #header .header_main .header_main_container {
   background: url(../home/mobile/image-header.jpg) no-repeat center/cover;

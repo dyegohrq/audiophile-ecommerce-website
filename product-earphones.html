@@ -7,22 +7,336 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
+  <!-- Link css -->
+  <link rel="stylesheet" href="assets/style/header.css" />
+  <link rel="stylesheet" href="assets/style/main.css" />
+  <link rel="stylesheet" href="assets/style/footer.css" />
+
+  <!-- Link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
 
 <body>
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <header id="header" class="header">
+    <div class="header_container">
+      <button class="menu">
+        <div class="hamburguer">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+      </button>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="" />
+        </a>
+      </div>
 
-  Go back
+      <button class="cart">
+        <i>
+          <img src="assets/shared/desktop/icon-cart.svg" alt="" />
+        </i>
+      </button>
 
-  New product
+      <div class="menu_mobile" id="menu_mobile">
+        <div class="menu_mobile_conteiner">
+          <a href="headphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Headphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="speakers.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Speakers</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="earphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Earphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+        </div>
+      </div>
 
-  YX1 Wireless Earphones
-  Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
-  Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.
+      <div class="menu_descktop">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li>
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li>
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+    <div class="main_container_product_detail">
+
+      <div class="go_back"><a href="checkout.html">Go back</a></div>
+
+      <div class="product_detail">
+        <div class="img_product_detail img_product_detail_yx1"></div>
+        <div class="descript_product_detail">
+          <h4 class="overline">New product</h4>
+          <h4 class="title_product">YX1 Wireless Earphones</h4>
+          <p>
+            Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
+            Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.
+          </p>
+          <span class="price">$ 599</span>
+          <div class="add_to_cart">
+            <span class="quantity btn" value="1"><a id="less" class="btn_quantity">-</a> 1 <a id="more" class="btn_quantity">+</a> </span>
+            <a href="" class="btn btn_light" data-price="599" data-name="YX1 Wireless Earphones">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="features_text">
+          <h3>Features</h3>
+          <p>
+            Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics 
+            designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with 
+            the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and 
+            truly immersive sound.
+          </p>
+
+          <p>
+            The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants 
+            built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, 
+            giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in 
+            an all new white and grey color scheme as well as the popular classic black.
+          </p>
+        </div>
+      
+        <div class="in_the_box">
+          <h3>In the box</h3>
+
+          <div class="description_box">
+            <div class="description_content"><span>2x</span> <p>Earphone unit</p></div>
+            <div class="description_content"><span>6x</span> <p>Multi-size earplugs</p></div>
+            <div class="description_content"><span>1x</span> <p>User manual</p></div>
+            <div class="description_content"><span>1x</span> <p>USB-C charging cable</p></div>
+            <div class="description_content"><span>1x</span> <p>Travel pouch</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="img_product_detail yx1">
+        <div class="gallery gallery1"></div>
+        <div class="gallery gallery2"></div>
+        <div class="gallery gallery3"></div>
+      </div>
+
+      <div class="also_like">
+        <h4>You may also like</h4>
+
+        <div class="suggested_product_container">
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_xx99_I"></div>
+            <h5>xx99 mark I</h5>
+            <a href="product-xx99-mark-one-headphones.html" class="btn btn_light">See product</a>
+          </div>
+
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_XX59"></div>
+            <h5>xx59</h5>
+            <a href="product-xx59-headphones.html" class="btn btn_light">See product</a>
+          </div>
+
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_zx9_speaker"></div>
+            <h5>Zx9 speaker</h5>
+            <a href="product-zx9-speaker.html" class="btn btn_light">See product</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="main_container">
+      <!-- Inicio Featured -->
+      <div class="featured_products">
+        <div class="product">
+          <div class="img_product">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+              style="top: -5px;"
+            />
+          </div>
+          <span class="title_span">Headphones</span>
+          <a href="headphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product speaker">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Speakers</span>
+          <a href="speakers.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product earphone">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Earphones</span>
+          <a href="earphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+      </div>
+      <!-- Fim Featured -->
+
+      <!-- Inicio Bringing -->
+      <div class="bringing">
+        <div class="bringing_container">
+          <div class="bringing_img"></div>
+          <div class="bringing_text">
+            <h4>Bringing you the <span>best</span> audio gear</h4>
+            <p>
+              Located at the heart of New York City, Audiophile is the premier
+              store for high end headphones, earphones, speakers, and audio
+              accessories. We have a large showroom and luxury demonstration
+              rooms available for you to browse and experience a wide range of
+              our products. Stop by our store to meet some of the fantastic
+              people who make Audiophile the best place to buy your portable
+              audio equipment
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Bringing -->
+    </div>
+  </main>
+  
+
+  <footer class="footer" id="footer">
+    <div class="footer_container">
+      <div class="line_top"></div>
+
+      <div class="top_content">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/shared/desktop/logo.svg" alt=""
+          /></a>
+        </div>
+        <ul class="list_menu">
+          <li class="link_menu">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="link_menu">
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li class="link_menu">
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li class="link_menu">
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        small team of music lovers and sound specialists who are devoted to
+        helping you get the most out of personal audio. Come and visit our
+        demo facility - we’re open 7 days a week.
+      </p>
+
+      <div class="bottom_content">
+        <p>Copyright 2021. All Rights Reserved</p>
+
+        <div class="social_media">
+          <ul class="list_social_media">
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Font awesome -->
+  <script
+  src="https://kit.fontawesome.com/24690ddc1f.js"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/Script/menu_mobile.js"></script>
+
+  <!-- Go back
+
+  
 
   $599
   1
@@ -30,23 +344,11 @@
 
   Features
 
-  Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics 
-  designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with 
-  the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and 
-  truly immersive sound.
-
-  The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants 
-  built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, 
-  giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in 
-  an all new white and grey color scheme as well as the popular classic black.
+  
 
   In the box
 
-  2x Earphone unit
-  6x Multi-size earplugs
-  1x User manual
-  1x USB-C charging cable
-  1x Travel pouch
+  
 
   You may also like
   
@@ -84,7 +386,7 @@
   and sound specialists who are devoted to helping you get the most out of personal audio. Come and
   visit our demo facility - we’re open 7 days a week.
 
-  Copyright 2021. All Rights Reserved
+  Copyright 2021. All Rights Reserved -->
 </body>
 
 </html>

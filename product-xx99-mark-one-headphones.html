@@ -7,81 +7,329 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
+  <!-- Link css -->
+  <link rel="stylesheet" href="assets/style/header.css" />
+  <link rel="stylesheet" href="assets/style/main.css" />
+  <link rel="stylesheet" href="assets/style/footer.css" />
+
+  <!-- Link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+
   <title>Frontend Mentor | Audiophile e-commerce website</title>
 </head>
 
 <body>
-  Home
-  Headphones
-  Speakers
-  Earphones
+  <header id="header" class="header">
+    <div class="header_container">
+      <button class="menu">
+        <div class="hamburguer">
+          <div class="bar" id="bar1"></div>
+          <div class="bar" id="bar2"></div>
+          <div class="bar" id="bar3"></div>
+        </div>
+      </button>
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/shared/desktop/logo.svg" alt="" />
+        </a>
+      </div>
 
-  Go back
+      <button class="cart">
+        <i>
+          <img src="assets/shared/desktop/icon-cart.svg" alt="" />
+        </i>
+      </button>
 
-  XX99 Mark I Headphones
+      <div class="menu_mobile" id="menu_mobile">
+        <div class="menu_mobile_conteiner">
+          <a href="headphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Headphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="speakers.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Speakers</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+          <a href="earphones.html" class="link_cart_menu">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+              class="img_product"
+              alt=""
+            />
+            <span class="title_span">Earphones</span>
+            <div class="shop">
+              <small>Shop</small>
+              <i
+                ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+              /></i>
+            </div>
+          </a>
+        </div>
+      </div>
 
-  As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate 
-  audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios 
-  and on the go.
+      <div class="menu_descktop">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li>
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li>
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  $1,750
-  1
-  Add to cart
+  <main class="main" id="main">
+    <div class="main_container_product_detail">
 
-  Features
-  As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades 
-  of audio expertise, redefining the critical listening experience. This pair of closed-back headphones 
-  are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.
+      <div class="go_back"><a href="checkout.html">Go back</a></div>
 
-  From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, 
-  the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers 
-  up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. 
-  For connectivity, a specially tuned cable is included with a balanced gold connector.
+      <div class="product_detail">
+        <div class="img_product_detail img_product_detail_xx99_mark_1"></div>
+        <div class="descript_product_detail">
+          <h4 class="title_product">XX99 Mark I Headphones</h4>
+          <p>
+            As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate 
+            audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios 
+            and on the go.
+          </p>
+          <span class="price">$ 1.750</span>
+          <div class="add_to_cart">
+            <span class="quantity btn" value="1"><a id="less" class="btn_quantity">-</a> 1 <a id="more" class="btn_quantity">+</a> </span>
+            <a href="" class="btn btn_light" data-price="1.750" data-name="XX99 Mark I Headphones">Add to cart</a>
+          </div>
+        </div>
+      </div>
 
-  In the box
-  
-  1x Headphone unit
-  2x Replacement earcups
-  1x User manual
-  1x 3.5mm 5m audio cable
-  
-  You may also like
-  
-  XX99 Mark II
-  See product
-  
-  XX59
-  See product
-  
-  ZX9 speaker
-  See product
+      <div class="features">
+        <div class="features_text">
+          <h3>Features</h3>
+          <p>
+            As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades 
+            of audio expertise, redefining the critical listening experience. This pair of closed-back headphones 
+            are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.
+          </p>
 
-  Headphones
-  Shop
-  
-  Speakers
-  Shop
-  
-  Earphones
-  Shop
-  
-  Bringing you the best audio gear
-  Located at the heart of New York City, Audiophile is the premier store for high end headphones,
-  earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
-  rooms available for you to browse and experience a wide range of our products. Stop by our store
-  to meet some of the fantastic people who make Audiophile the best place to buy your portable
-  audio equipment.
+          <p>
+            From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, 
+            the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers 
+            up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. 
+            For connectivity, a specially tuned cable is included with a balanced gold connector.
+          </p>
+        </div>
+      
+        <div class="in_the_box">
+          <h3>In the box</h3>
 
-  Home
-  Headphones
-  Speakers
-  Earphones
+          <div class="description_box">
+            <div class="description_content"><span>1x</span> <p>Headphone unit</p></div>
+            <div class="description_content"><span>2x</span> <p>Replacement earcups</p></div>
+            <div class="description_content"><span>1x</span> <p>User manual</p></div>
+            <div class="description_content"><span>1x</span> <p>3.5mm 5m audio cable</p></div>
+          </div>
+        </div>
+      </div>
 
-  Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
-  and sound specialists who are devoted to helping you get the most out of personal audio. Come and
-  visit our demo facility - we’re open 7 days a week.
+      <div class="img_product_detail xx99_mark-I">
+        <div class="gallery gallery1"></div>
+        <div class="gallery gallery2"></div>
+        <div class="gallery gallery3"></div>
+      </div>
 
-  Copyright 2021. All Rights Reserved
+      <div class="also_like">
+        <h4>You may also like</h4>
+
+        <div class="suggested_product_container">
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_xx99_II"></div>
+            <h5>XX99 Mark II</h5>
+            <a href="product-xx99-mark-two-headphones.html" class="btn btn_light">See product</a>
+          </div>
+
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_XX59"></div>
+            <h5>XX59</h5>
+            <a href="product-xx59-headphones.html" class="btn btn_light">See product</a>
+          </div>
+
+          <div class="suggested_product_contant">
+            <div class="suggested_product_img img_zx9_speaker"></div>
+            <h5>ZX9 speaker</h5>
+            <a href="product-zx9-speaker.html" class="btn btn_light">See product</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="main_container">
+      <!-- Inicio Featured -->
+      <div class="featured_products">
+        <div class="product">
+          <div class="img_product">
+            <img
+              src="assets/shared/desktop/image-category-thumbnail-headphones.png"
+              class="img_product"
+              alt=""
+              style="top: -5px;"
+            />
+          </div>
+          <span class="title_span">Headphones</span>
+          <a href="headphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product speaker">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-speakers.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Speakers</span>
+          <a href="speakers.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+
+        <div class="product earphone">
+          <img
+            src="assets/shared/desktop/image-category-thumbnail-earphones.png"
+            class="img_product"
+            alt=""
+          />
+          <span class="title_span">Earphones</span>
+          <a href="earphones.html" class="shop">
+            <small>shop</small>
+            <i
+              ><img src="assets/shared/desktop/icon-arrow-right.svg" alt=""
+            /></i>
+          </a>
+        </div>
+      </div>
+      <!-- Fim Featured -->
+
+      <!-- Inicio Bringing -->
+      <div class="bringing">
+        <div class="bringing_container">
+          <div class="bringing_img"></div>
+          <div class="bringing_text">
+            <h4>Bringing you the <span>best</span> audio gear</h4>
+            <p>
+              Located at the heart of New York City, Audiophile is the premier
+              store for high end headphones, earphones, speakers, and audio
+              accessories. We have a large showroom and luxury demonstration
+              rooms available for you to browse and experience a wide range of
+              our products. Stop by our store to meet some of the fantastic
+              people who make Audiophile the best place to buy your portable
+              audio equipment
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Fim Bringing -->
+    </div>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer_container">
+      <div class="line_top"></div>
+
+      <div class="top_content">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/shared/desktop/logo.svg" alt=""
+          /></a>
+        </div>
+        <ul class="list_menu">
+          <li class="link_menu">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="link_menu">
+            <a href="headphones.html">Headphones</a>
+          </li>
+          <li class="link_menu">
+            <a href="speakers.html">Speakers</a>
+          </li>
+          <li class="link_menu">
+            <a href="earphones.html">Earphones</a>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        small team of music lovers and sound specialists who are devoted to
+        helping you get the most out of personal audio. Come and visit our
+        demo facility - we’re open 7 days a week.
+      </p>
+
+      <div class="bottom_content">
+        <p>Copyright 2021. All Rights Reserved</p>
+
+        <div class="social_media">
+          <ul class="list_social_media">
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li class="link_social_media">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Font awesome -->
+  <script
+  src="https://kit.fontawesome.com/24690ddc1f.js"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/Script/menu_mobile.js"></script>
 </body>
 
 </html>
