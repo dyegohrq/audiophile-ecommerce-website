@@ -235,6 +235,15 @@ $paddin_desktop: 80px;
 }
 /* Fim header */
 
+.cart_menu {
+    visibility: hidden;
+    position: absolute;
+}
+
+.cart_menu .active {
+    visibility: visible;
+}
+
 
 
 // Featured products

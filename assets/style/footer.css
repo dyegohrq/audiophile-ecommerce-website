@@ -461,6 +461,15 @@ body {
   }
 }
 /* Fim header */
+.cart_menu {
+  visibility: hidden;
+  position: absolute;
+}
+
+.cart_menu .active {
+  visibility: visible;
+}
+
 #main .main_container {
   display: flex;
   align-items: center;
@@ -981,6 +990,15 @@ body {
   }
 }
 /* Fim header */
+.cart_menu {
+  visibility: hidden;
+  position: absolute;
+}
+
+.cart_menu .active {
+  visibility: visible;
+}
+
 #main .main_container {
   display: flex;
   align-items: center;
