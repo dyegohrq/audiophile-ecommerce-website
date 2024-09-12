@@ -44,7 +44,7 @@
           </a>
         </div>
 
-        <button class="cart">
+        <button class="cart" id="cart">
           <i>
             <img src="assets/shared/desktop/icon-cart.svg" alt="" />
           </i>
@@ -135,31 +135,6 @@
     </header>
     <!-- Fim Header -->
 
-    <div class="cart_menu">
-      <div class="header_cart">
-        <h6>Cart ( <span class="quantity_cart">1</span> )</h6>
-        <a href="">Remove All</a>
-      </div>
-      <ul class="list_cart">
-        <li class="item_cart">
-          <div class="img_cart"></div>
-          <div class="description_cart">
-            <span class="name_item">Xx99 mk II</span>
-            <small class="price_item">$ 2.999</small>
-          </div>
-        </li>
-      </ul>
-      <div class="quantity_item">
-        <a class="less_item">-</a>
-        <span class="quality_product" >1</span>
-        <a class="more_item">+</a>
-      </div>
-      <div class="footer_cart">
-        <span>Total</span>
-        <span>$ 0</span>
-      </div>
-      <a href="checkout.html" class="btn btn_light">Checkout</a>
-    </div>
 
     <main id="main" class="main">
       <div class="main_container">
@@ -339,6 +314,8 @@
       </div>
     </footer>
 
+    <div class="cart_menu"></div>
+
     <!-- Font awesome -->
     <script
       src="https://kit.fontawesome.com/24690ddc1f.js"
@@ -346,5 +323,6 @@
     ></script>
 
     <script src="assets/Script/menu_mobile.js"></script>
+    <script src="assets/Script/cart.js"></script>
   </body>
 </html>
