@@ -1,5 +1,5 @@
 import { FiShoppingCart } from 'react-icons/fi'
-import logoImg from '../../../public/assets/shared/desktop/logo.svg'
+import logoImg from '/assets/shared/desktop/logo.svg'
 import './index.css'
 import { Link } from 'react-router'
 import style from '../root.module.css'
