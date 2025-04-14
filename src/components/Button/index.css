@@ -1,0 +1,35 @@
+@import '../root.module.css';
+
+button {
+    width: 160px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: var(--font-manrope);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.orange {
+    background-color: var(--orange-900);
+    color: #fff;
+}
+
+.orange:hover {
+    background-color: var(--orange-300);
+}
+
+.white {
+    background-color: var(--white);
+    border: 1px solid var(--black-900);
+}
+
+.white:hover {
+    background-color: var(--black-900);
+    color: var(--white);
+    border: none;
+}

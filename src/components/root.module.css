@@ -1,0 +1,76 @@
+:root {
+    /* Colors */
+    --orange-900: #d87d4a;
+    --orange-300: #fbaf85;
+    --black-900: #000;
+    --black-600: #141414;
+    --black-300: #101010;
+    --gray-900: #f1f1f1;
+    --gray-300: #fafafa;
+    --white: #fff;
+
+    --font-manrope: "Manrope", sans-serif;
+}
+
+.text-present-1, 
+.text-present-2, 
+.text-present-3, 
+.text-present-4, 
+.text-present-5, 
+.text-present-6, 
+.subtitle {
+    font-family: var(--font-manrope);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-present-1 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+}
+
+.text-present-2 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+}
+
+.text-present-3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+}
+
+.text-present-4 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+}
+
+.text-present-5 {
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+}
+
+.text-present-6 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+}
+
+.overline {
+    font-family: var(--font-manrope);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}

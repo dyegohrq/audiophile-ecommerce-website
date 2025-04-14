@@ -1,0 +1,22 @@
+@import '../root.module.css';
+
+.buttonShop {
+    color: var(--black-900);
+    font-family: var(--font-manrope);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out ;
+}
+
+.buttonShop:hover {
+    color: var(--orange-900);
+}

@@ -1,0 +1,7 @@
+@import '../root.module.css';
+
+header {
+    background-color: var(--black-600);
+    
+   
+}
