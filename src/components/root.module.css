@@ -8,6 +8,8 @@
     --gray-900: #f1f1f1;
     --gray-300: #fafafa;
     --white: #fff;
+    --white-300: rgb(201, 201, 201);
+    --white-600: #f1f1f1;
 
     --font-manrope: "Manrope", sans-serif;
 }
@@ -17,7 +19,8 @@
 .text-present-3, 
 .text-present-4, 
 .text-present-5, 
-.text-present-6, 
+.text-present-6,
+.text-present-7, 
 .subtitle {
     font-family: var(--font-manrope);
     font-weight: bold;
@@ -58,6 +61,11 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.3px;
+}
+
+.text-present-7 {
+    font-size: 15px;
+    letter-spacing: 1.07px;
 }
 
 .overline {

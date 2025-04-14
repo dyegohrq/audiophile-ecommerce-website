@@ -1,7 +1,5 @@
-@import '../root.module.css';
-
 .buttonShop {
-    color: var(--black-900);
+    color: var(--white-300);
     font-family: var(--font-manrope);
     font-weight: bold;
     font-size: 13px;

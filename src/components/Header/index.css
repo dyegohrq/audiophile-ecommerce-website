@@ -1,7 +1,9 @@
 @import '../root.module.css';
 
 header {
-    background-color: var(--black-600);
+    background-color: transparent;
+    position: absolute;
+    top: 0;
 
     nav {
        border-bottom: 1px solid var(--white);
@@ -22,12 +24,73 @@ header {
                         width: 100%;
                         height: 3px;
                         background-color: var(--white);
+                        transition: all ease-in-out .3s;
+                    }
+                }
+
+                &.on {
+                    .hambuguer {
+                        position: relative;
+
+                        #bar1{
+                            transform: rotate(45deg);
+                            position: absolute;
+                            top: 45%;
+                        }
+
+                        #bar2{
+                            background-color: transparent;
+                        }
+
+                        #bar3{
+                            transform: rotate(-45deg);
+                            position: absolute;
+                            top: 45%;
+                        }
                     }
                 }
             }
         }
+
+        .bg_menu {
+            height: 0;
+            top: 90px;
+            background-color: rgba(0, 0, 0, 0.288);
+            opacity: 0;
+            overflow: hidden;
+            transition: all ease-in-out .5s;
+
+            .menu_mobile {
+                height: 85%;
+                border-radius: 0 0 8px 8px;
+    
+                .nav_list {
+                    background-color: var(--white-600);
+                    padding-bottom: 22px;
+    
+                    img {
+                        width: 114px;
+                        height: 104px;
+                        top: -38px;
+                    }
+                }
+
+                @media screen and (min-width: 640px) {
+                    height: 45%;
+                    padding: 0 10px;
+                }
+            }
+
+            &.active_button {
+                height: calc(100vh - 90px);
+                opacity: 1;
+                overflow: auto;
+            }
+        }
     }
 }
+
+
 
 
 @media screen and (min-width: 1025px) {

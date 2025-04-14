@@ -1,0 +1,30 @@
+main {
+    .header_main {
+        height: 800px;
+        background: url(/assets/home/mobile/image-header.jpg) no-repeat center / cover;
+
+        .description {
+            max-width: 1110px;
+            margin: auto;
+            h3, p {
+                color: var(--white-300);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    main {
+        .header_main {
+            background: url(/assets/home/tablet/image-header.jpg) no-repeat center / cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    main {
+        .header_main {
+            background: url(/assets/home/desktop/image-hero.jpg) no-repeat center / cover;
+        }
+    }
+}
