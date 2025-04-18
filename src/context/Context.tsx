@@ -25,7 +25,7 @@ interface ProductProvideProps {
 export const productContext = createContext({} as ProductContextData)
 
 function ProductProvider( {children}:ProductProvideProps ) {
-    const [product, setProduct] = useState([])
+    const [product] = useState([])
 
 
     return(

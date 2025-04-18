@@ -1,4 +1,3 @@
-import { About } from "../../components/about";
 import { Button } from "../../components/Button";
 import { FeaturedProduct } from "../../components/FeaturedProduct";
 import style from '../../components/root.module.css'

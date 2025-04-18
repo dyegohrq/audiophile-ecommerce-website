@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import { api } from "../../services/api"
-import ImageProductMobile from '/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg'
-import ImageProductTablet from '/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg'
-import ImageProductDescktop from '../../../public/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg'
 import { Button } from "../../components/Button";
 import style from '../../components/root.module.css'
 import './index.css'
@@ -25,7 +22,7 @@ interface CategoryProps {
 export function Category() {
     const {name} = useParams()
     const [category, setCategory] = useState<CategoryProps[]>([])
-    const [value, setValue] = useState(0)
+    // const [value, setValue] = useState(0)
 
     useEffect(() => {
         async function getCategory() {
