@@ -7,6 +7,7 @@ header {
 
     nav {
        border-bottom: 1px solid var(--white);
+       padding: 0 var(--mobile-spacing);
 
         .left_content {
             .burger {
@@ -55,10 +56,12 @@ header {
         .bg_menu {
             height: 0;
             top: 90px;
+            left: 0;
             background-color: rgba(0, 0, 0, 0.288);
             opacity: 0;
             overflow: hidden;
             transition: all ease-in-out .5s;
+            z-index: 999;
 
             .menu_mobile {
                 height: 85%;
@@ -91,11 +94,19 @@ header {
 }
 
 
-
+@media screen and (min-width: 770px) {
+    header {
+        nav {
+            padding: 0 var(--tablet-spacing);
+        }
+    }
+}
 
 @media screen and (min-width: 1025px) {
     header {
         nav {
+            margin: 0 var(--descktop-spacing);
+
             .menu_descktop {
                 .list_item {
                     a {

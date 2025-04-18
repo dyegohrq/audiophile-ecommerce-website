@@ -1,10 +1,25 @@
 .card_product {
+    margin: 90px var(--mobile-spacing);
+
     .card {
         background-color: var(--white-600);
 
         img {
             width: 114px;
             height: 104px;
+            top: -38px;
         }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .card_product {
+        margin: 90px var(--tablet-spacing) ;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card_product {
+        margin: 90px var(--descktop-spacing);
     }
 }

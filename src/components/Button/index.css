@@ -33,3 +33,21 @@ button {
     color: var(--white);
     border: none;
 }
+
+.black {
+    background-color: var(--black-900);
+    color: var(--white);
+}
+
+.black:hover {
+    background-color: #4c4c4c;
+}
+
+.transparent {
+    border: 1px solid var(--black-900);
+}
+
+.transparent:hover {
+    background-color: var(--black-900);
+    color: var(--white);
+}

@@ -10,6 +10,9 @@
     --white: #fff;
     --white-300: rgb(201, 201, 201);
     --white-600: #f1f1f1;
+    --mobile-spacing: 24px;
+    --tablet-spacing: 40px;
+    --descktop-spacing: 10%;
 
     --font-manrope: "Manrope", sans-serif;
 }
@@ -20,7 +23,6 @@
 .text-present-4, 
 .text-present-5, 
 .text-present-6,
-.text-present-7, 
 .subtitle {
     font-family: var(--font-manrope);
     font-weight: bold;
@@ -64,7 +66,10 @@
 }
 
 .text-present-7 {
+    font-family: var(--font-manrope);
+    font-weight: bold;
     font-size: 15px;
+    line-height: 25px;
     letter-spacing: 1.07px;
 }
 
@@ -81,4 +86,16 @@
     font-size: 13px;
     line-height: 25px;
     letter-spacing: 2px;
+}
+
+@media screen and (min-width: 770px) {
+    .text-present-3 {
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
 }

@@ -1,0 +1,38 @@
+.about {
+    margin: 120px var(--mobile-spacing);
+
+    .img_about {
+        background: url(/assets/shared/mobile/image-best-gear.jpg) no-repeat center / cover;
+        border-radius: 8px;
+    }
+
+    .text_about {
+        h1 span {
+            color: var(--orange-900);
+        }
+
+        p {
+            color: var(--white-300);
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .about {
+        margin: 120px var(--tablet-spacing);
+
+        .img_about {
+            background: url(/assets/shared/tablet/image-best-gear.jpg) no-repeat center / cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about {
+        margin: 120px var(--descktop-spacing);
+
+        .img_about {
+            background: url(/assets/shared/desktop/image-best-gear.jpg) no-repeat center / cover;
+        }
+    }
+}
