@@ -19,13 +19,13 @@ export function Footer() {
                         <Link to={'/'}>Home</Link>
                     </li>
                     <li className={`${style.subtitle} text-white `} >
-                        <Link to={'/'}>Headphones</Link>
+                        <Link to={'/category/headphones'}>Headphones</Link>
                     </li>
                     <li className={`${style.subtitle} text-white `} >
-                        <Link to={'/'}>Speakers</Link>
+                        <Link to={'/category/speakers'}>Speakers</Link>
                     </li>
                     <li className={`${style.subtitle} text-white `} >
-                        <Link to={'/'}>Earphones</Link>
+                        <Link to={'/category/earphones'}>Earphones</Link>
                     </li>
                 </ul>
             </div>

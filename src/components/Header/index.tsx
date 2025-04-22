@@ -25,6 +25,7 @@ export function Header() {
         } 
 
         body.style.overflow = 'auto'
+        window.scrollTo({ top: 0, behavior: "smooth" }); 
     }, [location])
 
 
@@ -82,13 +83,13 @@ export function Header() {
                         <Link to={'/'}>Home</Link>
                     </li>
                     <li className="list_item">
-                        <Link to={'/'}>Headphones</Link>
+                        <Link to={'/category/headphones'}>Headphones</Link>
                     </li>
                     <li className="list_item">
-                        <Link to={'/'}>Speakers</Link>
+                        <Link to={'/category/speakers'}>Speakers</Link>
                     </li>
                     <li className="list_item">
-                        <Link to={'/'}>Earphones</Link>
+                        <Link to={'/category/earphones'}>Earphones</Link>
                     </li>
                 </ul>
             </nav>
