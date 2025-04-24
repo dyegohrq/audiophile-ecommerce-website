@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router"
+import { Link, useParams } from "react-router"
 import { productProps } from "../../context/Context"
 import { api } from "../../services/api"
 import { ButtonQuantity } from "../../components/buttonQuantity"
