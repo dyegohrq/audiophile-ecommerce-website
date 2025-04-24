@@ -2,19 +2,23 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ProductContextData {
     product: productProps[];
+    addProduct: (newItem: productProps) => void;
+    removeProduct: (newItem: productProps) => void
 }
 
-interface productProps {
+export interface productProps {
     id: number;
     name: string;
     category: string;
     categoryImage: {
         mobile:string;
         tablet: string;
-        descktop: string;
+        desktop: string;
     };
     new: boolean;
     description: string;
+    price: number;
+    amount: number
 }
 
 interface ProductProvideProps {
@@ -28,11 +32,22 @@ function ProductProvider( {children}:ProductProvideProps ) {
     const [product] = useState([])
 
 
+    function addProduct(newItem: productProps) {
+        console.log(newItem)
+    }
+
+    function removeProduct(newItem: productProps) {
+        console.log(newItem)
+    }
+
+
     return(
         <productContext.Provider
             value={
                 {
-                    product
+                    product,
+                    addProduct,
+                    removeProduct
                 }
             }
         >

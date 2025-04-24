@@ -94,6 +94,12 @@
         line-height: 58px;
         letter-spacing: 2px;
     }
+
+    .text-present-4{
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: 1.43px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
