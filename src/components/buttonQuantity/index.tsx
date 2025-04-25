@@ -9,7 +9,7 @@ interface buttonProps {
 }
 
 export function ButtonQuantity( props: buttonProps ) {
-    const { addProduct, removeProduct } = useContext(productContext)
+    const { addProduct } = useContext(productContext)
     const [quantity, setQuantity] = useState(0)
 
     function more() {
