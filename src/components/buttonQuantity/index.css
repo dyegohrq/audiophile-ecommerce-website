@@ -1,0 +1,25 @@
+section {
+    .button_quantity {
+        background-color: var(--white-600);
+
+        button {
+            color: #adacac;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1;
+
+            &:hover {
+                color: var(--orange-900);
+            }
+        }
+    }
+
+    .button_add {
+        background-color: var(--orange-900);
+        transition: all ease-in-out .5s;
+
+        &:hover {
+            background-color: var(--orange-300);
+        }
+    }
+}

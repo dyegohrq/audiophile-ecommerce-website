@@ -5,6 +5,7 @@ import { productProps } from "../../context/Context";
 import { Button } from "../../components/Button";
 import style from '../../components/root.module.css'
 import './index.css'
+import { FeaturedProduct } from "../../components/FeaturedProduct";
 
 
 export default function Category() {
@@ -40,8 +41,8 @@ export default function Category() {
             <h1 className={ `${style['text-present-4']} bg-black pt-[140px] pb-[50px] text-white text-center ` } > {name} </h1>
             {
                 products.map((product, index) => (
-                    <section key={product.id} className={ 'py-[60px] flex flex-col items-center gap-[32px] lg:flex-row ' } >
-                        <div className=" rounded-[8px] overflow-hidden " >
+                    <section key={product.id} className={ 'py-[60px] w-full lg:flex flex-col items-center gap-[32px] lg:flex-row ' } >
+                        <div className=" rounded-[8px] overflow-hidden lg:max-w-[540px] " >
                             <img 
                                 src={product.categoryImage.mobile.replace('./assets', '/assets/')} 
                                 alt={product.name}
@@ -59,7 +60,7 @@ export default function Category() {
                             />
                         </div>
                         <div 
-                            className='text_product flex flex-col gap-[24px] items-center text-center max-w-[327px] md:max-w-[527px] lg:text-left lg:items-start ' 
+                            className='text_product flex flex-col gap-[24px] items-center text-center mx-auto mt-[52px] max-w-[327px] md:max-w-[527px] lg:text-left lg:items-start ' 
                             style={ { order: index % 2 !== 0 ? -1 : '' } }    
                         >
                             {
@@ -71,11 +72,12 @@ export default function Category() {
                             <p className={`${style['text-present-7']}`} >
                                 {product.description}
                             </p>
-                            <Button classButton="orange" />
+                            <Button classButton="orange" url={`/product/${product.category}/${product.id}`} />
                         </div>
                     </section>
                 ))
             }
+            <FeaturedProduct/>
         </main>
     )
 }

@@ -2,8 +2,8 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ProductContextData {
     product: productProps[];
-    addProduct: (newItem: productProps) => void;
-    removeProduct: (newItem: productProps) => void
+    addProduct: (newItem: productProps, amount: number) => void;
+    // removeProduct: (newItem: productProps) => void;
 }
 
 export interface productProps {
@@ -18,7 +18,10 @@ export interface productProps {
     new: boolean;
     description: string;
     price: number;
-    amount: number
+    amount: number;
+    total: number;
+    features: string;
+    includes: [];
 }
 
 interface ProductProvideProps {
@@ -29,17 +32,38 @@ interface ProductProvideProps {
 export const productContext = createContext({} as ProductContextData)
 
 function ProductProvider( {children}:ProductProvideProps ) {
-    const [product] = useState([])
+    const [product, setProduct] = useState<productProps[]>([])
 
 
-    function addProduct(newItem: productProps) {
-        console.log(newItem)
+    function addProduct(newItem: productProps, amount: number) {
+        const indexItem = product.findIndex( (item) => item.id === newItem.id )
+
+        if (indexItem !== -1) {
+            let productItem = [...product]
+
+            productItem[indexItem].amount = amount
+            setProduct(productItem)
+            return;
+        }
+
+        let data = {
+            ...newItem,
+            amount: amount,
+            total: newItem.price
+        }
+
+        setProduct(product => [...product, data])
     }
 
-    function removeProduct(newItem: productProps) {
-        console.log(newItem)
-    }
+    // function QuantityAdd() {
+        
+    // }
 
+    // function removeProduct(productItem: productProps) {
+    //     const indexItem = product.findIndex((item) => item.id === productItem.id )
+    // }
+
+    console.log(product)
 
     return(
         <productContext.Provider
@@ -47,7 +71,7 @@ function ProductProvider( {children}:ProductProvideProps ) {
                 {
                     product,
                     addProduct,
-                    removeProduct
+                    // removeProduct
                 }
             }
         >
@@ -56,4 +80,4 @@ function ProductProvider( {children}:ProductProvideProps ) {
     )
 }
 
-export default ProductProvider
+export default ProductProvider;

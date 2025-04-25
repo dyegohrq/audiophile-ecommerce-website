@@ -7,7 +7,7 @@ import style from '../root.module.css'
 
 export function FeaturedProduct() {
     return(
-        <section className="card_product flex flex-col gap-[68px] sm:flex-row sm:gap-[10px] " >
+        <section className="card_product flex flex-col gap-[68px] my-[90px] sm:flex-row sm:gap-[10px] sm:justify-between " >
 
             <div className="card relative flex flex-col items-center justify-end w-full h-[165px] rounded-[8px] ">
                 <img src={ImgHeadphones} alt="" className="absolute"/>
