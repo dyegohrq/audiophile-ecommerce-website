@@ -9,7 +9,6 @@ import ImgSpeakers from '/assets/shared/desktop/image-category-thumbnail-speaker
 import { ButtonShop } from '../buttonShop'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { productContext } from '../../context/Context'
-import { ButtonQuantity } from '../buttonQuantity'
 import { ButtonQuantityCart } from '../buttonQuantityCart'
 
 export function Header() {

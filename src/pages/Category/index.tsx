@@ -10,7 +10,7 @@ import { FeaturedProduct } from "../../components/FeaturedProduct";
 
 export default function Category() {
     const [category, setCategory] = useState<productProps[]>([])
-    const {name, id, slug} = useParams()
+    const {name} = useParams()
 
     useEffect(() => {
         async function getCategory() {

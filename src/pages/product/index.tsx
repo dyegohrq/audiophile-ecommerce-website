@@ -9,7 +9,7 @@ import { Button } from "../../components/Button"
 import { FeaturedProduct } from "../../components/FeaturedProduct"
 
 export function Product() {
-    const { category, id, slug } = useParams()
+    const { category, id } = useParams()
     const [productItem, setProductItem] = useState <productProps[]> ([])
     // const { product } = useContext(productContext)
     
