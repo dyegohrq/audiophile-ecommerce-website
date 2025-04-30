@@ -10,7 +10,7 @@ import { FeaturedProduct } from "../../components/FeaturedProduct";
 
 export default function Category() {
     const [category, setCategory] = useState<productProps[]>([])
-    const {name} = useParams()
+    const {name, id, slug} = useParams()
 
     useEffect(() => {
         async function getCategory() {
@@ -72,7 +72,7 @@ export default function Category() {
                             <p className={`${style['text-present-7']}`} >
                                 {product.description}
                             </p>
-                            <Button classButton="orange" url={`/product/${product.category}/${product.id}`} />
+                            <Button classButton="orange" url={`/product/${product.category}/${product.id}/${product.slug} `} />
                         </div>
                     </section>
                 ))

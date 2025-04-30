@@ -90,6 +90,14 @@ header {
                 overflow: auto;
             }
         }
+
+        #cart {
+            background-color: rgba(0, 0, 0, 0.322);
+            top: 89px;
+            left: 0;
+            width: 100%;
+            height: calc( 100vh - 89px );
+        }
     }
 }
 

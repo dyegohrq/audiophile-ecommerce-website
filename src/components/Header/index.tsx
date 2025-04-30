@@ -7,13 +7,17 @@ import ImgEarphones from '/assets/shared/desktop/image-category-thumbnail-earpho
 import ImgHeadphones from '/assets/shared/desktop/image-category-thumbnail-headphones.png'
 import ImgSpeakers from '/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import { ButtonShop } from '../buttonShop'
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
+import { productContext } from '../../context/Context'
+import { ButtonQuantity } from '../buttonQuantity'
+import { ButtonQuantityCart } from '../buttonQuantityCart'
 
 export function Header() {
     const location = useLocation()
     const bgRef = useRef<HTMLDivElement | null >(null)
     const burgerRef = useRef<HTMLButtonElement | null>(null)
     const [menuActive, setMenuActive] = useState(false)
+    const { product, total } = useContext(productContext)
 
     const body = document.body
 
@@ -42,6 +46,10 @@ export function Header() {
         setMenuActive(true)
     }
 
+    function activeCart() {
+        
+    }
+
     return(
         <header className='w-full h-[90px] flex items-center justify-center'>
             <nav className='flex items-center justify-between w-full h-full'>
@@ -57,7 +65,47 @@ export function Header() {
                         <Link to={'/'} ><img src={logoImg} alt="" /></Link>
                     </div>
                 </div>
-                <FiShoppingCart size={20} color='#fff' className='icon order-2 cursor-pointer'/>
+                <button
+                    className=' flex w-auto'
+                    onClick={ () => activeCart() }
+                >
+                    <FiShoppingCart size={20} color='#fff' className='icon order-2 cursor-pointer'/>
+                </button>
+
+                <div id="cart" className=' absolute flex flex-col items-center justify-start' >
+                    <div className=' bg-white w-[90%] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
+                        <div>
+                            <h3>Cart ( {product.length} ) </h3>
+                            <button>Remove all</button>
+                        </div>
+                        <ul>
+                            {
+                                product.map((item) => (
+                                    <li>
+                                        <div>
+                                            <img src={item.categoryImage.mobile.replace("./assets/", "/assets/")} alt={item.slug} />
+                                        </div>
+                                        <div>
+                                            <h3> {item.name} </h3>
+                                            <span> {item.price.toLocaleString('en-US', {
+                                                style: 'currency',
+                                                currency: 'USD'
+                                            })} </span>
+                                        </div>
+                                        <div>
+                                            <ButtonQuantityCart/>
+                                        </div>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <div>
+                            <span>Total</span>
+                            <span> {total} </span>
+                        </div>
+                        
+                    </div>
+                </div>
 
                 <div className="bg_menu w-full fixed" ref={bgRef} id='bg_menu'>
                     <ul className="menu_mobile bg-white w-full flex items-center justify-center flex-col gap-[56px] sm:flex-row sm:gap-[10px] lg:hidden">
@@ -96,3 +144,4 @@ export function Header() {
         </header>
     )
 }
+

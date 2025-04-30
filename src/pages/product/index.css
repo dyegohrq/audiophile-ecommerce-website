@@ -15,6 +15,17 @@ main {
     .paragraph{
         color: var(--white-300);
     }
+
+    #inTheBox {
+        .inTheBoxText {
+            .quantity {
+                color: var(--orange-900);
+            }
+            .item {
+                color: var(--white-300);
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 640px) {

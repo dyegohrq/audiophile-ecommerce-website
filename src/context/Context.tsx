@@ -4,10 +4,12 @@ interface ProductContextData {
     product: productProps[];
     addProduct: (newItem: productProps, amount: number) => void;
     // removeProduct: (newItem: productProps) => void;
+    total: number;
 }
 
 export interface productProps {
     id: number;
+    slug: string;
     name: string;
     category: string;
     categoryImage: {
@@ -21,7 +23,38 @@ export interface productProps {
     amount: number;
     total: number;
     features: string;
-    includes: [];
+    includes: [{
+        quantity: number, 
+        item:string
+    }];
+    gallery: {
+        first: {
+            mobile:string;
+            tablet:string;
+            desktop:string;
+        },
+        second: {
+            mobile:string;
+            tablet:string;
+            desktop:string;
+        },
+        third: {
+            mobile:string;
+            tablet:string;
+            desktop:string;
+        },
+    },
+    others: [
+        {
+            slug: string;
+            name: string;
+            image: {
+                mobile: string;
+                tablet: string;
+                desktop: string
+            }
+        }
+    ]
 }
 
 interface ProductProvideProps {
@@ -33,6 +66,7 @@ export const productContext = createContext({} as ProductContextData)
 
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
+    const [total, setTotal] = useState(0)
 
 
     function addProduct(newItem: productProps, amount: number) {
@@ -72,6 +106,7 @@ function ProductProvider( {children}:ProductProvideProps ) {
                     product,
                     addProduct,
                     // removeProduct
+                    total
                 }
             }
         >

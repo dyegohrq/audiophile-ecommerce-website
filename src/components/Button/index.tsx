@@ -11,7 +11,7 @@ export function Button( props : ButtonProps ) {
 
     return(
         <button
-            className={props.classButton}
+            className={`${props.classButton} button_default  `}
             onClick={ () => navigate(props.url) }
         >
             See product

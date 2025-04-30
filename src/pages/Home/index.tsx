@@ -11,7 +11,7 @@ export function Home() {
                     <h3 className={`${style.overline}`} >New product</h3>
                     <h1 className={`${style['text-present-3']} text-white `} >XX99 Mark II Headphones</h1>
                     <p className={`${style['text-present-7']} normal-case`} >Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                    <Button classButton="orange" url="/product/headphones/4" />
+                    <Button classButton="orange" url="/product/headphones/4/xx99-mark-two-headphones" />
                 </div>
                 <div className="hidden lg:block">
                     

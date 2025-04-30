@@ -10,14 +10,14 @@ interface buttonProps {
 
 export function ButtonQuantity( props: buttonProps ) {
     const { addProduct } = useContext(productContext)
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     function more() {
         setQuantity( (num) => num + 1 )
     }
 
     function less() {
-        if (quantity > 0) {
+        if (quantity > 1) {
             setQuantity( (num) => num - 1 )
         }
     }
@@ -28,12 +28,12 @@ export function ButtonQuantity( props: buttonProps ) {
 
     return(
         <div className=" flex gap-[16px] max-w-[296px] items-center justify-around" >
-            <div className="button_quantity flex w-[40%] items-center justify-between " >
+            <div className="button_quantity flex w-[40%] h-[48px] px-[10px] items-center justify-between " >
                 <button onClick={ () => less()  } >-</button>
                     {quantity}
                 <button onClick={ () => more()  } >+</button>
             </div>
-            <div className={` ${style.subtitle} button_add w-[60%] text-white flex items-center justify-center `}>
+            <div className={` ${style.subtitle} button_add w-[60%] h-[48px] text-white flex items-center justify-center `}>
                 <button onClick={ () => handleAddProduct(props.newItem, quantity) }>
                     Add to cart
                 </button>

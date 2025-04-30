@@ -17,7 +17,7 @@ const route = createBrowserRouter([
                 element: <Category/>
             },
             {
-                path: '/product/:name/:id',
+                path: '/product/:category/:id/:slug',
                 element: <Product/>
             }
         ]

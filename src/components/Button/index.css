@@ -1,6 +1,6 @@
 @import '../root.module.css';
 
-button {
+.button_default {
     width: 160px;
     height: 48px;
     border: none;
