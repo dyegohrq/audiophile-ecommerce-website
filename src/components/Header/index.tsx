@@ -72,7 +72,7 @@ export function Header() {
                     <FiShoppingCart size={20} color='#fff' className='icon order-2 cursor-pointer'/>
                 </button>
 
-                <div id="cart" className=' absolute flex flex-col items-center justify-start' >
+                <div id="cart" className=' absolute flex flex-col items-center justify-start hidden ' >
                     <div className=' bg-white w-[90%] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
                         <div>
                             <h3>Cart ( {product.length} ) </h3>
