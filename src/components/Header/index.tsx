@@ -8,15 +8,15 @@ import ImgHeadphones from '/assets/shared/desktop/image-category-thumbnail-headp
 import ImgSpeakers from '/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import { ButtonShop } from '../buttonShop'
 import { useContext, useEffect, useRef, useState } from 'react'
-import { productContext } from '../../context/Context'
-import { ButtonQuantityCart } from '../buttonQuantityCart'
+import { productContext, productProps } from '../../context/Context'
 
 export function Header() {
     const location = useLocation()
     const bgRef = useRef<HTMLDivElement | null >(null)
     const burgerRef = useRef<HTMLButtonElement | null>(null)
+    const cart = useRef<HTMLDivElement | null>(null)
     const [menuActive, setMenuActive] = useState(false)
-    const { product, total } = useContext(productContext)
+    const { product, total, addCart } = useContext(productContext)
 
     const body = document.body
 
@@ -42,11 +42,30 @@ export function Header() {
             body.style.overflow = 'auto'
         }
 
+        if (cart.current?.classList.contains('activeCart')) {
+            cart.current.classList.toggle('activeCart')
+        }
+
         setMenuActive(true)
     }
 
     function activeCart() {
-        
+        cart.current?.classList.toggle('activeCart')
+
+        // if (cart.current?.classList.contains('activeCart')) {
+        //     // body.style.overflow = 'hidden'
+        // } else {
+        //     body.style.overflow = 'auto'
+        // }
+
+        if (bgRef.current?.classList.contains('active_button')) {
+            bgRef.current.classList.toggle('active_button')
+            burgerRef.current?.classList.toggle('on')
+        }
+    }
+
+    function handleAddCart(item:productProps) {
+        addCart(item)
     }
 
     return(
@@ -65,13 +84,13 @@ export function Header() {
                     </div>
                 </div>
                 <button
-                    className=' flex w-auto'
+                    className=' flex w-auto order-2 cursor-pointer'
                     onClick={ () => activeCart() }
                 >
-                    <FiShoppingCart size={20} color='#fff' className='icon order-2 cursor-pointer'/>
+                    <FiShoppingCart size={20} color='#fff' className='icon '/>
                 </button>
 
-                <div id="cart" className=' absolute flex flex-col items-center justify-start hidden ' >
+                <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden ' >
                     <div className=' bg-white w-[90%] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
                         <div>
                             <h3>Cart ( {product.length} ) </h3>
@@ -92,7 +111,9 @@ export function Header() {
                                             })} </span>
                                         </div>
                                         <div>
-                                            <ButtonQuantityCart/>
+                                            <button>-</button>
+                                            0
+                                            <button onClick={ () => handleAddCart(item) }  >+</button>
                                         </div>
                                     </li>
                                 ))

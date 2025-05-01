@@ -67,6 +67,7 @@ export const productContext = createContext({} as ProductContextData)
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
     const [total] = useState(0)
+    const [amount, setAmount] = useState(0)
 
 
     function addProduct(newItem: productProps, amount: number) {
@@ -87,6 +88,7 @@ function ProductProvider( {children}:ProductProvideProps ) {
         }
 
         setProduct(product => [...product, data])
+        setAmount(amount)
     }
 
     // function QuantityAdd() {
