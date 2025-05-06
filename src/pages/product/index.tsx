@@ -45,8 +45,6 @@ export function Product() {
     const includes = selectedProduct?.includes;
     const gallery = selectedProduct?.gallery;
     
-    console.log(productData)
-
     return(
         <main>
             <div className=" w-full h-[90px] bg-black mb-[16px] " ></div>
@@ -82,7 +80,8 @@ export function Product() {
                         currency: 'USD'
                     } )} </strong>
                     
-                    <ButtonQuantity amount={selectedProduct?.amount} newItem={selectedProduct} />
+                    <ButtonQuantity newItem={selectedProduct} />  
+
                 </div>
             </section>
             <section className="flex flex-col gap-[88px] md:gap-[120px] lg:flex-row lg:w-full lg:justify-between " >

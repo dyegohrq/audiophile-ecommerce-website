@@ -2,8 +2,10 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ProductContextData {
     product: productProps[];
-    addProduct: (newItem: productProps, amount: number) => void;
-    // removeProduct: (newItem: productProps) => void;
+    addProductCart: (newItem: productProps) => void;
+    more: (item:productProps) => void;
+    decrease: () => void;
+    amount: number;
     total: number;
 }
 
@@ -66,38 +68,47 @@ export const productContext = createContext({} as ProductContextData)
 
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
-    const [total] = useState(0)
-    const [amount, setAmount] = useState(0)
+    const [amount, setAmount] = useState(1)
+    const [total, setTotal] = useState(0)
 
+    function addProductCart(newItem: productProps) {
+        const indexItem = product.findIndex((item) => item.id === newItem.id)
 
-    function addProduct(newItem: productProps, amount: number) {
-        const indexItem = product.findIndex( (item) => item.id === newItem.id )
+        if (indexItem !== - 1) {
+            let updatedProducts  = [...product];
 
-        if (indexItem !== -1) {
-            let productItem = [...product]
-
-            productItem[indexItem].amount = amount
-            setProduct(productItem)
+            updatedProducts[indexItem].amount = amount
+            setProduct(updatedProducts)
             return;
         }
 
         let data = {
             ...newItem,
-            amount: amount,
-            total: newItem.price
+            amount
         }
 
         setProduct(product => [...product, data])
-        setAmount(amount)
     }
 
-    // function QuantityAdd() {
+    function more(productItem: productProps) {
+        const indexItem = product.findIndex((item) => item.id === productItem.id )
         
-    // }
+        if (indexItem !== - 1 ) {
+            let updatedProducts = product
+            
+            updatedProducts[indexItem].amount += 1
+            setProduct(updatedProducts)
 
-    // function removeProduct(productItem: productProps) {
-    //     const indexItem = product.findIndex((item) => item.id === productItem.id )
-    // }
+        } else {
+            setAmount((prev) => prev + 1)
+        }
+    }
+
+    function decrease() {
+        if (amount > 1) {
+            setAmount((prev) => prev - 1)
+        }
+    }
 
     console.log(product)
 
@@ -106,8 +117,10 @@ function ProductProvider( {children}:ProductProvideProps ) {
             value={
                 {
                     product,
-                    addProduct,
-                    // removeProduct
+                    addProductCart,
+                    more,
+                    decrease,
+                    amount,
                     total
                 }
             }

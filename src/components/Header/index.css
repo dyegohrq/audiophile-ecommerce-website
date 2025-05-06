@@ -101,6 +101,11 @@ header {
             &.activeCart {
                 display: flex;
             }
+
+            .remove {
+                color: #d6d6d6 ;
+                border-color: #d6d6d6;
+            }
         }
     }
 }
