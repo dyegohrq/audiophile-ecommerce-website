@@ -25,21 +25,21 @@ export function Home() {
                         <div className="text-zx9 text-center flex flex-col items-center gap-[24px] max-w-[380px] lg:text-left lg:items-start ">
                             <h2 className={`${style['text-present-3']} text-white`}>ZX9 <br /> speaker</h2>
                             <p className={`${style['text-present-7']}`} >Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                            <Button classButton="black" url="/product/speakers/6" /> 
+                            <Button classButton="black" url="/product/speakers/6/zx9-speaker" /> 
                         </div>
                     </div>
                 </article>
                 <article className="zx7 w-full h-[320px] rounded-[8px] flex items-center " >
                     <div className={`text_zx7 `}>
                         <h2 className={`${style['text-present-4']}`} >ZX7 speaker</h2>
-                        <Button classButton="transparent" url="/product/speakers/5" />
+                        <Button classButton="transparent" url="/product/speakers/5/zx7-speaker" />
                     </div>
                 </article>
                 <article className="yx1 flex flex-col gap-[24px] sm:flex-row sm:gap-[11px] " >
                     <div className="img-yx1 rounded-[8px] "></div>
                     <div className="text-yx1 rounded-[8px] flex flex-col justify-center gap-[32px] ">
                         <h2 className={style['text-present-4']} >YX1 earphones</h2>
-                        <Button classButton="transparent" url="/product/earphones/1" />
+                        <Button classButton="transparent" url="/product/earphones/1/yx1-earphones" />
                     </div>
                 </article>
             </section>

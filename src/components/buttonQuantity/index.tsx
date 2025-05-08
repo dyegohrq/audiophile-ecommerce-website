@@ -1,4 +1,4 @@
-import { useContext  } from "react";
+import { useContext, useEffect  } from "react";
 import { productContext, productProps } from "../../context/Context";
 import './index.css'
 import style from '../../components/root.module.css'
@@ -8,11 +8,23 @@ interface buttonProps {
 }
 
 export function ButtonQuantity( props: buttonProps ) {
-    const { addProductCart, more, decrease , amount } = useContext(productContext)
+    const { addProductCart, more, decrease , amount, product, setProduct } = useContext(productContext)
 
     function handleAddProduct( item:productProps ) {
         addProductCart(item)
     }
+
+    useEffect(() => {
+        const indexItem = product.findIndex((item) => item.id === props.newItem.id)
+
+        if (indexItem !== -1 ) {
+            const updatAmount = [...product]
+
+            updatAmount[indexItem].amount = amount
+            setProduct(updatAmount)
+        }
+
+    }, [amount])
 
     return(
         <div className=" flex gap-[16px] max-w-[296px] items-center justify-around" >

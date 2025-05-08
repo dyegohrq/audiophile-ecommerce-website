@@ -2,6 +2,7 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ProductContextData {
     product: productProps[];
+    setProduct: React.Dispatch<React.SetStateAction<productProps[]>>
     addProductCart: (newItem: productProps) => void;
     more: (item:productProps) => void;
     decrease: () => void;
@@ -98,6 +99,7 @@ function ProductProvider( {children}:ProductProvideProps ) {
             
             updatedProducts[indexItem].amount += 1
             setProduct(updatedProducts)
+            setAmount(updatedProducts[indexItem].amount)
 
         } else {
             setAmount((prev) => prev + 1)
@@ -111,12 +113,14 @@ function ProductProvider( {children}:ProductProvideProps ) {
     }
 
     console.log(product)
+    console.log(amount)
 
     return(
         <productContext.Provider
             value={
                 {
                     product,
+                    setProduct,
                     addProductCart,
                     more,
                     decrease,
