@@ -106,6 +106,29 @@ header {
                 color: #d6d6d6 ;
                 border-color: #d6d6d6;
             }
+
+            .number {
+                font-size: 15px;
+                line-height: 25px;
+                font-weight: bold;
+                color: #c2c2c2;
+            }
+
+            .button {
+                background-color: var(--white-600);
+
+                .buttonAmount {
+                    color: #adacac;
+
+                    &:hover {
+                        color: var(--orange-900);
+                    }
+                }
+            }
+
+            .total {
+                color: #d6d6d6;
+            }
         }
     }
 }

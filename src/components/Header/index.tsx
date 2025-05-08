@@ -16,7 +16,7 @@ export function Header() {
     const burgerRef = useRef<HTMLButtonElement | null>(null)
     const cart = useRef<HTMLDivElement | null>(null)
     const [menuActive, setMenuActive] = useState(false)
-    const { product, total } = useContext(productContext)
+    const { product, total, amount, more, less } = useContext(productContext)
 
     const body = document.body
 
@@ -100,27 +100,30 @@ export function Header() {
                                             <img src={item.categoryImage.mobile.replace("./assets/", "/assets/")} alt={item.slug} />
                                         </div>
                                         <div className=' w-[100px] ' >
-                                            <h3> {
+                                            <h3 className={`${style['text-present-7']}`} > {
                                                 item.name.replace('Headphones', '')
                                                 .replace('Wireless Earphones', '')
                                             } </h3>
-                                            <span> {item.price.toLocaleString('en-US', {
+                                            <span className='number' > {item.price.toLocaleString('en-US', {
                                                 style: 'currency',
                                                 currency: 'USD'
                                             })} </span>
                                         </div>
-                                        <div>
-                                            <button>-</button>
-                                                0
-                                            <button>+</button>
+                                        <div className=' py-[7px] px-[10px] button w-[96px] flex justify-between items-center ' >
+                                            <button onClick={ () => less(item) }  className='buttonAmount cursor-pointer' >-</button>
+                                                <span className={style.subtitle} >{amount}</span>
+                                            <button onClick={() => more(item)}  className='buttonAmount cursor-pointer' >+</button>
                                         </div>
                                     </li>
                                 ))
                             }
                         </ul>
-                        <div>
-                            <span>Total</span>
-                            <span> {total} </span>
+                        <div className='w-full flex justify-between ' >
+                            <span className={`${style['text-present-7']} uppercase total `} >Total</span>
+                            <span className={style['text-present-6']}> {total.toLocaleString('en-US', {
+                                style: 'currency',
+                                currency: 'USD'
+                            })} </span>
                         </div>
                         
                     </div>

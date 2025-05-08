@@ -5,6 +5,7 @@ interface ProductContextData {
     setProduct: React.Dispatch<React.SetStateAction<productProps[]>>
     addProductCart: (newItem: productProps) => void;
     more: (item:productProps) => void;
+    less: (item:productProps) => void;
     decrease: () => void;
     amount: number;
     total: number;
@@ -99,7 +100,6 @@ function ProductProvider( {children}:ProductProvideProps ) {
             
             updatedProducts[indexItem].amount += 1
             setProduct(updatedProducts)
-            setAmount(updatedProducts[indexItem].amount)
 
         } else {
             setAmount((prev) => prev + 1)
@@ -112,8 +112,23 @@ function ProductProvider( {children}:ProductProvideProps ) {
         }
     }
 
-    console.log(product)
-    console.log(amount)
+    function less(productItem: productProps) {
+        const indexItem = product.findIndex((item) => item.id === productItem.id)
+
+        if (indexItem !== -1) {
+            const updatedProduct = [...product]
+            const currentAmount = updatedProduct[indexItem].amount
+
+            if (currentAmount > 0) {
+                updatedProduct[indexItem].amount -= 1
+                setProduct(updatedProduct)
+            }
+        } else {
+            const filteredProduct = product.filter((item) => item.id === productItem.id)
+
+            setProduct(filteredProduct)
+        }
+    }
 
     return(
         <productContext.Provider
@@ -123,6 +138,7 @@ function ProductProvider( {children}:ProductProvideProps ) {
                     setProduct,
                     addProductCart,
                     more,
+                    less,
                     decrease,
                     amount,
                     total
