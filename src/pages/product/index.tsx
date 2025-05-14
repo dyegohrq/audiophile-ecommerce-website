@@ -48,7 +48,7 @@ export function Product() {
     return(
         <main>
             <div className=" w-full h-[90px] bg-black mb-[16px] " ></div>
-            <Link to={'/'} className={style['text-present-7']} >Go back</Link>
+            <Link to={'/checkout'} className={`${style['text-present-7']}`} >Go back</Link>
             <section className="flex flex-col gap-[32px] md:flex-row md:gap-[69px] lg:gap-[124px] lg:justify-between" >
                 <div className="rounded-[8px] overflow-hidden flex items-center img_product md:max-w-[300px] lg:max-w-[740px] " >
                     <img 
@@ -151,7 +151,7 @@ export function Product() {
                         selectedProduct?.others.map((item) => {
                             const relatedProduct = productItem.find((product:productProps) => product.slug === item.slug)
                             return(
-                                <div className="flex flex-col gap-[32px] items-center " >
+                                <div key={item.name} className="flex flex-col gap-[32px] items-center " >
                                     <div className="rounded-[8px] overflow-hidden" >
                                         <img
                                         src={item.image.mobile.replace("./assets/", '/assets/')}

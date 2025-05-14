@@ -105,6 +105,11 @@ header {
             .remove {
                 color: #d6d6d6 ;
                 border-color: #d6d6d6;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    color: var(--orange-900);
+                }
             }
 
             .number {
@@ -128,6 +133,15 @@ header {
 
             .total {
                 color: #d6d6d6;
+            }
+
+            .button_checkout {
+                background-color: var(--orange-900);
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    background-color: var(--orange-300);
+                }
             }
         }
     }

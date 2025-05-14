@@ -8,7 +8,7 @@ import ImgHeadphones from '/assets/shared/desktop/image-category-thumbnail-headp
 import ImgSpeakers from '/assets/shared/desktop/image-category-thumbnail-speakers.png'
 import { ButtonShop } from '../buttonShop'
 import { useContext, useEffect, useRef, useState } from 'react'
-import { productContext, productProps } from '../../context/Context'
+import { productContext } from '../../context/Context'
 
 export function Header() {
     const location = useLocation()
@@ -16,7 +16,14 @@ export function Header() {
     const burgerRef = useRef<HTMLButtonElement | null>(null)
     const cart = useRef<HTMLDivElement | null>(null)
     const [menuActive, setMenuActive] = useState(false)
-    const { product, total, amount, more, less } = useContext(productContext)
+    const { 
+        product, 
+        incrementAmount, 
+        decrementAmount, 
+        getAmountByProduct, 
+        calculateTotal, 
+        removeAll 
+    } = useContext(productContext)
 
     const body = document.body
 
@@ -86,11 +93,11 @@ export function Header() {
                     <FiShoppingCart size={20} color='#fff' className='icon '/>
                 </button>
 
-                <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden ' >
-                    <div className=' bg-white w-[90%] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
+                <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden' >
+                    <div className='absolute right-[5%] lg:right-[10%] bg-white w-[90%] md:max-w-[377px] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
                         <div className='flex justify-between mb-[30px] ' >
                             <h3 className={ ` ${style['text-present-6']} ` } >Cart ( {product.length} ) </h3>
-                            <button className={ `remove  ${style['text-present-7']} border-b ` } >Remove all</button>
+                            <button onClick={removeAll} className={ `remove  ${style['text-present-7']} border-b  cursor-pointer` } >Remove all</button>
                         </div>
                         <ul className=' flex flex-col gap-[24px] mb-[32px] ' >
                             {
@@ -110,9 +117,19 @@ export function Header() {
                                             })} </span>
                                         </div>
                                         <div className=' py-[7px] px-[10px] button w-[96px] flex justify-between items-center ' >
-                                            <button onClick={ () => less(item) }  className='buttonAmount cursor-pointer' >-</button>
-                                                <span className={style.subtitle} >{amount}</span>
-                                            <button onClick={() => more(item)}  className='buttonAmount cursor-pointer' >+</button>
+                                            <button 
+                                               onClick={() => decrementAmount(item, true)}
+                                               className='buttonAmount cursor-pointer'
+                                            > - </button>
+
+                                                <span 
+                                                    className={style.subtitle} 
+                                                >{getAmountByProduct(item)}</span>
+
+                                            <button 
+                                                className='buttonAmount cursor-pointer' 
+                                                onClick={ () => incrementAmount(item) }
+                                            >+</button>
                                         </div>
                                     </li>
                                 ))
@@ -120,11 +137,16 @@ export function Header() {
                         </ul>
                         <div className='w-full flex justify-between ' >
                             <span className={`${style['text-present-7']} uppercase total `} >Total</span>
-                            <span className={style['text-present-6']}> {total.toLocaleString('en-US', {
-                                style: 'currency',
-                                currency: 'USD'
-                            })} </span>
+                            <span className={style['text-present-6']}>
+                                {
+                                    calculateTotal().toLocaleString('en-US', {
+                                        style: 'currency',
+                                        currency: 'USD'
+                                    })
+                                }
+                            </span>
                         </div>
+                        <Link to={'/checkout'} className={`${style.subtitle} w-full flex mt-[24px] py-[15px] button_checkout items-center justify-center text-white `} >Checkout</Link>
                         
                     </div>
                 </div>

@@ -1,0 +1,17 @@
+input {
+    border-color: #cfcfcf;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.25;
+    outline: none;
+    caret-color: var(--orange-900);
+    color: var(--black-900);
+
+    &::placeholder{
+        color: #cfcfcf;
+    }
+
+    &:focus {
+        border-color: var(--orange-900);
+    }
+}

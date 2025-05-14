@@ -2,13 +2,13 @@ import { createContext, ReactNode, useState } from "react";
 
 interface ProductContextData {
     product: productProps[];
-    setProduct: React.Dispatch<React.SetStateAction<productProps[]>>
-    addProductCart: (newItem: productProps) => void;
-    more: (item:productProps) => void;
-    less: (item:productProps) => void;
-    decrease: () => void;
-    amount: number;
-    total: number;
+    setProduct: React.Dispatch<React.SetStateAction<productProps[]>>;
+    incrementAmount: (product: productProps) => void;
+    decrementAmount: (product: productProps, fromCart: boolean) => void;
+    getAmountByProduct: (product: productProps) => number;
+    addCart: (product: productProps) => void;
+    calculateTotal: () => number;
+    removeAll: () => void;
 }
 
 export interface productProps {
@@ -70,65 +70,66 @@ export const productContext = createContext({} as ProductContextData)
 
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
-    const [amount, setAmount] = useState(1)
-    const [total, setTotal] = useState(0)
+    const [productAmounts, setProductsAmounts] = useState<Record<string, number>> ({})
 
-    function addProductCart(newItem: productProps) {
-        const indexItem = product.findIndex((item) => item.id === newItem.id)
 
-        if (indexItem !== - 1) {
-            let updatedProducts  = [...product];
-
-            updatedProducts[indexItem].amount = amount
-            setProduct(updatedProducts)
-            return;
-        }
-
-        let data = {
-            ...newItem,
-            amount
-        }
-
-        setProduct(product => [...product, data])
+    const incrementAmount = (product: productProps) => {
+        setProductsAmounts((prev) => ({
+            ...prev,
+            [product.id]: (prev[product.id] || 1) + 1
+        }))
     }
 
-    function more(productItem: productProps) {
-        const indexItem = product.findIndex((item) => item.id === productItem.id )
-        
-        if (indexItem !== - 1 ) {
-            let updatedProducts = product
-            
-            updatedProducts[indexItem].amount += 1
-            setProduct(updatedProducts)
+    const decrementAmount = (product: productProps, fromCart: boolean = false) => {
+        setProductsAmounts(prev => {
+          const currentAmount = prev[product.id] || 1;
+      
+          // Se estiver no carrinho e o amount for 1 ou menor, removemos o item
+          if (fromCart && currentAmount <= 1) {
+            // Remover do carrinho
+            setProduct(currentCart => currentCart.filter(item => item.id !== product.id));
+      
+            // Remover do productAmounts
+            const updatedAmounts = { ...prev };
+            delete updatedAmounts[product.id];
+            return updatedAmounts;
+          }
+      
+          // Se não for no carrinho, só decrementa
+          return {
+            ...prev,
+            [product.id]: Math.max(currentAmount - 1, 1), // Mantém o valor mínimo de 1
+          };
+        });
+      };
 
-        } else {
-            setAmount((prev) => prev + 1)
-        }
+    const getAmountByProduct = (product?: productProps): number => {
+        if (!product) return 1;
+        return productAmounts[product.id] || 1
     }
 
-    function decrease() {
-        if (amount > 1) {
-            setAmount((prev) => prev - 1)
-        }
-    }
+    const addCart = (product: productProps) => {
+        const amount = getAmountByProduct(product)
 
-    function less(productItem: productProps) {
-        const indexItem = product.findIndex((item) => item.id === productItem.id)
+        setProduct(prev => {
+            const existing = prev.find(item => item.id === product.id)
 
-        if (indexItem !== -1) {
-            const updatedProduct = [...product]
-            const currentAmount = updatedProduct[indexItem].amount
-
-            if (currentAmount > 0) {
-                updatedProduct[indexItem].amount -= 1
-                setProduct(updatedProduct)
+            if (existing) {
+                return prev.map(item => item.id === product.id ? {...item, amount: item.amount + amount} : item )
             }
-        } else {
-            const filteredProduct = product.filter((item) => item.id === productItem.id)
-
-            setProduct(filteredProduct)
-        }
+            return [...prev, {...product, amount}]
+        })
     }
+
+    const calculateTotal = () => {
+        return product.reduce((total, item) => {
+            const amount = productAmounts[item.id] || 1
+
+            return total + (item.price * amount)
+        }, 0)
+    }
+
+    const removeAll = () => {return setProduct([])}
 
     return(
         <productContext.Provider
@@ -136,12 +137,12 @@ function ProductProvider( {children}:ProductProvideProps ) {
                 {
                     product,
                     setProduct,
-                    addProductCart,
-                    more,
-                    less,
-                    decrease,
-                    amount,
-                    total
+                    incrementAmount,
+                    decrementAmount,
+                    addCart,
+                    getAmountByProduct,
+                    calculateTotal, 
+                    removeAll
                 }
             }
         >
