@@ -3,16 +3,19 @@ main {
         margin: 24px var(--mobile-spacing);
         padding: 24px;
 
-        .formImputs {
-            h2 {
-                color: var(--orange-900);
-            }
+        h2 {
+            color: var(--orange-900);
+            margin: 16px 0;
+        }
+        label {
+            font-size: 12px;
+            letter-spacing: -0.21px;
+            font-weight: bold;
+        }
 
-            label {
-                font-size: 12px;
-                letter-spacing: -0.21px;
-                font-weight: bold;
-            }
+        .money, .cash {
+            border-color: #cfcfcf;
+            accent-color: var(--orange-900);
         }
     }
 }

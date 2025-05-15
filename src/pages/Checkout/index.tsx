@@ -4,8 +4,11 @@ import { Header } from "../../components/Header";
 import { Input } from "../../components/input";
 import './index.css'
 import style from '../../components/root.module.css'
+import { useState } from "react";
 
 export function Checkout() {
+    const [selected, setSelected] = useState(false)
+
     return(
         <div>
             <Header/>
@@ -15,103 +18,65 @@ export function Checkout() {
 
                 <form className="bg-white rounded-[8px] " >
                     <h1 className={style['text-present-4']} >Checkout</h1>
-                    <div className="mt-[32px] formImputs " >
-                        <h2 className={style.subtitle} >Billig details</h2>
-                        <article  >
-                            <div className="my-[16px] " >
-                                <label>Name</label>
+                    <article>
+                        <h2 className={`${style.subtitle}`} >Billing Details</h2>
+                        <div className=" w-full flex flex-col md:flex-row gap-4 " >
+                            <div className="w-full" >
+                                <label htmlFor="name">Name</label>
                                 <Input
-                                    type="text"
+                                    id="name"
                                     placeholder="Alexei Ward"
                                 />
                             </div>
-                            <div className="my-[16px] " >
-                                <label>Email Address</label>
-                                <Input
-                                    type="text"
-                                    placeholder="alexei@email.com"
-                                />
+                            <div className="w-full" >
+                                <label htmlFor="email">Email Address</label>
+                                    <Input
+                                        id="email"
+                                        placeholder="alexei@gmail.com"
+                                    />
                             </div>
-                            <div className="my-[16px] " >
-                                <label>Phone Number</label>
+                        </div>
+                        <div className="mt-4 md:max-w-[50%] " >
+                            <label htmlFor="phone">Phone Number</label>
+                            <Input 
+                                id="phone"
+                                placeholder="+1 202-555-0136"
+                            />
+                        </div>
+                    </article>
+                    <article>
+                        <h2 className={style.subtitle} > Shippinng Info </h2>
+                        <div>
+                            <label htmlFor="Address">You Address</label>
+                            <Input
+                                id="Address"
+                                placeholder="1137 Williams Avenue"
+                            />
+                        </div>
+                        <div className=" flex flex-col md:flex-row gap-4 my-4 " >
+                            <div className=" w-full " >
+                                <label htmlFor="code">ZIP Code</label>
                                 <Input
-                                    type="text"
-                                    placeholder="+1 202-555-0136"
-                                />
-                            </div>
-                        </article>
-                    </div>
-                    <div className="mt-[32px] formImputs " >
-                        <h2 className={style.subtitle} >Shipping info</h2>
-                        <article  >
-                            <div className="my-[16px] " >
-                                <label>Your Address</label>
-                                <Input
-                                    type="text"
-                                    placeholder="1137 Williams Avenue"
-                                />
-                            </div>
-                            <div className="my-[16px] " >
-                                <label>ZIP Code</label>
-                                <Input
-                                    type="text"
+                                    id="code"
                                     placeholder="10001"
                                 />
                             </div>
-                            <div className="my-[16px] " >
-                                <label>City</label>
+                            <div className=" w-full " >
+                                <label htmlFor="city">City</label>
                                 <Input
-                                    type="text"
+                                    id="city"
                                     placeholder="New York"
                                 />
                             </div>
-                            <div className="my-[16px] " >
-                                <label>Country</label>
-                                <Input
-                                    type="text"
-                                    placeholder="United States"
-                                />
-                            </div>
-                        </article>
-                    </div>
-                    <div className="mt-[32px] formImputs " >
-                        <h2 className={style.subtitle} >Payment Datails</h2>
-                        <article  >
-                            <div className="my-[16px] " >
-                                <label>Payment Method</label>
-                                <div className=" flex items-center gap-[21px] border rounded-[8px] py-[18px] px-[20px] " >
-                                    <input
-                                        type="radio"
-                                        placeholder="1137 Williams Avenue"
-                                        name="e-money"
-                                        id="number"
-                                    /> <label htmlFor="number">e-Money</label>
-                                </div>
-                                <div className=" flex items-center gap-[21px] border rounded-[8px] py-[18px] px-[20px] " >
-                                    <input
-                                        type="radio"
-                                        placeholder="1137 Williams Avenue"
-                                        name="e-money"
-                                        id="pin"
-                                    /> <label htmlFor="pin">Cash on Delivery</label>
-                                </div>
-                            </div>
-                            <div className="my-[16px] " >
-                                <label>e-Money Number</label>
-                                <Input
-                                    type="text"
-                                    placeholder="238521993"
-                                />
-                            </div>
-                            <div className="my-[16px] " >
-                                <label>e-Money PIN</label>
-                                <Input
-                                    type="text"
-                                    placeholder="6891"
-                                />
-                            </div>
-                        </article>
-                    </div>
+                        </div>
+                        <div className=" md:max-w-[50%] " >
+                            <label htmlFor="country">Country</label>
+                            <Input
+                                id="country"
+                                placeholder="United States"
+                            />
+                        </div>
+                    </article>
                 </form>
             </main>
             <Footer/>
