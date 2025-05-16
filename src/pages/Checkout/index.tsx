@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { Input } from "../../components/input";
 import './index.css'
 import style from '../../components/root.module.css'
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { productContext } from "../../context/Context";
 
 export function Checkout() {
