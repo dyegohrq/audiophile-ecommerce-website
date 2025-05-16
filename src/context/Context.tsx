@@ -9,6 +9,9 @@ interface ProductContextData {
     addCart: (product: productProps) => void;
     calculateTotal: () => number;
     removeAll: () => void;
+    vatAmount: () => number;
+    shipping: number;
+    grandTotal: () => number;
 }
 
 export interface productProps {
@@ -71,6 +74,7 @@ export const productContext = createContext({} as ProductContextData)
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
     const [productAmounts, setProductsAmounts] = useState<Record<string, number>> ({})
+    const shipping = 50
 
 
     const incrementAmount = (product: productProps) => {
@@ -124,12 +128,17 @@ function ProductProvider( {children}:ProductProvideProps ) {
     const calculateTotal = () => {
         return product.reduce((total, item) => {
             const amount = productAmounts[item.id] || 1
+            const totalAmount = item.price * amount            
 
-            return total + (item.price * amount)
+            return total + (totalAmount)
         }, 0)
     }
 
     const removeAll = () => {return setProduct([])}
+
+    const vatAmount = () => {return Number((calculateTotal() * 0.2).toFixed(0)) } 
+    
+    const grandTotal = () => { return Number(calculateTotal() + shipping) }
 
     return(
         <productContext.Provider
@@ -142,7 +151,10 @@ function ProductProvider( {children}:ProductProvideProps ) {
                     addCart,
                     getAmountByProduct,
                     calculateTotal, 
-                    removeAll
+                    removeAll,
+                    vatAmount, 
+                    shipping,
+                    grandTotal
                 }
             }
         >

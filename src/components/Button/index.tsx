@@ -3,7 +3,7 @@ import './index.css'
 
 interface ButtonProps {
     classButton: string;
-    url: any;
+    url?: any;
 }
 
 export function Button( props : ButtonProps ) {
