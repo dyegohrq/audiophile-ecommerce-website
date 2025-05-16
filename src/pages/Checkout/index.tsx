@@ -6,10 +6,9 @@ import './index.css'
 import style from '../../components/root.module.css'
 import { useContext, useState } from "react";
 import { productContext } from "../../context/Context";
-import { Button } from "../../components/Button";
 
 export function Checkout() {
-    const [selected, setSelected] = useState(false)
+    // const [selected, setSelected] = useState(false)
     const { product, calculateTotal, vatAmount, shipping, grandTotal } = useContext(productContext)
 
     return(
