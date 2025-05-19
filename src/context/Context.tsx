@@ -74,7 +74,6 @@ export const productContext = createContext({} as ProductContextData)
 function ProductProvider( {children}:ProductProvideProps ) {
     const [product, setProduct] = useState<productProps[]>([])
     const [productAmounts, setProductsAmounts] = useState<Record<string, number>> ({})
-    const shipping = 50
 
 
     const incrementAmount = (product: productProps) => {
@@ -133,6 +132,8 @@ function ProductProvider( {children}:ProductProvideProps ) {
             return total + (totalAmount)
         }, 0)
     }
+
+    const shipping = calculateTotal() === 0 ? 0 : 50
 
     const removeAll = () => {return setProduct([])}
 

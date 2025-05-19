@@ -7,24 +7,9 @@ main {
             color: var(--orange-900);
             margin: 16px 0;
         }
-        label {
-            font-size: 12px;
-            letter-spacing: -0.21px;
-            font-weight: bold;
-        }
+        
 
         .method {
-            border-color: #cfcfcf;
-            accent-color: var(--orange-900);
-
-            &:focus {
-                border-color: var(--orange-900);
-            }
-
-            &:active {
-                border-color: var(--orange-900);
-            }
-
             & span {
                 font-size: 14px;
                 letter-spacing: -0.25px;
