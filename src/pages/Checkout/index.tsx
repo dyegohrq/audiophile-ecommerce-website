@@ -92,7 +92,7 @@ export function Checkout() {
                 <div className=" flex flex-col gap-[16px] w-full md:max-w-[50%] ">
                   <label
                     htmlFor="eMoney"
-                    className=" border-[#cfcfcf] method w-full border-[1px] py-[18px] px-[16px] flex items-center gap-[16px] rounded-[8px] focus:border-[#d87d4a] active:border-[#d87d4a] peer-checked:border-[#d87d4a]"
+                    className=" border-[#cfcfcf] method w-full border-[1px] py-[18px] px-[16px] flex items-center gap-[16px] rounded-[8px] focus:border-Orange-900 active:border-Orange-900 peer-checked:border-Orange-900 hover:border-Orange-900 cursor-pointer "
                     style={{
                       borderColor: paymentMethod === "eMoney" ? "#d87d4a" : "",
                     }}
@@ -102,13 +102,13 @@ export function Checkout() {
                       value="eMoney"
                       id="eMoney"
                       {...register("paymentMethod")}
-                      className=" accent-[#d87d4a] peer "
+                      className=" accent-Orange-900 peer "
                     />
                     <span>e-Money</span>
                   </label>
                   <label
                     htmlFor="cash"
-                    className=" border-[#cfcfcf] method w-full border-[1px] py-[18px] px-[16px] flex items-center gap-[16px] rounded-[8px] focus:border-[#d87d4a] active:border-[#d87d4a] peer-checked:border-[#d87d4a] "
+                    className=" border-[#cfcfcf] method w-full border-[1px] py-[18px] px-[16px] flex items-center gap-[16px] rounded-[8px] focus:border-Orange-900 active:border-Orange-900 peer-checked:border-Orange-900 hover:border-Orange-900 cursor-pointer "
                     style={{
                       borderColor: paymentMethod === "cash" ? "#d87d4a" : "",
                     }}
@@ -118,7 +118,7 @@ export function Checkout() {
                       value="cash"
                       id="cash"
                       {...register("paymentMethod")}
-                      className=" accent-[#d87d4a] peer "
+                      className=" accent-Orange-900 peer "
                     />
                     <span>Cash on Delivery</span>
                   </label>
@@ -144,13 +144,13 @@ export function Checkout() {
               )}
 
               {paymentMethod === "cash" && (
-                <div>
+                <div className="flex items-center gap-[32px] my-[32px] " >
                     <img src={codImg} alt="" />
-                    <p>
-                    The ‘Cash on Delivery’ option enables you to pay in cash
-                    when our delivery courier arrives at your residence. Just
-                    make sure your address is correct so that your order will
-                    not be cancelled.
+                    <p className={`${style['text-present-7']} text-Gray-900 `} >
+                      The ‘Cash on Delivery’ option enables you to pay in cash
+                      when our delivery courier arrives at your residence. Just
+                      make sure your address is correct so that your order will
+                      not be cancelled.
                     </p>
                 </div>
               )}

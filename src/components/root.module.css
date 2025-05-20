@@ -1,15 +1,16 @@
-:root {
+@theme {
     /* Colors */
-    --orange-900: #d87d4a;
-    --orange-300: #fbaf85;
-    --black-900: #000;
-    --black-600: #141414;
-    --black-300: #101010;
-    --gray-900: #dadada;
-    --gray-300: #fafafa;
-    --white: #fff;
-    --white-300: rgb(201, 201, 201);
-    --white-600: #f1f1f1;
+    --color-Orange-900: #d87d4a;
+    --color-Orange-300: #fbaf85;
+    --color-Black-900: #000;
+    --color-Black-600: #141414;
+    --color-Black-300: #101010;
+    --color-Gray-900: #dadada;
+    --color-Bray-300: #fafafa;
+    --color-White: #fff;
+    --color-White-600: #f1f1f1;
+    --color-White-300: rgb(201, 201, 201);
+
     --mobile-spacing: 24px;
     --tablet-spacing: 40px;
     --descktop-spacing: 10%;

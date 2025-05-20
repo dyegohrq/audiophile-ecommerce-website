@@ -72,14 +72,14 @@ export function Header() {
     }
 
     return(
-        <header className='w-full h-[90px] flex items-center justify-center'>
-            <nav className='flex items-center justify-between w-full h-full'>
+        <header className='w-full h-[90px] flex items-center justify-center bg-transparent absolute top-[0px] '>
+            <nav className='flex items-center justify-between w-full h-full border-b-[1px] border-solid border-b-White '>
                 <div className="left_content w-[65%] flex items-center justify-between md:justify-start gap-[42px] lg:w-auto">
-                    <button ref={burgerRef} className="burger cursor-pointer lg:hidden"  id='burger' onClick={activeButton} >
-                        <div className="hambuguer">
-                            <div className="bar" id="bar1"></div>
-                            <div className="bar" id="bar2"></div>
-                            <div className="bar" id="bar3"></div>
+                    <button ref={burgerRef} className="burger cursor-pointer w-[16px] h-[16px] lg:hidden"  id='burger' onClick={activeButton} >
+                        <div className="hambuguer w-full h-full flex flex-col gap-[3px] ">
+                            <div className="bar w-full h-[3px] bg-White transition-all ease-in-out duration-[.3s] " id="bar1"></div>
+                            <div className="bar w-full h-[3px] bg-White transition-all ease-in-out duration-[.3s] " id="bar2"></div>
+                            <div className="bar w-full h-[3px] bg-White transition-all ease-in-out duration-[.3s] " id="bar3"></div>
                         </div>
                     </button>
                     <div className="logo">
