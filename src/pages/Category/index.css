@@ -1,6 +1,6 @@
 main {
     section {
-        padding: 64px var(--mobile-spacing);
+        /* padding: 64px var(--mobile-spacing); */
 
         .text_product {
             h2 {
@@ -14,18 +14,18 @@ main {
     }
 }
 
-@media screen and (min-width: 640px) {
+/* @media screen and (min-width: 640px) {
     main {
         section {
             padding: 64px var(--tablet-spacing);
         }
     }
-}
+} */
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
     main {
         section {
             padding: 64px var(--descktop-spacing);
         }
     }
-}
+} */

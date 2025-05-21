@@ -6,5 +6,5 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 25px;
-    background-color: #f3f2f2bb;
+    background-color: var(--color-Gray-300);
 }

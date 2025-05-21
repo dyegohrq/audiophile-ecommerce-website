@@ -9,6 +9,7 @@ import ImgSpeakers from '/assets/shared/desktop/image-category-thumbnail-speaker
 import { ButtonShop } from '../buttonShop'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { productContext } from '../../context/Context'
+import { Container } from '../container/Container'
 
 export function Header() {
     const location = useLocation()
@@ -73,7 +74,8 @@ export function Header() {
 
     return(
         <header className='w-full h-[90px] flex items-center justify-center bg-transparent absolute top-[0px] '>
-            <nav className='flex items-center justify-between w-full h-full border-b-[1px] border-solid border-b-White '>
+            <Container>
+                <nav className='flex items-center justify-between w-full h-full lg:border-b-[1px] lg:border-solid lg:border-b-White pt-[36px] pb-[36px] '>
                 <div className="left_content w-[65%] flex items-center justify-between md:justify-start gap-[42px] lg:w-auto">
                     <button ref={burgerRef} className="burger cursor-pointer w-[16px] h-[16px] lg:hidden"  id='burger' onClick={activeButton} >
                         <div className="hambuguer w-full h-full flex flex-col gap-[3px] ">
@@ -90,7 +92,7 @@ export function Header() {
                     className=' flex w-auto order-2 cursor-pointer'
                     onClick={ () => activeCart() }
                 >
-                    <FiShoppingCart size={20} color='#fff' className='icon '/>
+                    <FiShoppingCart size={20} className='icon text-White hover:text-Orange-900 transition-all ease-in-out duration-[.3s] '/>
                 </button>
 
                 <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden' >
@@ -185,6 +187,7 @@ export function Header() {
                     </li>
                 </ul>
             </nav>
+            </Container>
         </header>
     )
 }

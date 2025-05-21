@@ -15,28 +15,28 @@
 }
 
 .orange {
-    background-color: var(--orange-900);
+    background-color: var(--color-Orange-900);
     color: #fff;
 }
 
 .orange:hover {
-    background-color: var(--orange-300);
+    background-color: var(--color-Orange-300);
 }
 
 .white {
-    background-color: var(--white);
-    border: 1px solid var(--black-900);
+    background-color: var(--color-White);
+    border: 1px solid var(--color-Black-900);
 }
 
 .white:hover {
-    background-color: var(--black-900);
-    color: var(--white);
+    background-color: var(--color-Black-900);
+    color: var(--color-White);
     border: none;
 }
 
 .black {
-    background-color: var(--black-900);
-    color: var(--white);
+    background-color: var(--color-Black-900);
+    color: var(--color-White);
 }
 
 .black:hover {
@@ -44,10 +44,10 @@
 }
 
 .transparent {
-    border: 1px solid var(--black-900);
+    border: 1px solid var(--color-Black-900);
 }
 
 .transparent:hover {
-    background-color: var(--black-900);
-    color: var(--white);
+    background-color: var(--color-Black-900);
+    color: var(--color-White);
 }

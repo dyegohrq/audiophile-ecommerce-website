@@ -1,12 +1,9 @@
 footer{
-    background-color: var(--black-300);
-    padding: 0 var(--mobile-spacing) 38px var(--mobile-spacing);
-
-    .line {
+    /* .line {
         width: 100px;
         height: 4px;
         background-color: var(--orange-900);
-    }
+    } */
 
     .nav {
         .nav_item {

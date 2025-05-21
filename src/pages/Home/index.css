@@ -22,8 +22,6 @@ main {
 }
 
 .main {
-    margin: 0 var(--mobile-spacing);
-
     .zx9 {
 
         .description {
@@ -49,8 +47,6 @@ main {
 
 @media screen and (min-width: 640px) {
     .main {
-        padding: 0 var(--tablet-spacing);
-
         .zx9 {
     
             .description {
@@ -76,9 +72,6 @@ main {
 
 @media screen and (min-width: 1024px) {
     .main {
-        margin: 0;
-        padding: 0 var(--descktop-spacing);
-
         .zx9 {
             .description {
                 background: url(/assets/home/desktop/pattern-circles.svg) no-repeat top right / cover;

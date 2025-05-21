@@ -2,8 +2,6 @@
 
 header {
     nav {
-       padding: 0 var(--mobile-spacing);
-
         .left_content {
             .burger {                
                 &.on {
@@ -45,7 +43,7 @@ header {
                 border-radius: 0 0 8px 8px;
     
                 .nav_list {
-                    background-color: var(--white-600);
+                    background-color: var(--color-White-600);
                     padding-bottom: 22px;
     
                     img {
@@ -80,12 +78,12 @@ header {
             }
 
             .remove {
-                color: #d6d6d6 ;
-                border-color: #d6d6d6;
+                color: var(--color-Gray-600) ;
+                border-color: var(--color-Gray-600);
                 transition: all .5s ease-in-out;
 
                 &:hover {
-                    color: var(--orange-900);
+                    color: var(--color-Orange-900) ;
                 }
             }
 
@@ -93,23 +91,23 @@ header {
                 font-size: 15px;
                 line-height: 25px;
                 font-weight: bold;
-                color: #c2c2c2;
+                color: var(--color-Gray-400);
             }
 
             .button {
-                background-color: var(--white-600);
+                background-color: var(--color-White-600);
 
                 .buttonAmount {
                     color: #adacac;
 
                     &:hover {
-                        color: var(--orange-900);
+                        color: var(--color-Orange-900orange-900);
                     }
                 }
             }
 
             .total {
-                color: #d6d6d6;
+                color: var(--color-Gray-600);
             }
 
             .button_checkout {
@@ -117,18 +115,9 @@ header {
                 transition: all .5s ease-in-out;
 
                 &:hover {
-                    background-color: var(--orange-300);
+                    background-color: var(--color-Orange-300);
                 }
             }
-        }
-    }
-}
-
-
-@media screen and (min-width: 770px) {
-    header {
-        nav {
-            padding: 0 var(--tablet-spacing);
         }
     }
 }
@@ -136,16 +125,14 @@ header {
 @media screen and (min-width: 1025px) {
     header {
         nav {
-            margin: 0 var(--descktop-spacing);
-
             .menu_descktop {
                 .list_item {
-                    a {
-                        transition: all .5s ease-in-out;
+                    a{
+                        transition: var(--transition);
                     }
 
                     a:hover {
-                        color: var(--orange-900);
+                        color: var(--color-Orange-900);
                     }
                 }
             }

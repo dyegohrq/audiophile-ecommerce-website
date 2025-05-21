@@ -1,5 +1,5 @@
 .buttonShop {
-    color: var(--white-300);
+    color: var(--color-White-300);
     font-family: var(--font-manrope);
     font-weight: bold;
     font-size: 13px;
@@ -17,5 +17,5 @@
 }
 
 .buttonShop:hover {
-    color: var(--orange-900);
+    color: var(--color-Orange-900);
 }

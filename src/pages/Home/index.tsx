@@ -1,4 +1,5 @@
 import { Button } from "../../components/Button";
+import { Container } from "../../components/container/Container";
 import { FeaturedProduct } from "../../components/FeaturedProduct";
 import style from '../../components/root.module.css'
 import './index.css'
@@ -9,7 +10,7 @@ export function Home() {
             <section className="header_main flex items-center justify-center text-center  lg:text-left lg:justify-between h-[800px] ">
                 <div className="description w-auto max-w-[328px] flex flex-col items-center gap-[16px] lg:items-start lg:max-w-[340px]">
                     <h3 className={`${style.overline} text-White-300 `} >New product</h3>
-                    <h1 className={`${style['text-present-3']} text-white `} >XX99 Mark II Headphones</h1>
+                    <h1 className={`${style['text-present-3']} text-White `} >XX99 Mark II Headphones</h1>
                     <p className={`${style['text-present-7']} normal-case text-White-300 `} >Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
                     <Button classButton="orange" url="/product/headphones/4/xx99-mark-two-headphones" />
                 </div>
@@ -18,7 +19,8 @@ export function Home() {
                 </div>
             </section>
             <FeaturedProduct/>
-            <section className="main flex flex-col gap-[24px] ">
+            <Container>
+                <section className="main flex flex-col gap-[24px] ">
                 <article className="zx9 rounded-[8px] bg-Orange-900 pb-[55px] lg:h-[560px] lg: p-[0px] lg:mb-[126px] lg:flex lg:items-center lg:justify-center">
                     <div className="description flex flex-col justify-center items-center lg:flex-row lg:w-full lg:h-full lg:my-[0px] lg:mr-[0px] lg:ml-[100px] ">
                         <div className="img-zx9 relative top-[120px] w-[152px] h-[207px] md:w-[197px] md:h-[237px] lg:top-[0px]"></div>
@@ -43,6 +45,7 @@ export function Home() {
                     </div>
                 </article>
             </section>
+            </Container>
         </main>
     )
 }

@@ -3,10 +3,8 @@
     --color-Orange-900: #d87d4a;
     --color-Orange-300: #fbaf85;
     --color-Black-900: #000;
-    --color-Black-600: #141414;
     --color-Black-300: #101010;
-    --color-Gray-900: #dadada;
-    --color-Bray-300: #fafafa;
+    --color-Gray-300: #fafafa;
     --color-White: #fff;
     --color-White-600: #f1f1f1;
     --color-White-300: rgb(201, 201, 201);
@@ -14,6 +12,8 @@
     --mobile-spacing: 24px;
     --tablet-spacing: 40px;
     --descktop-spacing: 10%;
+
+    --transition: all ease-in-out .3s;
 
     --font-manrope: "Manrope", sans-serif;
 }

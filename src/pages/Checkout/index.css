@@ -1,7 +1,7 @@
 main {
     .form {
-        margin: 24px var(--mobile-spacing) 0 var(--mobile-spacing) ;
-        padding: 24px;
+        /* margin: 24px var(--mobile-spacing) 0 var(--mobile-spacing) ;
+        padding: 24px; */
 
         h2 {
             color: var(--orange-900);
@@ -71,7 +71,7 @@ main {
         }
     }
 }
-
+/* 
 @media screen and (min-width: 640px) {
     main {
         form {
@@ -83,9 +83,9 @@ main {
             }
         }
     }
-}
+} */
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
     main {
         form {
             margin: 64px var(--descktop-spacing);
@@ -96,4 +96,4 @@ main {
             }
         }
     }
-}
+} */
