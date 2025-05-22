@@ -2,7 +2,6 @@ import { ButtonShop } from "../buttonShop";
 import ImgEarphones from "/assets/shared/desktop/image-category-thumbnail-earphones.png";
 import ImgHeadphones from "/assets/shared/desktop/image-category-thumbnail-headphones.png";
 import ImgSpeakers from "/assets/shared/desktop/image-category-thumbnail-speakers.png";
-import "./index.css";
 import style from "../root.module.css";
 import { Container } from "../container/Container";
 
