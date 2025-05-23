@@ -26,7 +26,7 @@ export function Checkout() {
   const { product, calculateTotal, vatAmount, shipping, grandTotal } = useContext(productContext);
   const { register, watch, handleSubmit, formState: {errors}, reset } = useForm<checkoutFormData>();
   const paymentMethod = watch("paymentMethod");
-  const [isOrderSuccess, setIsOrderSuccess] = useState<boolean>(false)
+  const [,setIsOrderSuccess] = useState<boolean>(false)
 
   function onSubmit() {
     setIsOrderSuccess(true)
