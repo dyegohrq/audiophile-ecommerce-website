@@ -2,7 +2,7 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/input";
 import style from "../../components/root.module.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { productContext } from "../../context/Context";
 import { useForm } from "react-hook-form";
 import codImg from "../../../public/assets/checkout/icon-cash-on-delivery.svg";
@@ -23,10 +23,15 @@ export type checkoutFormData = {
 };
 
 export function Checkout() {
-  const { product, calculateTotal, vatAmount, shipping, grandTotal } =
-    useContext(productContext);
-  const { register, watch } = useForm<checkoutFormData>();
+  const { product, calculateTotal, vatAmount, shipping, grandTotal } = useContext(productContext);
+  const { register, watch, handleSubmit, formState: {errors}, reset } = useForm<checkoutFormData>();
   const paymentMethod = watch("paymentMethod");
+  const [isOrderSuccess, setIsOrderSuccess] = useState<boolean>(false)
+
+  function onSubmit() {
+    setIsOrderSuccess(true)
+    reset()
+  }
 
   return (
     <div>
@@ -36,32 +41,55 @@ export function Checkout() {
         <Container>
           <GoBack url="/" />
 
-          <form className=" flex flex-col md:flex-row justify-between md:gap-[30px] mb-[64px]">
+          <form 
+            className=" flex flex-col md:flex-row justify-between md:gap-[30px] mb-[64px]"
+            onSubmit={handleSubmit(onSubmit)}
+            >
             <div className="bg-white rounded-[8px] flex flex-col gap-[32px] p-[24px] md:w-full md:max-w-[70%] md:p-[50px] ">
               <h1 className={style["text-present-4"]}>Checkout</h1>
               <article>
                 <h2 className={`${style.subtitle} text-Orange-900 my-[16px] `}>Billing Details</h2>
                 <div className=" w-full flex flex-col md:flex-row gap-4 ">
                   <div className="w-full">
-                    <Input placeholder="Alexei Ward" title="Name" id="name" />
+                    <Input 
+                      placeholder="Alexei Ward" 
+                      title="Name" 
+                      id="name" 
+                      error={errors?.name?.message}
+                      register={register}
+                      requiredMessage="Name is required "
+                      pattern={ {
+                        value: /^[A-Za-z\s]+$/,
+                        message: 'Wrong Format'
+                      } }
+                    />
                   </div>
                   <div className="w-full">
                     <Input
                       placeholder="alexei@gmail.com"
                       title="Email Address"
                       id="email"
+                      error={errors?.email?.message}
+                      register={register}
+                      requiredMessage="Email is required"
+                      pattern={
+                        {
+                          value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: 'Wrong Format'
+                        }
+                      }
                     />
                   </div>
                 </div>
-                <div className="mt-4 md:max-w-[50%] ">
+                {/* <div className="mt-4 md:max-w-[50%] ">
                   <Input
                     id="phoneNumber"
                     placeholder="+1 202-555-0136"
                     title="Phone Number"
                   />
-                </div>
+                </div>  */}
               </article>
-              <article>
+              {/* <article>
                 <h2 className={`${style.subtitle} text-Orange-900 my-[16px] `}> Shippinng Info </h2>
                 <div>
                   <Input
@@ -85,7 +113,7 @@ export function Checkout() {
                     title="Country"
                   />
                 </div>
-              </article>
+              </article> */}
               <article>
                 <h2 className={`${style.subtitle} text-Orange-900 my-[16px] `}> Payment Details </h2>
                 <div className=" flex flex-col gap-[17px] md:flex-row md:justify-between ">
@@ -126,7 +154,7 @@ export function Checkout() {
                     </label>
                   </div>
                 </div>
-                {paymentMethod === "eMoney" && (
+                {/* {paymentMethod === "eMoney" && (
                   <div className=" flex flex-col w-full my-[16px] md:flex-row gap-[16px] ">
                     <div className="w-full md:max-w-[50%] ">
                       <Input
@@ -143,7 +171,7 @@ export function Checkout() {
                       />
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {paymentMethod === "cash" && (
                   <div className="flex items-center gap-[32px] my-[32px] ">

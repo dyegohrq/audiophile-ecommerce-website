@@ -1,19 +1,5 @@
 @import '../root.module.css';
 
-.button_default {
-    width: 160px;
-    height: 48px;
-    border: none;
-    background-color: transparent;
-    text-transform: uppercase;
-    font-family: var(--font-manrope);
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-}
-
 .orange {
     background-color: var(--color-Orange-900);
     color: #fff;

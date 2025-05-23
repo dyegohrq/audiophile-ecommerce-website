@@ -1,5 +1,4 @@
 import { FaAngleRight } from 'react-icons/fa'
-import './index.css'
 import { useNavigate } from 'react-router';
 
 interface ButtonShopProps {
@@ -15,7 +14,7 @@ export function ButtonShop( props : ButtonShopProps ) {
 
     return(
         <button
-            className="buttonShop"
+            className=" text-White-300 font-manrope font-bold text-[13px] tracking-[1px] uppercase flex items-center justify-between w-[58px] h-[48px] bg-transparent border-0 cursor-pointer transition-all duration-[.3s] ease-in-out hover:text-Orange-900 "
             onClick={ () => navigatePage(props.url) }
         >
             Shop

@@ -138,7 +138,7 @@ export function Header() {
                             }
                         </ul>
                         <div className='w-full flex justify-between ' >
-                            <span className={`${style['text-present-7']} uppercase total `} >Total</span>
+                            <span className={`${style['text-present-7']} uppercase text-White-300`} >Total</span>
                             <span className={style['text-present-6']}>
                                 {
                                     calculateTotal().toLocaleString('en-US', {
@@ -148,7 +148,7 @@ export function Header() {
                                 }
                             </span>
                         </div>
-                        <Link to={'/checkout'} className={`${style.subtitle} w-full flex mt-[24px] py-[15px] button_checkout items-center justify-center text-white `} >Checkout</Link>
+                        <Link to={'/checkout'} className={`${style.subtitle} w-full flex mt-[24px] py-[15px] items-center justify-center text-white bg-Orange-900 transition-all duration-[.3s] ease-in-out hover:bg-Orange-300 `} >Checkout</Link>
                         
                     </div>
                 </div>
@@ -173,16 +173,16 @@ export function Header() {
                     </ul>
                 </div>
                 <ul className={ `${style.subtitle} menu_descktop hidden order-1 gap-[34px] text-white lg:flex` }>
-                    <li className="list_item">
+                    <li className=" transition-all duration-[.3s] ease-in-out hover:text-Orange-900 ">
                         <Link to={'/'}>Home</Link>
                     </li>
-                    <li className="list_item">
+                    <li className=" transition-all duration-[.3s] ease-in-out hover:text-Orange-900 ">
                         <Link to={'/category/headphones'}>Headphones</Link>
                     </li>
-                    <li className="list_item">
+                    <li className=" transition-all duration-[.3s] ease-in-out hover:text-Orange-900 ">
                         <Link to={'/category/speakers'}>Speakers</Link>
                     </li>
-                    <li className="list_item">
+                    <li className=" transition-all duration-[.3s] ease-in-out hover:text-Orange-900 ">
                         <Link to={'/category/earphones'}>Earphones</Link>
                     </li>
                 </ul>

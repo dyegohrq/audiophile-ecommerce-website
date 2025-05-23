@@ -106,36 +106,6 @@ header {
                 }
             }
 
-            .total {
-                color: var(--color-Gray-600);
-            }
-
-            .button_checkout {
-                background-color: var(--orange-900);
-                transition: all .5s ease-in-out;
-
-                &:hover {
-                    background-color: var(--color-Orange-300);
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    header {
-        nav {
-            .menu_descktop {
-                .list_item {
-                    a{
-                        transition: var(--transition);
-                    }
-
-                    a:hover {
-                        color: var(--color-Orange-900);
-                    }
-                }
-            }
         }
     }
 }
