@@ -7,7 +7,7 @@ import './index.css'
 export function Home() {
     return(
         <main>
-            <section className="header_main flex items-center justify-center text-center  lg:text-left lg:justify-between h-[800px] ">
+            <section className="header_main flex items-center justify-center text-center  lg:text-left lg:justify-between h-[750px] md:h-[900px] ">
                 <div className="description w-auto max-w-[328px] flex flex-col items-center gap-[16px] lg:items-start lg:max-w-[340px]">
                     <h3 className={`${style.overline} text-White-300 `} >New product</h3>
                     <h1 className={`${style['text-present-3']} text-White `} >XX99 Mark II Headphones</h1>
