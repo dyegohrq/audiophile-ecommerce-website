@@ -96,7 +96,7 @@ export function Header() {
                 </button>
 
                 <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden' >
-                    <div className='absolute right-[5%] lg:right-[10%] bg-white w-[90%] md:max-w-[377px] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
+                    <div className='absolute right-[5%] lg:right-[10%] bg-white w-[90%] md:max-w-[450px] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
                         <div className='flex justify-between mb-[30px] ' >
                             <h3 className={ ` ${style['text-present-6']} ` } >Cart ( {product.length} ) </h3>
                             <button onClick={removeAll} className={ `remove  ${style['text-present-7']} border-b  cursor-pointer` } >Remove all</button>
@@ -108,7 +108,7 @@ export function Header() {
                                         <div className=' max-w-[64px] max-h-[64px] overflow-hidden rounded-[8px]  ' >
                                             <img src={item.categoryImage.mobile.replace("./assets/", "/assets/")} alt={item.slug} />
                                         </div>
-                                        <div className=' w-[100px] ' >
+                                        <div className=' w-[105px] ' >
                                             <h3 className={`${style['text-present-7']}`} > {
                                                 item.name.replace('Headphones', '')
                                                 .replace('Wireless Earphones', '')

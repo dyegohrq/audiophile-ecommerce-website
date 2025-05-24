@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
+import toast from "react-hot-toast";
 
 interface ProductContextData {
     product: productProps[];
@@ -113,6 +114,14 @@ function ProductProvider( {children}:ProductProvideProps ) {
 
     const addCart = (product: productProps) => {
         const amount = getAmountByProduct(product)
+
+        toast.success('Item added to cart', {
+            style: {
+                borderRadius: 10,
+                backgroundColor: '#fff' ,
+                color: "#000"
+            }
+        })
 
         setProduct(prev => {
             const existing = prev.find(item => item.id === product.id)

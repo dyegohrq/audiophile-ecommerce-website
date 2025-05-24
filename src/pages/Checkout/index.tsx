@@ -34,7 +34,7 @@ export function Checkout() {
     reset,
   } = useForm<checkoutFormData>();
   const paymentMethod = watch("paymentMethod");
-  const [, setIsOrderSuccess] = useState<boolean>(false);
+  const [isOrderSuccess, setIsOrderSuccess] = useState<boolean>(false);
 
   function onSubmit() {
     setIsOrderSuccess(true);
@@ -69,7 +69,7 @@ export function Checkout() {
                       register={register}
                       requiredMessage="Name is required "
                       pattern={{
-                        value: /^[A-Za-z\s]+$/,
+                        value: /^[\p{L}\s]+$/u,
                         message: "Wrong Format",
                       }}
                     />
@@ -142,7 +142,7 @@ export function Checkout() {
                       register={register}
                       requiredMessage=" City is required "
                       pattern={{
-                        value: /^[A-Za-z\s]+$/,
+                        value: /^[\p{L}\s]+$/u,
                         message: 'Wrong Format'
                       }}
                     />
@@ -355,7 +355,9 @@ export function Checkout() {
             </div>
           </form>
         </Container>
-        <OrderSuccess/>
+        {
+          isOrderSuccess && <OrderSuccess setIsOrderSuccess={setIsOrderSuccess} />
+        }
       </main>
       <Footer />
     </div>

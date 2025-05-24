@@ -39,7 +39,7 @@ export function Home() {
                 </article>
                 <article className="yx1 flex flex-col gap-[24px] sm:flex-row sm:gap-[11px] " >
                     <div className="img-yx1 rounded-[8px] w-full h-[200px] md:h-[320px]  "></div>
-                    <div className="text-yx1 w-full h-[200px] md:h-[320px] bg-Gray-900 pl-[24px] rounded-[8px] flex flex-col justify-center gap-[32px] ">
+                    <div className="text-yx1 w-full h-[200px] md:h-[320px] bg-White-300 pl-[24px] rounded-[8px] flex flex-col justify-center gap-[32px] ">
                         <h2 className={style['text-present-4']} >YX1 earphones</h2>
                         <Button classButton="transparent" url="/product/earphones/1/yx1-earphones" />
                     </div>

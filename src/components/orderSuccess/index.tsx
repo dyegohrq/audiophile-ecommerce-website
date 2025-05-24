@@ -1,23 +1,51 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import iconImg from "../../../public/assets/checkout/icon-order-confirmation.svg";
 import { productContext } from "../../context/Context";
 import style from "../root.module.css";
+import { useNavigate } from "react-router";
 
-export function OrderSuccess() {
+
+type OrderSuccessProps = {
+  setIsOrderSuccess: (value: boolean) => void
+}
+
+export function OrderSuccess( { setIsOrderSuccess }:OrderSuccessProps ) {
   const { product, grandTotal } = useContext(productContext);
+  const remainingNumItems = product.length - 1;
+  const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
+  const body = document.body
+
+  const toggleShowAll  = () => {
+    setShowAll((prev) => !prev)
+  }
+
+  const productsToShow = showAll ? product : [product[0]]
+
+  function handleButtonClick() {
+    setIsOrderSuccess(false)
+    navigate('/')
+  }
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior:'smooth'})
+    body.style.overflow = 'hidden'
+  }, [])
 
   return (
-    <section className="bg-black/50 fixed w-full h-full inset-0 flex items-center justify-center hidden ">
-      <div className="bg-white w-[80%] max-w-[540px] p-[32px] rounded-[8px] ">
+    <section className="bg-black/50 fixed w-full h-full inset-0 flex items-center justify-center ">
+      <div className="bg-white w-[80%] max-w-[540px] max-h-[900px] p-[32px] rounded-[8px] ">
         <img src={iconImg} alt=" success order " />
         <h2 className={` ${style['text-present-4']} mt-[32px] mb-[16px] `} >Thank You <br /> for your Order</h2>
         <p className={`${style['text-present-7']} text-White-300 mb-[24px] `} > You will receive an email confirmation shortly </p>
 
-        <div className=" rounded-[8px] overflow-hidden " >
-          <div className="bg-Gray-300" >
-            <ul>
-              {product.map((item) => (
-                <li className=" flex justify-between items-center p-[24px] " >
+        <div className=" rounded-[8px] overflow-hidden w-full flex flex-col md:flex-row " >
+          <div className="bg-White-600 p-[24px] w-full md:w-[60%] " >
+            <ul
+              className={` flex flex-col gap-[16px] pb-[16px] border-b border-White-300 `}
+            >
+              {productsToShow.map((item) => (
+                <li className=" flex justify-between items-center" >
                   <div className=" max-w-[64px] max-h-[64px] overflow-hidden rounded-[8px]  ">
                     <img
                       src={item.categoryImage.mobile.replace(
@@ -50,13 +78,22 @@ export function OrderSuccess() {
                 </li>
               ))}
             </ul>
-            <button> and 2 other item(s) </button>
+            <button onClick={toggleShowAll} className={`cursor-pointer font-manrope text-[12px] font-bold tracking-[0.21px] text-White-300 w-full h-[30px] `} > { !showAll ? `and ${remainingNumItems} other item(s)` : 'View less' } </button>
           </div>
-          <div className="bg-Black-300" >
-            <h2>Grand Total</h2>
-            <span> {grandTotal()} </span>
+          <div className={`bg-Black-300 p-[24px] w-full md:w-[40%] flex flex-col ${showAll? 'justify-end pb-[41px] ' : 'justify-center' }  `} >
+            <h2 className={`${style['text-present-7']} uppercase text-White-300` } >Grand Total</h2>
+            <span className=" text-White " > {
+                grandTotal().toLocaleString('en-US', {
+                  style: 'currency',
+                  currency: 'USD'
+                })
+              }
+            </span>
           </div>
         </div>
+        <button
+          onClick={handleButtonClick} 
+          className="w-full h-[48px] border-0 bg-Orange-900 uppercase  font-manrope text-[13px] font-bold tracking-[1px] transition-all duration-[.5s] ease-in-out cursor-pointer hover:bg-Orange-300 text-White mt-[23px] md:mt-[48px] " >Back to home</button>
       </div>
     </section>
   );
