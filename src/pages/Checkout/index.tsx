@@ -5,7 +5,7 @@ import style from "../../components/root.module.css";
 import { useContext, useState } from "react";
 import { productContext } from "../../context/Context";
 import { useForm } from "react-hook-form";
-import codImg from "../../../public/assets/checkout/icon-cash-on-delivery.svg";
+import codImg from "/assets/checkout/icon-cash-on-delivery.svg";
 import { Container } from "../../components/container/Container";
 import { GoBack } from "../../components/goBack";
 import { OrderSuccess } from "../../components/orderSuccess";
@@ -24,7 +24,7 @@ export type checkoutFormData = {
 };
 
 export function Checkout() {
-  const { product, calculateTotal, vatAmount, shipping, grandTotal } =
+  const { product, calculateTotal, vatAmount, shipping, grandTotal, removeAll } =
     useContext(productContext);
   const {
     register,
@@ -39,6 +39,7 @@ export function Checkout() {
   function onSubmit() {
     setIsOrderSuccess(true);
     reset();
+    removeAll();
   }
 
   return (
