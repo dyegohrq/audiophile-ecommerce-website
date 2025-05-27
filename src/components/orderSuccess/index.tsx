@@ -50,7 +50,7 @@ export function OrderSuccess({
       onClick={handleClose} 
       >
       <div 
-        className="bg-white w-[80%] max-w-[540px] max-h-[900px] p-[32px] rounded-[8px] overflow-auto "
+        className="bg-white w-[80%] max-w-[540px] max-h-[900px] p-[32px] rounded-[8px] overflow-auto z-50 "
         onClick={(e) => e.stopPropagation() }
         >
         <img src={iconImg} alt=" success order " />

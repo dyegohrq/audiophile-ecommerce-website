@@ -23,7 +23,7 @@ export function Home() {
                 <section className="main flex flex-col gap-[24px] ">
                 <article className="zx9 rounded-[8px] bg-Orange-900 pb-[55px] lg:h-[560px] lg: p-[0px] lg:mb-[126px] lg:flex lg:items-center lg:justify-center">
                     <div className="description flex flex-col justify-center items-center lg:flex-row lg:w-full lg:h-full lg:my-[0px] lg:mr-[0px] lg:ml-[100px] ">
-                        <div className="img-zx9 relative top-[120px] w-[152px] h-[207px] md:w-[197px] md:h-[237px] lg:top-[0px]"></div>
+                        <div className="img-zx9 relative top-[120px] w-[152px] h-[207px] md:w-[197px] md:h-[237px] lg:top-[35px] lg:left-[-100px] "></div>
                         <div className="text-zx9 text-center flex flex-col items-center gap-[24px] max-w-[380px] mt-[135px] lg:text-left lg:items-start ">
                             <h2 className={`${style['text-present-3']} text-white`}>ZX9 <br /> speaker</h2>
                             <p className={`${style['text-present-7']} text-White-300 `} >Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
@@ -31,7 +31,7 @@ export function Home() {
                         </div>
                     </div>
                 </article>
-                <article className="zx7 w-full h-[320px] rounded-[8px] flex items-center " >
+                <article className="zx7 w-full h-[320px] rounded-[8px] flex items-center lg:h-[420px] " >
                     <div className={`text_zx7 pl-[24px] md:pl-[62px] `}>
                         <h2 className={`${style['text-present-4']} mb-[32px] `} >ZX7 speaker</h2>
                         <Button classButton="transparent" url="/product/speakers/5/zx7-speaker" />
