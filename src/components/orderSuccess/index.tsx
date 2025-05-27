@@ -50,17 +50,17 @@ export function OrderSuccess({
       onClick={handleClose} 
       >
       <div 
-        className="bg-white w-[80%] max-w-[540px] max-h-[900px] p-[32px] rounded-[8px] "
+        className="bg-white w-[80%] max-w-[540px] max-h-[900px] p-[32px] rounded-[8px] overflow-auto "
         onClick={(e) => e.stopPropagation() }
         >
         <img src={iconImg} alt=" success order " />
         <h2 className={` ${style['text-present-4']} mt-[32px] mb-[16px] `} >Thank You <br /> for your Order</h2>
         <p className={`${style['text-present-7']} text-White-300 mb-[24px] `} > You will receive an email confirmation shortly </p>
 
-        <div className=" rounded-[8px] overflow-hidden w-full flex flex-col md:flex-row " >
+        <div className=" rounded-[8px] overflow-auto w-full flex flex-col md:flex-row " >
           <div className="bg-White-600 p-[24px] w-full md:w-[60%] " >
             <ul
-              className={` flex flex-col gap-[16px] pb-[16px] border-b border-White-300 `}
+              className={` flex flex-col gap-[16px] pb-[16px] border-b border-White-300`}
             >
               {productsToShow.map((item) => (
                 <li key={item.id} className=" flex justify-between items-center" >
