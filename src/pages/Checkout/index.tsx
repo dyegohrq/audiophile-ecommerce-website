@@ -2,7 +2,7 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/input";
 import style from "../../components/root.module.css";
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { productContext } from "../../context/Context";
 import { useForm } from "react-hook-form";
 import codImg from "/assets/checkout/icon-cash-on-delivery.svg";
