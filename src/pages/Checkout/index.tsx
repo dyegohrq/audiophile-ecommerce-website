@@ -2,13 +2,14 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/input";
 import style from "../../components/root.module.css";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { productContext } from "../../context/Context";
 import { useForm } from "react-hook-form";
 import codImg from "/assets/checkout/icon-cash-on-delivery.svg";
 import { Container } from "../../components/container/Container";
 import { GoBack } from "../../components/goBack";
 import { OrderSuccess } from "../../components/orderSuccess";
+import toast from "react-hot-toast";
 
 export type checkoutFormData = {
   name: string;
@@ -24,7 +25,7 @@ export type checkoutFormData = {
 };
 
 export function Checkout() {
-  const { product, calculateTotal, vatAmount, shipping, grandTotal, removeAll } =
+  const { product, calculateTotal, vatAmount, shipping, grandTotal } =
     useContext(productContext);
   const {
     register,
@@ -35,11 +36,17 @@ export function Checkout() {
   } = useForm<checkoutFormData>();
   const paymentMethod = watch("paymentMethod");
   const [isOrderSuccess, setIsOrderSuccess] = useState<boolean>(false);
+  const [orderedProducts, setOrderedProducts] = useState<typeof product>([]);
 
   function onSubmit() {
+
+    if (product.length === 0) {
+      toast.error("Cart is empty")
+      return;
+    }
+
+    setOrderedProducts(product)
     setIsOrderSuccess(true);
-    reset();
-    removeAll();
   }
 
   return (
@@ -349,7 +356,9 @@ export function Checkout() {
                   </span>
                 </div>
 
-                <button className=" w-full h-[48px] border-0 bg-Orange-900 uppercase  font-manrope text-[13px] font-bold tracking-[1px] transition-all duration-[.5s] ease-in-out cursor-pointer hover:bg-Orange-300 text-White ">
+                <button 
+                  className=" w-full h-[48px] border-0 bg-Orange-900 uppercase  font-manrope text-[13px] font-bold tracking-[1px] transition-all duration-[.5s] ease-in-out cursor-pointer hover:bg-Orange-300 text-White "
+                >
                   Continue & Pay
                 </button>
               </div>
@@ -357,7 +366,7 @@ export function Checkout() {
           </form>
         </Container>
         {
-          isOrderSuccess && <OrderSuccess setIsOrderSuccess={setIsOrderSuccess} />
+          isOrderSuccess && <OrderSuccess setIsOrderSuccess={setIsOrderSuccess} productItem={orderedProducts} resetForm={reset} />
         }
       </main>
       <Footer />

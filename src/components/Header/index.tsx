@@ -30,8 +30,8 @@ export function Header() {
 
     useEffect(() => {
         if (menuActive) {
-            bgRef.current?.classList.toggle('active_button')
-            burgerRef.current?.classList.toggle('on')
+            bgRef.current?.classList.remove('active_button')
+            burgerRef.current?.classList.remove('on')
             setMenuActive(false)
         } 
 
@@ -57,7 +57,39 @@ export function Header() {
         setMenuActive(true)
     }
 
+    function handleCloseMenu() {
+        bgRef.current?.classList.toggle('active_button')
+        burgerRef.current?.classList.toggle('on')
+
+        if (bgRef.current?.classList.contains('active_button')) {
+            body.style.overflow = 'hidden'
+        } else {
+            body.style.overflow = 'auto'
+        }
+
+        if (cart.current?.classList.contains('activeCart')) {
+            cart.current.classList.toggle('activeCart')
+        }
+
+        setMenuActive(false)
+    }
+
     function activeCart() {
+        cart.current?.classList.toggle('activeCart')
+
+        if (cart.current?.classList.contains('activeCart')) {
+            body.style.overflow = 'hidden'
+        } else {
+            body.style.overflow = 'auto'
+        }
+
+        if (bgRef.current?.classList.contains('active_button')) {
+            bgRef.current.classList.toggle('active_button')
+            burgerRef.current?.classList.toggle('on')
+        }
+    }
+
+    function handleClose() {
         cart.current?.classList.toggle('activeCart')
 
         if (cart.current?.classList.contains('activeCart')) {
@@ -95,8 +127,16 @@ export function Header() {
                     <FiShoppingCart size={20} className='icon text-White hover:text-Orange-900 transition-all ease-in-out duration-[.3s] '/>
                 </button>
 
-                <div ref={cart} id='cart' className='absolute flex-col items-center justify-start hidden' >
-                    <div className='absolute right-[5%] lg:right-[10%] bg-white w-[90%] md:max-w-[450px] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' >
+                <div 
+                    ref={cart} 
+                    id='cart' 
+                    className='absolute flex-col items-center justify-start hidden z-50 ' 
+                    onClick={handleClose}
+                    >
+                    <div 
+                        className='absolute right-[5%] lg:right-[10%] bg-white w-[90%] md:max-w-[450px] mt-[24px] rounded-[8px] py-[32px] px-[28px] ' 
+                        onClick={(e) => e.stopPropagation()}
+                        >
                         <div className='flex justify-between mb-[30px] ' >
                             <h3 className={ ` ${style['text-present-6']} ` } >Cart ( {product.length} ) </h3>
                             <button onClick={removeAll} className={ `remove  ${style['text-present-7']} border-b  cursor-pointer` } >Remove all</button>
@@ -153,8 +193,8 @@ export function Header() {
                     </div>
                 </div>
 
-                <div className="bg_menu w-full fixed" ref={bgRef} id='bg_menu'>
-                    <ul className="menu_mobile bg-white w-full flex items-center justify-center flex-col gap-[56px] sm:flex-row sm:gap-[10px] lg:hidden">
+                <div className="bg_menu w-full fixed" ref={bgRef} id='bg_menu' onClick={handleCloseMenu} >
+                    <ul className="menu_mobile bg-white w-full flex items-center justify-center flex-col gap-[56px] sm:flex-row sm:gap-[10px] lg:hidden" onClick={(e) => e.stopPropagation()} >
                         <li className='nav_list w-[90%] h-[165px] flex flex-col items-center justify-end gap-[17px] relative rounded-[8px] ' >
                             <img src={ImgHeadphones} alt="" className='absolute'/>
                             <h2 className={`${style['text-present-7']}`} >Headphones</h2>
