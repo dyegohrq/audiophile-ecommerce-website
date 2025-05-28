@@ -88,18 +88,14 @@ function ProductProvider( {children}:ProductProvideProps ) {
         setProductsAmounts(prev => {
           const currentAmount = prev[product.id] || 1;
       
-          // Se estiver no carrinho e o amount for 1 ou menor, removemos o item
           if (fromCart && currentAmount <= 1) {
-            // Remover do carrinho
             setProduct(currentCart => currentCart.filter(item => item.id !== product.id));
       
-            // Remover do productAmounts
             const updatedAmounts = { ...prev };
             delete updatedAmounts[product.id];
             return updatedAmounts;
           }
       
-          // Se não for no carrinho, só decrementa
           return {
             ...prev,
             [product.id]: Math.max(currentAmount - 1, 1), // Mantém o valor mínimo de 1
